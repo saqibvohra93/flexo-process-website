@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
-import { CheckCircle2, AlertTriangle, Sparkles, ShieldCheck, Gauge } from 'lucide-react';
+import React from 'react';
+import { CheckCircle2, AlertTriangle, Sparkles, ShieldCheck } from 'lucide-react';
 
 export const DotComparator: React.FC = () => {
-  const [activeImpression, setActiveImpression] = useState<'normal' | 'high'>('normal');
-
   return (
     <section id="technology" className="py-16 lg:py-20 bg-slate-100/70  border-b border-slate-200  relative overflow-hidden transition-colors duration-200">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,rgba(22,41,92,0.3),transparent_70%)]  hidden pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,rgba(22,41,92,0.3),transparent_70%)] pointer-events-none" />
       <div className="container-x relative z-10">
         
         {/* Section Header */}
@@ -24,51 +22,6 @@ export const DotComparator: React.FC = () => {
           <p className="text-slate-600  text-sm leading-relaxed">
             See how our oxygen-free flat-top dot technology eliminates impression dot gain and protects your highlights across 500,000+ meter runs.
           </p>
-        </div>
-
-        {/* Simulate Press Impression Nip Controller (Positioned ABOVE the comparison cards) */}
-        <div className="mb-8 p-4 sm:p-5 rounded-2xl bg-white  border border-slate-200  flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm backdrop-blur-sm">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-slate-100  border border-slate-200  flex items-center justify-center text-emerald-500 shrink-0">
-              <Gauge className="w-5 h-5" />
-            </div>
-            <div>
-              <span className="text-[11px] font-mono text-slate-500  uppercase tracking-wider block">
-                Live Pressroom Simulation
-              </span>
-              <span className="text-xs sm:text-sm font-semibold text-slate-900 ">
-                Cylinder Impression Nip:{' '}
-                <strong className={activeImpression === 'normal' ? 'text-emerald-600 ' : 'text-amber-600 '}>
-                  {activeImpression === 'normal' ? 'Normal Operating Pressure (10-15 µm)' : 'Heavy Production Load (30-40 µm)'}
-                </strong>
-              </span>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2 w-full sm:w-auto">
-            <button
-              type="button"
-              onClick={() => setActiveImpression('normal')}
-              className={`flex-1 sm:flex-none text-xs px-4 py-2 rounded-xl font-bold transition-all duration-200 ${
-                activeImpression === 'normal'
-                  ? 'bg-emerald-500 text-navy-950 shadow-md shadow-emerald-500/20 scale-[1.02]'
-                  : 'bg-slate-100  border border-slate-200  text-slate-700  hover:bg-slate-200 '
-              }`}
-            >
-              Normal Nip
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveImpression('high')}
-              className={`flex-1 sm:flex-none text-xs px-4 py-2 rounded-xl font-bold transition-all duration-200 ${
-                activeImpression === 'high'
-                  ? 'bg-amber-400 text-navy-950 shadow-md shadow-amber-400/20 scale-[1.02]'
-                  : 'bg-slate-100  border border-slate-200  text-slate-700  hover:bg-slate-200 '
-              }`}
-            >
-              Heavy Impression
-            </button>
-          </div>
         </div>
 
         {/* Clean Side-by-Side Comparison Cards */}
@@ -159,7 +112,7 @@ export const DotComparator: React.FC = () => {
                   Standard Round-Top Flexo
                 </span>
                 <span className="text-xs font-mono text-rose-600  font-semibold">
-                  {activeImpression === 'high' ? 'High Nip: +28% Dot Gain' : 'Normal Nip: +18% Dot Gain'}
+                  Normal Nip: +18% Dot Gain
                 </span>
               </div>
 
@@ -178,12 +131,8 @@ export const DotComparator: React.FC = () => {
                   <div className="flex flex-col items-center gap-2">
                     <div className="relative">
                       {/* Parabolic round dot */}
-                      <div className={`rounded-t-full bg-gradient-to-b from-rose-400 to-rose-700 border border-rose-300 transition-all duration-300 ${
-                        activeImpression === 'high' ? 'w-14 h-11' : 'w-10 h-14'
-                      }`} />
-                      <div className={`absolute -bottom-1 -left-2 -right-2 h-2.5 rounded-full bg-rose-500/30 blur-[2px] transition-all duration-300 ${
-                        activeImpression === 'high' ? 'opacity-100' : 'opacity-40'
-                      }`} />
+                      <div className="rounded-t-full bg-gradient-to-b from-rose-400 to-rose-700 border border-rose-300 w-10 h-14" />
+                      <div className="absolute -bottom-1 -left-2 -right-2 h-2.5 rounded-full bg-rose-500/30 blur-[2px] opacity-40" />
                     </div>
                     <span className="text-[10px] font-mono text-rose-600  font-semibold">Unstable Crown</span>
                   </div>
