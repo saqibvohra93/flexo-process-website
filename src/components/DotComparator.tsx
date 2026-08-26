@@ -74,76 +74,8 @@ export const DotComparator: React.FC = () => {
         {/* Clean Side-by-Side Comparison Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 items-stretch">
           
-          {/* Card 1: Standard Round-Top Flexo (Defects / Issues) */}
-          <div className="rounded-2xl border border-rose-500/30 bg-white  p-6 sm:p-7 flex flex-col justify-between shadow-sm">
-            <div>
-              {/* Header Badge */}
-              <div className="flex items-center justify-between pb-4 border-b border-slate-200  mb-5">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-rose-500/15 text-rose-700  border border-rose-500/30 text-xs font-bold font-mono uppercase">
-                  <AlertTriangle className="w-3.5 h-3.5" />
-                  Standard Round-Top Flexo
-                </span>
-                <span className="text-xs font-mono text-rose-600  font-semibold">
-                  {activeImpression === 'high' ? 'High Nip: +28% Dot Gain' : 'Normal Nip: +18% Dot Gain'}
-                </span>
-              </div>
-
-              <h3 className="text-lg font-bold text-slate-900  font-display mb-2">
-                Parabolic Dome &amp; Impression Sensitivity
-              </h3>
-              <p className="text-xs text-slate-600  leading-relaxed mb-6">
-                Atmospheric oxygen truncates dot crowns into bullet domes. As press impression fluctuates by just 15 microns, the round top squashes outward, causing harsh vignette cutoffs and muddy midtones.
-              </p>
-
-              {/* Graphic Simulation */}
-              <div className="h-44 rounded-xl bg-slate-100  border border-slate-200  p-4 flex flex-col justify-between items-center mb-6 relative overflow-hidden">
-                <span className="text-[10px] font-mono text-slate-500 uppercase self-start">Microscopic 100x Profile</span>
-                
-                <div className="flex items-end justify-center gap-6 my-auto">
-                  <div className="flex flex-col items-center gap-2">
-                    <div className="relative">
-                      {/* Parabolic round dot */}
-                      <div className={`rounded-t-full bg-gradient-to-b from-rose-400 to-rose-700 border border-rose-300 transition-all duration-300 ${
-                        activeImpression === 'high' ? 'w-14 h-11' : 'w-10 h-14'
-                      }`} />
-                      <div className={`absolute -bottom-1 -left-2 -right-2 h-2.5 rounded-full bg-rose-500/30 blur-[2px] transition-all duration-300 ${
-                        activeImpression === 'high' ? 'opacity-100' : 'opacity-40'
-                      }`} />
-                    </div>
-                    <span className="text-[10px] font-mono text-rose-600  font-semibold">Unstable Crown</span>
-                  </div>
-                </div>
-
-                <div className="w-full flex justify-between text-[11px] font-mono text-rose-700  pt-2 border-t border-slate-200 ">
-                  <span>Minimum Highlight: 3.5%</span>
-                  <span>Prone to Haloing</span>
-                </div>
-              </div>
-
-              {/* Technical Limits */}
-              <div className="space-y-2 text-xs text-slate-600 ">
-                <div className="flex items-start gap-2">
-                  <span className="text-rose-500 font-bold shrink-0">&times;</span>
-                  <span>Dot crowns mushroom under nip pressure, shifting Pantone colors</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-rose-500 font-bold shrink-0">&times;</span>
-                  <span>Requires frequent press shutdowns for manual plate cleaning</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <span className="text-rose-500 font-bold shrink-0">&times;</span>
-                  <span>Shorter plate life due to mechanical stress on thin shoulders</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-6 pt-4 border-t border-slate-200  text-[11px] font-mono text-slate-500">
-              Traditional Analog &amp; Non-Inert Digital Plates
-            </div>
-          </div>
-
-          {/* Card 2: Flexo Process HD Flat-Top (ALL GOOD THINGS IN GREEN) */}
-          <div className="rounded-2xl border-2 border-emerald-500/60 bg-emerald-50/50     p-6 sm:p-7 flex flex-col justify-between shadow-[0_0_30px_rgba(16,185,129,0.08)] [0_0_30px_rgba(16,185,129,0.12)]">
+          {/* Card 1: Flexo Process HD Flat-Top (ALL GOOD THINGS IN GREEN) */}
+          <div className="rounded-2xl border-2 border-emerald-500/60 bg-emerald-50/50     p-6 sm:p-7 flex flex-col justify-between shadow-[0_0_30px_rgba(16,185,129,0.08)]">
             <div>
               {/* Header Badge */}
               <div className="flex items-center justify-between pb-4 border-b border-emerald-500/20 mb-5">
@@ -214,6 +146,74 @@ export const DotComparator: React.FC = () => {
               >
                 Request Free Sample Kit &rarr;
               </a>
+            </div>
+          </div>
+
+          {/* Card 2: Standard Round-Top Flexo (Defects / Issues) */}
+          <div className="rounded-2xl border border-rose-500/30 bg-white  p-6 sm:p-7 flex flex-col justify-between shadow-sm">
+            <div>
+              {/* Header Badge */}
+              <div className="flex items-center justify-between pb-4 border-b border-slate-200  mb-5">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-rose-500/15 text-rose-700  border border-rose-500/30 text-xs font-bold font-mono uppercase">
+                  <AlertTriangle className="w-3.5 h-3.5" />
+                  Standard Round-Top Flexo
+                </span>
+                <span className="text-xs font-mono text-rose-600  font-semibold">
+                  {activeImpression === 'high' ? 'High Nip: +28% Dot Gain' : 'Normal Nip: +18% Dot Gain'}
+                </span>
+              </div>
+
+              <h3 className="text-lg font-bold text-slate-900  font-display mb-2">
+                Parabolic Dome &amp; Impression Sensitivity
+              </h3>
+              <p className="text-xs text-slate-600  leading-relaxed mb-6">
+                Atmospheric oxygen truncates dot crowns into bullet domes. As press impression fluctuates by just 15 microns, the round top squashes outward, causing harsh vignette cutoffs and muddy midtones.
+              </p>
+
+              {/* Graphic Simulation */}
+              <div className="h-44 rounded-xl bg-slate-100  border border-slate-200  p-4 flex flex-col justify-between items-center mb-6 relative overflow-hidden">
+                <span className="text-[10px] font-mono text-slate-500 uppercase self-start">Microscopic 100x Profile</span>
+                
+                <div className="flex items-end justify-center gap-6 my-auto">
+                  <div className="flex flex-col items-center gap-2">
+                    <div className="relative">
+                      {/* Parabolic round dot */}
+                      <div className={`rounded-t-full bg-gradient-to-b from-rose-400 to-rose-700 border border-rose-300 transition-all duration-300 ${
+                        activeImpression === 'high' ? 'w-14 h-11' : 'w-10 h-14'
+                      }`} />
+                      <div className={`absolute -bottom-1 -left-2 -right-2 h-2.5 rounded-full bg-rose-500/30 blur-[2px] transition-all duration-300 ${
+                        activeImpression === 'high' ? 'opacity-100' : 'opacity-40'
+                      }`} />
+                    </div>
+                    <span className="text-[10px] font-mono text-rose-600  font-semibold">Unstable Crown</span>
+                  </div>
+                </div>
+
+                <div className="w-full flex justify-between text-[11px] font-mono text-rose-700  pt-2 border-t border-slate-200 ">
+                  <span>Minimum Highlight: 3.5%</span>
+                  <span>Prone to Haloing</span>
+                </div>
+              </div>
+
+              {/* Technical Limits */}
+              <div className="space-y-2 text-xs text-slate-600 ">
+                <div className="flex items-start gap-2">
+                  <span className="text-rose-500 font-bold shrink-0">&times;</span>
+                  <span>Dot crowns mushroom under nip pressure, shifting Pantone colors</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-rose-500 font-bold shrink-0">&times;</span>
+                  <span>Requires frequent press shutdowns for manual plate cleaning</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-rose-500 font-bold shrink-0">&times;</span>
+                  <span>Shorter plate life due to mechanical stress on thin shoulders</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-slate-200  text-[11px] font-mono text-slate-500">
+              Traditional Analog &amp; Non-Inert Digital Plates
             </div>
           </div>
 

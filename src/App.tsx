@@ -104,17 +104,17 @@ function AppContent() {
           onNavigateSection={handleNavigateSection}
         />
 
-        {/* 2. Interactive Dot Gain & German HD Flat Top Comparator */}
+        {/* 2. Services (right after Hero) */}
+        <ServicesSection onSelectServiceForQuote={handleSelectServiceForQuote} />
+
+        {/* 3. Interactive Dot Gain & German HD Flat Top Comparator */}
         <DotComparator />
 
-        {/* 3. Industries We Serve */}
+        {/* 4. Industries We Serve */}
         <IndustriesSection onSelectIndustryForQuote={handleSelectIndustryForQuote} />
 
-        {/* 4. Interactive Plate Configurator & Spec Builder */}
+        {/* 5. Interactive Plate Configurator & Spec Builder */}
         <PlateConfigurator onSelectSpec={handleSelectSpecFromConfigurator} />
-
-        {/* 5. End-to-End Capabilities & Services */}
-        <ServicesSection onSelectServiceForQuote={handleSelectServiceForQuote} />
 
         {/* 6. 6-Stage German Workflow Pipeline */}
         <WorkflowSection />

@@ -44,59 +44,68 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
           {SERVICES.map((srv) => (
             <div
               key={srv.id}
-              className="group rounded-2xl bg-white border border-slate-200 hover:border-amber-500/50 p-6 sm:p-7 transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-lg backdrop-blur-sm"
+              className="group rounded-2xl bg-white border border-slate-200 hover:border-amber-500/50 overflow-hidden transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-lg"
             >
-              <div>
-                {/* Icon & Equipment Tag */}
-                <div className="flex items-center justify-between mb-5">
-                  <div className="w-12 h-12 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:border-amber-500 transition-colors shadow-inner">
-                    {getIcon(srv.icon)}
-                  </div>
-                  <span className="text-[11px] font-mono font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full border border-slate-200">
-                    German CDI Laser
+              {/* Service Image */}
+              <div className="relative h-44 w-full overflow-hidden bg-slate-200">
+                <img
+                  src={srv.imageUrl}
+                  alt={srv.imageAlt}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-95"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
+                <div className="absolute top-3 left-3">
+                  <span className="text-[11px] font-mono font-bold bg-white/95 text-amber-700 border border-amber-500/30 px-2.5 py-1 rounded-md shadow-sm">
+                    {srv.equipment.split(',')[0]}
                   </span>
-                </div>
-
-                <h3 className="font-display font-bold text-xl text-slate-900 group-hover:text-amber-600 transition-colors mb-1.5">
-                  {srv.title}
-                </h3>
-                <p className="text-xs font-mono text-amber-600 mb-3 line-clamp-1">
-                  {srv.subtitle}
-                </p>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-5 line-clamp-3">
-                  {srv.description}
-                </p>
-
-                {/* Key Features List */}
-                <div className="space-y-2 mb-6 text-xs text-slate-700">
-                  {srv.features.slice(0, 3).map((feat, i) => (
-                    <div key={i} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                      <span className="line-clamp-1">{feat}</span>
-                    </div>
-                  ))}
                 </div>
               </div>
 
-              {/* Bottom Card Footer */}
-              <div className="pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
-                <button
-                  type="button"
-                  onClick={() => setActiveServiceModal(srv)}
-                  className="font-bold text-slate-700 hover:text-amber-600 flex items-center gap-1.5 transition-colors"
-                >
-                  <FileCheck className="w-4 h-4 text-amber-500" />
-                  <span>View Details</span>
-                </button>
+              <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 className="font-display font-bold text-xl text-slate-900 group-hover:text-amber-600 transition-colors mb-1.5">
+                    {srv.title}
+                  </h3>
+                  <p className="text-xs font-mono text-amber-600 mb-3 line-clamp-1">
+                    {srv.subtitle}
+                  </p>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 line-clamp-3">
+                    {srv.description}
+                  </p>
 
-                <button
-                  type="button"
-                  onClick={() => onSelectServiceForQuote(srv.title)}
-                  className="btn-primary text-xs py-2 px-3.5 font-bold"
-                >
-                  <span>Book Service</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
+                  {/* Key Features List */}
+                  <div className="space-y-1.5 mb-4 text-xs text-slate-700">
+                    {srv.features.slice(0, 3).map((feat, i) => (
+                      <div key={i} className="flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                        <span className="line-clamp-1">{feat}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Bottom Card Footer */}
+                <div className="pt-3 border-t border-slate-200 flex items-center justify-between text-xs">
+                  <button
+                    type="button"
+                    onClick={() => setActiveServiceModal(srv)}
+                    className="font-bold text-slate-700 hover:text-amber-600 flex items-center gap-1.5 transition-colors"
+                  >
+                    <FileCheck className="w-4 h-4 text-amber-500" />
+                    <span>View Details</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => onSelectServiceForQuote(srv.title)}
+                    className="btn-primary text-xs py-2 px-3.5 font-bold"
+                  >
+                    <span>Book Service</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
               </div>
             </div>
           ))}

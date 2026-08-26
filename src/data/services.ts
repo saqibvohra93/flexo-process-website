@@ -4,6 +4,8 @@ export interface ServiceItem {
   subtitle: string;
   description: string;
   icon: string;
+  imageUrl: string;
+  imageAlt: string;
   features: string[];
   deliverables: string[];
   equipment: string;
@@ -16,6 +18,8 @@ export const SERVICES: ServiceItem[] = [
     subtitle: 'High precision digital flexo plates for self-adhesive labels, stickers & shrink sleeves',
     description: 'Specialized flexographic plate making for narrow-web label printing presses across Pakistan. Engineered for high-clarity product labels, barcodes, cosmetic packaging, pharma labels, and multi-color print runs on paper, clear films, and metallic substrates with zero dot gain shift.',
     icon: 'Tag',
+    imageUrl: '/images/industries/labels.jpg',
+    imageAlt: "Josh's Kitchen hexagonal jar product labels with high-definition botanical color printing",
     equipment: 'German CDI Laser Imaging, High-Durometer (73-75 Shore A) Digital Photopolymer',
     features: [
       'Razor-sharp 2pt micro-typography and reverse text reproduction',
@@ -36,6 +40,8 @@ export const SERVICES: ServiceItem[] = [
     subtitle: 'Digital plates for CI and stack flexo presses on plastic films, foils & pouches',
     description: 'Superior digital flexo plates crafted for flexible packaging converters in Karachi, Lahore, and across Pakistan. Designed for central impression (CI) and stack flexo machines printing on BOPP, CPP, PET, PE barrier films, food pouches, wrappers, and multi-layer laminates with gravure-rivaling solid ink laydown.',
     icon: 'Layers',
+    imageUrl: '/images/industries/flexible-packaging.jpg',
+    imageAlt: 'High-barrier flexible packaging stand-up pouches for food, coffee, dried fruit, and snacks',
     equipment: '4,000 DPI Laser CDI Engine with HD MicroCell Surface Texturization',
     features: [
       'Eliminates pinholing and mottle on non-porous transparent and metallized films',
@@ -56,6 +62,8 @@ export const SERVICES: ServiceItem[] = [
     subtitle: 'Durable, fluting-suppressing flexo plates for corrugated boxes & sheets',
     description: 'Heavy-duty digital photopolymer plates engineered specifically for corrugated carton post-print and pre-print box manufacturing. Formulated with high elasticity to absorb fluting variation and suppress washboard effect on kraft and recycled board while delivering crisp brand logos and solid ink transfer.',
     icon: 'Box',
+    imageUrl: '/images/industries/corrugated.jpg',
+    imageAlt: 'Fort Point Beer Co kraft corrugated cardboard shipping boxes with crisp geometric printing',
     equipment: 'Large-Format Digital Laser Imager, Low-Durometer (38-45 Shore A) Photopolymer',
     features: [
       'Active washboard and fluting suppression on B, C, and E flute liners',
@@ -76,6 +84,8 @@ export const SERVICES: ServiceItem[] = [
     subtitle: 'Rugged, abrasion-resistant flexo blocks for woven polypropylene sacks',
     description: 'Specialized digital flexo plates formulated to withstand the heavy mechanical abrasion of woven polypropylene fabric. Delivers strong ink transfer, vibrant solid branding, and sharp caution text on flour bags, rice sacks, feed bags, fertilizer sacks, and reusable shopping totes.',
     icon: 'Package',
+    imageUrl: '/images/industries/pp-woven.jpg',
+    imageAlt: 'Colorful printed PP woven and non-woven reusable shopping tote bags with custom logo and sunflower print',
     equipment: 'Huaguang DR284M-II Heavy Industrial Photopolymer Processing',
     features: [
       'High-tensile elastomer resin resisting weave snagging and surface tearing',
@@ -96,6 +106,8 @@ export const SERVICES: ServiceItem[] = [
     subtitle: 'High-solid impact-resistant plates for multi-wall kraft paper & cement sacks',
     description: 'Engineered for high-volume cement, chemical, and building material packaging lines. These high-solid photopolymer plates deliver maximum ink opacity and rub-resistance on rough, porous multi-wall kraft paper and perforated valve cement sacks under continuous press pressure.',
     icon: 'Archive',
+    imageUrl: '/images/industries/cement-sacks.jpg',
+    imageAlt: 'Benchmark Perfect Mash 20kg multi-wall industrial sack bag standing on wooden pallet in warehouse',
     equipment: 'Automated UV-C De-Tack Post-Curing & Digital Laser CDI Exposure',
     features: [
       'High opacity ink transfer on heavy-absorption porous kraft sheets',
@@ -116,6 +128,8 @@ export const SERVICES: ServiceItem[] = [
     subtitle: 'High-definition plates for BOPP, CPP, OPP films & custom folding cartons',
     description: 'Precision digital plate solutions for polypropylene packaging converters printing on BOPP, CPP, OPP, thermoformed containers, and premium folding cartons. Allows converters to run delicate halftone photographic screens and solid background blocks simultaneously without press slowdowns.',
     icon: 'Sparkles',
+    imageUrl: '/images/industries/polypropylene.jpg',
+    imageAlt: 'Custom printed retail product folding cartons and mailer boxes with multi-color branding',
     equipment: 'Sub-Micron Laser Optics, Digital HD Plate Finishing Line',
     features: [
       'Uniform ink film splitting across smooth, non-porous PP films',

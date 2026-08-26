@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sliders, CheckCircle2, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Sliders, CheckCircle2, ArrowRight, ShieldCheck, ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
 import { PLATE_SPECIFICATIONS, SUBSTRATE_OPTIONS, PlateSpec } from '../data/specs';
 
 interface PlateConfiguratorProps {
@@ -7,6 +7,7 @@ interface PlateConfiguratorProps {
 }
 
 export const PlateConfigurator: React.FC<PlateConfiguratorProps> = ({ onSelectSpec }) => {
+  const [isOpen, setIsOpen] = useState(false);
   const [selectedSubstrate, setSelectedSubstrate] = useState(SUBSTRATE_OPTIONS[1].id);
   const [selectedPlate, setSelectedPlate] = useState<PlateSpec>(PLATE_SPECIFICATIONS[1]);
   const [selectedLpi, setSelectedLpi] = useState('150 LPI');
@@ -40,194 +41,227 @@ export const PlateConfigurator: React.FC<PlateConfiguratorProps> = ({ onSelectSp
   };
 
   return (
-    <section id="configurator" className="py-16 lg:py-20 bg-slate-50  border-t border-slate-200  relative overflow-hidden transition-colors duration-200">
+    <section id="configurator" className="py-16 lg:py-20 bg-slate-50 border-t border-slate-200 relative overflow-hidden">
       <div className="container-x relative z-10">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-12 text-left">
+        <div className="max-w-3xl mb-8 text-left">
           <div className="eyebrow mb-3">
             <Sliders className="w-3.5 h-3.5" />
             <span>Spec Builder</span>
           </div>
-          <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900  tracking-tight mb-3">
-            Not sure which plate <span className="text-flexo-yellow">you need?</span>
+          <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 tracking-tight mb-3">
+            Not sure which plate <span className="text-amber-600">you need?</span>
           </h2>
-          <p className="text-slate-600  text-sm leading-relaxed">
+          <p className="text-slate-600 text-sm leading-relaxed">
             Pick your substrate and press setup, we'll show you the right spec.
           </p>
         </div>
 
-        {/* Configurator Workbench */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
-          {/* Controls Form (Left Column) */}
-          <div className="lg:col-span-6 bg-white  border border-slate-200  rounded-2xl p-6 sm:p-8 backdrop-blur-md shadow-sm">
-            
-            {/* Step 1: Substrate Selection */}
-            <div className="mb-6">
-              <label className="block text-xs font-bold uppercase tracking-wider text-amber-600  mb-2.5">
-                1. Select Target Substrate &amp; Packaging Type
-              </label>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                {SUBSTRATE_OPTIONS.map((sub) => (
-                  <button
-                    key={sub.id}
-                    type="button"
-                    onClick={() => handleSubstrateChange(sub.id)}
-                    className={`text-left p-3 rounded-xl border text-xs font-medium transition-all ${
-                      selectedSubstrate === sub.id
-                        ? 'bg-amber-500/10 border-amber-500 text-slate-900 '
-                        : 'bg-slate-50  border-slate-200  text-slate-700  hover:border-slate-300  hover:text-slate-950 '
-                    }`}
-                  >
-                    <div className="font-bold mb-0.5">{sub.label}</div>
-                    <div className="text-[11px] text-slate-500 ">Rec. Thick: {sub.defaultThick}</div>
-                  </button>
-                ))}
+        {/* Collapsible Spec Builder */}
+        <div className="rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+          {/* Toggle Header */}
+          <button
+            type="button"
+            onClick={() => setIsOpen(!isOpen)}
+            className="w-full flex items-center justify-between p-5 sm:p-6 text-left hover:bg-slate-50 transition-colors"
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-600 shrink-0">
+                <HelpCircle className="w-5 h-5" />
+              </div>
+              <div>
+                <span className="font-display font-bold text-base text-slate-900 block">
+                  {isOpen ? 'Close Spec Builder' : 'Try the Spec Builder'}
+                </span>
+                <span className="text-xs text-slate-500 mt-0.5 block">
+                  {isOpen
+                    ? 'Collapse the tool when done'
+                    : 'Select your substrate, plate thickness, and screen ruling to find the ideal photopolymer formulation for your press. One click sends the spec to our prepress team.'}
+                </span>
               </div>
             </div>
+            <div className="shrink-0 text-slate-400">
+              {isOpen ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+            </div>
+          </button>
 
-            {/* Step 2: Plate Grade / Thickness */}
-            <div className="mb-6">
-              <label className="block text-xs font-bold uppercase tracking-wider text-amber-600  mb-2.5">
-                2. Choose Photopolymer Plate Thickness
-              </label>
-              <div className="space-y-2">
-                {PLATE_SPECIFICATIONS.map((plate) => (
-                  <button
-                    key={plate.id}
-                    type="button"
-                    onClick={() => setSelectedPlate(plate)}
-                    className={`w-full text-left p-3.5 rounded-xl border text-xs transition-all flex items-center justify-between ${
-                      selectedPlate.id === plate.id
-                        ? 'bg-amber-500/10  border-amber-500  text-slate-900 '
-                        : 'bg-slate-50  border-slate-200  text-slate-700  hover:border-slate-300 '
-                    }`}
-                  >
-                    <div>
-                      <span className="font-bold text-slate-900  block">{plate.name}</span>
-                      <span className="text-[11px] text-slate-500 ">
-                        {plate.hardness} &bull; Relief: {plate.reliefDepth}
-                      </span>
+          {/* Collapsible Content */}
+          {isOpen && (
+            <div className="border-t border-slate-200 p-5 sm:p-6 animate-in slide-in-from-top-2 duration-200">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                {/* Controls Form (Left Column) */}
+                <div className="lg:col-span-6">
+                  
+                  {/* Step 1: Substrate Selection */}
+                  <div className="mb-6">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-amber-600 mb-2.5">
+                      1. Select Target Substrate &amp; Packaging Type
+                    </label>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                      {SUBSTRATE_OPTIONS.map((sub) => (
+                        <button
+                          key={sub.id}
+                          type="button"
+                          onClick={() => handleSubstrateChange(sub.id)}
+                          className={`text-left p-3 rounded-xl border text-xs font-medium transition-all ${
+                            selectedSubstrate === sub.id
+                              ? 'bg-amber-500/10 border-amber-500 text-slate-900'
+                              : 'bg-slate-50 border-slate-200 text-slate-700 hover:border-slate-300 hover:text-slate-950'
+                          }`}
+                        >
+                          <div className="font-bold mb-0.5">{sub.label}</div>
+                          <div className="text-[11px] text-slate-500">Rec. Thick: {sub.defaultThick}</div>
+                        </button>
+                      ))}
                     </div>
-                    <span className="font-mono text-xs font-bold px-2.5 py-1 rounded bg-slate-100  text-amber-700  border border-slate-200 ">
-                      {plate.thickness.split('/')[0].trim()}
+                  </div>
+
+                  {/* Step 2: Plate Grade / Thickness */}
+                  <div className="mb-6">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-amber-600 mb-2.5">
+                      2. Choose Photopolymer Plate Thickness
+                    </label>
+                    <div className="space-y-2">
+                      {PLATE_SPECIFICATIONS.map((plate) => (
+                        <button
+                          key={plate.id}
+                          type="button"
+                          onClick={() => setSelectedPlate(plate)}
+                          className={`w-full text-left p-3.5 rounded-xl border text-xs transition-all flex items-center justify-between ${
+                            selectedPlate.id === plate.id
+                              ? 'bg-amber-500/10 border-amber-500 text-slate-900'
+                              : 'bg-slate-50 border-slate-200 text-slate-700 hover:border-slate-300'
+                          }`}
+                        >
+                          <div>
+                            <span className="font-bold text-slate-900 block">{plate.name}</span>
+                            <span className="text-[11px] text-slate-500">
+                              {plate.hardness} &bull; Relief: {plate.reliefDepth}
+                            </span>
+                          </div>
+                          <span className="font-mono text-xs font-bold px-2.5 py-1 rounded bg-slate-100 text-amber-700 border border-slate-200">
+                            {plate.thickness.split('/')[0].trim()}
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Step 3: Screen Ruling & Inks */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                        Screen Ruling (LPI)
+                      </label>
+                      <select
+                        value={selectedLpi}
+                        onChange={(e) => setSelectedLpi(e.target.value)}
+                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:border-amber-500 focus:outline-none"
+                      >
+                        <option value="85 LPI">85 LPI (Sacks &amp; Rough Board)</option>
+                        <option value="110 LPI">110 LPI (Standard Corrugated)</option>
+                        <option value="133 LPI">133 LPI (Standard Packaging)</option>
+                        <option value="150 LPI">150 LPI (High-Res Flexible Film)</option>
+                        <option value="175 LPI">175 LPI (HD Process Labels/Film)</option>
+                        <option value="200 LPI">200 LPI (Ultra-HD Micro-Screening)</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">
+                        Pressroom Ink System
+                      </label>
+                      <select
+                        value={selectedInk}
+                        onChange={(e) => setSelectedInk(e.target.value)}
+                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:border-amber-500 focus:outline-none"
+                      >
+                        <option value="Solvent-based Inks">Solvent-based Inks (CI Flexo)</option>
+                        <option value="UV / LED Curable Inks">UV / LED Curable (Narrow Web)</option>
+                        <option value="Water-based Inks">Water-based Inks (Corrugated/Paper)</option>
+                        <option value="Alcohol / Specialty Inks">Alcohol / Specialty (PP Woven)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                </div>
+
+                {/* Technical Spec Output Sheet (Right Column) */}
+                <div className="lg:col-span-6 bg-white border border-amber-500/30 rounded-2xl p-6 sm:p-8 shadow-lg relative">
+                  
+                  {/* Header Badge */}
+                  <div className="flex items-center justify-between pb-4 border-b border-slate-200">
+                    <div className="flex items-center gap-2 text-xs font-mono text-emerald-600">
+                      <ShieldCheck className="w-4 h-4" />
+                      <span>CERTIFIED PREPRESS CALIBRATION</span>
+                    </div>
+                    <span className="text-xs font-mono text-amber-700 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/30">
+                      GERMAN CDI PROFILE
                     </span>
-                  </button>
-                ))}
+                  </div>
+
+                  {/* Spec Title */}
+                  <div className="mt-5 mb-6">
+                    <span className="text-xs text-slate-500 uppercase tracking-widest block font-mono mb-1">
+                      Recommended Photopolymer Formula
+                    </span>
+                    <h3 className="font-display font-extrabold text-xl sm:text-2xl text-slate-900">
+                      {selectedPlate.name}
+                    </h3>
+                    <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                      {selectedPlate.description}
+                    </p>
+                  </div>
+
+                  {/* Technical Parameters Matrix */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 mb-6 text-xs font-mono">
+                    <div className="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                      <span className="text-slate-500 block text-[11px]">Plate Thickness</span>
+                      <span className="text-slate-900 font-bold text-sm">{selectedPlate.thickness}</span>
+                    </div>
+                    <div className="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                      <span className="text-slate-500 block text-[11px]">Durometer Hardness</span>
+                      <span className="text-amber-600 font-bold text-sm">{selectedPlate.hardness}</span>
+                    </div>
+                    <div className="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                      <span className="text-slate-500 block text-[11px]">Relief Floor Depth</span>
+                      <span className="text-slate-900 font-bold text-sm">{selectedPlate.reliefDepth}</span>
+                    </div>
+                    <div className="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                      <span className="text-slate-500 block text-[11px]">Target Highlight Dot</span>
+                      <span className="text-emerald-600 font-bold text-sm">{selectedPlate.minDot}</span>
+                    </div>
+                  </div>
+
+                  {/* Best Application Match */}
+                  <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 mb-6">
+                    <span className="font-bold text-slate-900 block mb-1">Ideal Industrial Applications:</span>
+                    <span>{selectedPlate.bestFor}</span>
+                  </div>
+
+                  {/* Action CTA Bridge */}
+                  <div className="pt-2 flex flex-col sm:flex-row gap-3">
+                    <button
+                      type="button"
+                      onClick={handleApplySpec}
+                      className="btn-primary w-full justify-center text-xs py-3.5"
+                    >
+                      <span>Request Quotation with This Spec</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </div>
+
+                  <div className="mt-4 text-center text-[11px] text-slate-500">
+                    Need custom cylinder distortion calculations or stepped layouts? Contact our prepress lab directly.
+                  </div>
+
+                </div>
+
               </div>
             </div>
-
-            {/* Step 3: Screen Ruling & Inks */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-700  mb-2">
-                  Screen Ruling (LPI)
-                </label>
-                <select
-                  value={selectedLpi}
-                  onChange={(e) => setSelectedLpi(e.target.value)}
-                  className="w-full bg-slate-50  border border-slate-200  rounded-xl px-3.5 py-2.5 text-xs text-slate-900  focus:border-amber-500  focus:outline-none"
-                >
-                  <option value="85 LPI">85 LPI (Sacks &amp; Rough Board)</option>
-                  <option value="110 LPI">110 LPI (Standard Corrugated)</option>
-                  <option value="133 LPI">133 LPI (Standard Packaging)</option>
-                  <option value="150 LPI">150 LPI (High-Res Flexible Film)</option>
-                  <option value="175 LPI">175 LPI (HD Process Labels/Film)</option>
-                  <option value="200 LPI">200 LPI (Ultra-HD Micro-Screening)</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-700  mb-2">
-                  Pressroom Ink System
-                </label>
-                <select
-                  value={selectedInk}
-                  onChange={(e) => setSelectedInk(e.target.value)}
-                  className="w-full bg-slate-50  border border-slate-200  rounded-xl px-3.5 py-2.5 text-xs text-slate-900  focus:border-amber-500  focus:outline-none"
-                >
-                  <option value="Solvent-based Inks">Solvent-based Inks (CI Flexo)</option>
-                  <option value="UV / LED Curable Inks">UV / LED Curable (Narrow Web)</option>
-                  <option value="Water-based Inks">Water-based Inks (Corrugated/Paper)</option>
-                  <option value="Alcohol / Specialty Inks">Alcohol / Specialty (PP Woven)</option>
-                </select>
-              </div>
-            </div>
-
-          </div>
-
-          {/* Technical Spec Output Sheet (Right Column) */}
-          <div className="lg:col-span-6 bg-white    border border-amber-500/30  rounded-2xl p-6 sm:p-8 backdrop-blur-md shadow-lg relative">
-            
-            {/* Header Badge */}
-            <div className="flex items-center justify-between pb-4 border-b border-slate-200 ">
-              <div className="flex items-center gap-2 text-xs font-mono text-emerald-600 ">
-                <ShieldCheck className="w-4 h-4" />
-                <span>CERTIFIED PREPRESS CALIBRATION</span>
-              </div>
-              <span className="text-xs font-mono text-amber-700  bg-amber-500/10  px-2 py-0.5 rounded border border-amber-500/30 ">
-                GERMAN CDI PROFILE
-              </span>
-            </div>
-
-            {/* Spec Title */}
-            <div className="mt-5 mb-6">
-              <span className="text-xs text-slate-500  uppercase tracking-widest block font-mono mb-1">
-                Recommended Photopolymer Formula
-              </span>
-              <h3 className="font-display font-extrabold text-xl sm:text-2xl text-slate-900 ">
-                {selectedPlate.name}
-              </h3>
-              <p className="text-xs text-slate-600  mt-2 leading-relaxed">
-                {selectedPlate.description}
-              </p>
-            </div>
-
-            {/* Technical Parameters Matrix */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 mb-6 text-xs font-mono">
-              <div className="p-3 rounded-xl bg-slate-50  border border-slate-200 ">
-                <span className="text-slate-500  block text-[11px]">Plate Thickness</span>
-                <span className="text-slate-900  font-bold text-sm">{selectedPlate.thickness}</span>
-              </div>
-              <div className="p-3 rounded-xl bg-slate-50  border border-slate-200 ">
-                <span className="text-slate-500  block text-[11px]">Durometer Hardness</span>
-                <span className="text-amber-600  font-bold text-sm">{selectedPlate.hardness}</span>
-              </div>
-              <div className="p-3 rounded-xl bg-slate-50  border border-slate-200 ">
-                <span className="text-slate-500  block text-[11px]">Relief Floor Depth</span>
-                <span className="text-slate-900  font-bold text-sm">{selectedPlate.reliefDepth}</span>
-              </div>
-              <div className="p-3 rounded-xl bg-slate-50  border border-slate-200 ">
-                <span className="text-slate-500  block text-[11px]">Target Highlight Dot</span>
-                <span className="text-emerald-600  font-bold text-sm">{selectedPlate.minDot}</span>
-              </div>
-            </div>
-
-            {/* Best Application Match */}
-            <div className="p-3.5 rounded-xl bg-slate-50 [0.03] border border-slate-200  text-xs text-slate-700  mb-6">
-              <span className="font-bold text-slate-900  block mb-1">Ideal Industrial Applications:</span>
-              <span>{selectedPlate.bestFor}</span>
-            </div>
-
-            {/* Action CTA Bridge */}
-            <div className="pt-2 flex flex-col sm:flex-row gap-3">
-              <button
-                type="button"
-                onClick={handleApplySpec}
-                className="btn-primary w-full justify-center text-xs py-3.5"
-              >
-                <span>Request Quotation with This Spec</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-
-            <div className="mt-4 text-center text-[11px] text-slate-500 ">
-              Need custom cylinder distortion calculations or stepped layouts? Contact our prepress lab directly.
-            </div>
-
-          </div>
-
+          )}
         </div>
 
       </div>
