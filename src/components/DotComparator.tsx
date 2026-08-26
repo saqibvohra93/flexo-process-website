@@ -5,7 +5,8 @@ export const DotComparator: React.FC = () => {
   const [activeImpression, setActiveImpression] = useState<'normal' | 'high'>('normal');
 
   return (
-    <section id="technology" className="py-16 lg:py-20 bg-navy-900/60 border-y border-white/10 relative overflow-hidden">
+    <section id="technology" className="py-16 lg:py-20 bg-navy-950/90 border-b border-white/10 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,rgba(22,41,92,0.3),transparent_70%)] pointer-events-none" />
       <div className="container-x relative z-10">
         
         {/* Section Header */}

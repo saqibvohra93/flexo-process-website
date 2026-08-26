@@ -99,6 +99,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuote, onNavigateSection }) =>
 
         </div>
       </div>
+      {/* Subtle bottom separator line for crisp transition */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />
     </section>
   );
 };
