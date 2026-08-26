@@ -163,7 +163,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenQuote }
             &copy; {currentYear} Flexo Process (Private) Limited. All rights reserved. Precision Plates. Perfect Prints.
           </div>
           <div className="flex items-center gap-6">
-            <span>Karachi &bull; Lahore &bull; Faisalabad Dispatch</span>
+            <span>Instant Dispatch for Karachi &bull; Lahore &bull; Faisalabad clients</span>
             <button onClick={() => onNavigateSection('knowledge-hub')} className="hover:text-white transition-colors">
               Knowledge Hub
             </button>
