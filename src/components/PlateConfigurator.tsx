@@ -185,7 +185,7 @@ export const PlateConfigurator: React.FC<PlateConfiguratorProps> = ({ onSelectSp
             </div>
 
             {/* Technical Parameters Matrix */}
-            <div className="grid grid-cols-2 gap-3 mb-6 text-xs font-mono">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 mb-6 text-xs font-mono">
               <div className="p-3 rounded-xl bg-navy-950/80 border border-white/10">
                 <span className="text-slate-400 block text-[11px]">Plate Thickness</span>
                 <span className="text-white font-bold text-sm">{selectedPlate.thickness}</span>

@@ -25,7 +25,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuote, onNavigateSection }) =>
               German CDI Laser Plate Technology &bull; HD Flat-Top
             </div>
 
-            <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-[3.4rem] tracking-tight text-white leading-[1.08] mb-5">
+            <h1 className="font-display font-extrabold text-3xl sm:text-5xl lg:text-[3.4rem] tracking-tight text-white leading-[1.1] mb-5">
               Precision Plates.<br />
               <span className="text-flexo-yellow">Perfect Prints.</span>
             </h1>
@@ -78,20 +78,20 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuote, onNavigateSection }) =>
               <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-950/10 to-transparent" />
 
               {/* Minimal floating spec badge */}
-              <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between bg-navy-950/90 backdrop-blur-md border border-white/10 rounded-xl px-4 py-3">
+              <div className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 flex items-center justify-between bg-navy-950/90 backdrop-blur-md border border-white/10 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 text-center sm:text-left">
                 <div>
-                  <span className="text-[11px] text-slate-400 block">Plate Thickness</span>
-                  <span className="text-sm font-bold text-white">1.14mm – 3.94mm</span>
+                  <span className="text-[10px] sm:text-[11px] text-slate-400 block">Thickness</span>
+                  <span className="text-xs sm:text-sm font-bold text-white">1.14–3.94mm</span>
                 </div>
-                <div className="w-px h-8 bg-white/10" />
+                <div className="w-px h-7 sm:h-8 bg-white/10" />
                 <div>
-                  <span className="text-[11px] text-slate-400 block">Screen Ruling</span>
-                  <span className="text-sm font-bold text-emerald-400">Up to 200 LPI</span>
+                  <span className="text-[10px] sm:text-[11px] text-slate-400 block">Screen</span>
+                  <span className="text-xs sm:text-sm font-bold text-emerald-400">Up to 200 LPI</span>
                 </div>
-                <div className="w-px h-8 bg-white/10" />
+                <div className="w-px h-7 sm:h-8 bg-white/10" />
                 <div>
-                  <span className="text-[11px] text-slate-400 block">Turnaround</span>
-                  <span className="text-sm font-bold text-emerald-400">24 Hours</span>
+                  <span className="text-[10px] sm:text-[11px] text-slate-400 block">Turnaround</span>
+                  <span className="text-xs sm:text-sm font-bold text-emerald-400">24 Hours</span>
                 </div>
               </div>
             </div>

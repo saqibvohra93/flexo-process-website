@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CheckCircle2, AlertTriangle, Sparkles, ZoomIn, ShieldCheck, ArrowRight } from 'lucide-react';
+import { CheckCircle2, AlertTriangle, Sparkles, ZoomIn, ShieldCheck, ArrowRight, Gauge } from 'lucide-react';
 
 export const DotComparator: React.FC = () => {
   const [activeImpression, setActiveImpression] = useState<'normal' | 'high'>('normal');
@@ -10,7 +10,7 @@ export const DotComparator: React.FC = () => {
       <div className="container-x relative z-10">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-12 text-left">
+        <div className="max-w-3xl mb-8 text-left">
           <div className="eyebrow mb-3">
             <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
             <span className="text-emerald-400">German CDI Technology</span>
@@ -26,7 +26,52 @@ export const DotComparator: React.FC = () => {
           </p>
         </div>
 
-        {/* Clean Side-by-Side Comparison (No drag slider, 100% clean layout) */}
+        {/* Simulate Press Impression Nip Controller (Positioned ABOVE the comparison cards) */}
+        <div className="mb-8 p-4 sm:p-5 rounded-2xl bg-navy-900/80 border border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-lg backdrop-blur-sm">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-xl bg-navy-950 border border-white/10 flex items-center justify-center text-emerald-400 shrink-0">
+              <Gauge className="w-5 h-5" />
+            </div>
+            <div>
+              <span className="text-[11px] font-mono text-slate-400 uppercase tracking-wider block">
+                Live Pressroom Simulation
+              </span>
+              <span className="text-xs sm:text-sm font-semibold text-white">
+                Cylinder Impression Nip:{' '}
+                <strong className={activeImpression === 'normal' ? 'text-emerald-400' : 'text-amber-400'}>
+                  {activeImpression === 'normal' ? 'Normal Operating Pressure (10-15 µm)' : 'Heavy Production Load (30-40 µm)'}
+                </strong>
+              </span>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 w-full sm:w-auto">
+            <button
+              type="button"
+              onClick={() => setActiveImpression('normal')}
+              className={`flex-1 sm:flex-none text-xs px-4 py-2 rounded-xl font-bold transition-all duration-200 ${
+                activeImpression === 'normal'
+                  ? 'bg-emerald-500 text-navy-950 shadow-md shadow-emerald-500/20 scale-[1.02]'
+                  : 'bg-navy-950/80 border border-white/10 text-slate-300 hover:bg-white/5 hover:text-white'
+              }`}
+            >
+              Normal Nip
+            </button>
+            <button
+              type="button"
+              onClick={() => setActiveImpression('high')}
+              className={`flex-1 sm:flex-none text-xs px-4 py-2 rounded-xl font-bold transition-all duration-200 ${
+                activeImpression === 'high'
+                  ? 'bg-amber-400 text-navy-950 shadow-md shadow-amber-400/20 scale-[1.02]'
+                  : 'bg-navy-950/80 border border-white/10 text-slate-300 hover:bg-white/5 hover:text-white'
+              }`}
+            >
+              Heavy Impression
+            </button>
+          </div>
+        </div>
+
+        {/* Clean Side-by-Side Comparison Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 items-stretch">
           
           {/* Card 1: Standard Round-Top Flexo (Defects / Issues) */}
@@ -172,39 +217,6 @@ export const DotComparator: React.FC = () => {
             </div>
           </div>
 
-        </div>
-
-        {/* Impression Nip Toggle */}
-        <div className="mt-8 p-4 rounded-xl bg-navy-950/80 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2 text-xs text-slate-300">
-            <span className="text-slate-400">Simulate Press Impression Nip:</span>
-            <span className="font-mono text-emerald-400 font-semibold">
-              {activeImpression === 'normal' ? 'Normal Operating Pressure (10-15µm)' : 'Heavy Production Load (30-40µm)'}
-            </span>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => setActiveImpression('normal')}
-              className={`text-xs px-3.5 py-1.5 rounded-lg font-semibold transition-colors ${
-                activeImpression === 'normal'
-                  ? 'bg-emerald-500 text-navy-950 font-bold'
-                  : 'bg-white/5 text-slate-300 hover:bg-white/10'
-              }`}
-            >
-              Normal Nip
-            </button>
-            <button
-              onClick={() => setActiveImpression('high')}
-              className={`text-xs px-3.5 py-1.5 rounded-lg font-semibold transition-colors ${
-                activeImpression === 'high'
-                  ? 'bg-emerald-500 text-navy-950 font-bold'
-                  : 'bg-white/5 text-slate-300 hover:bg-white/10'
-              }`}
-            >
-              Heavy Impression
-            </button>
-          </div>
         </div>
 
       </div>
