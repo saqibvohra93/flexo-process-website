@@ -3,14 +3,6 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
-}
-
-html.dark {
-  color-scheme: dark;
-}
-
-html.light {
   color-scheme: light;
 }
 
@@ -19,12 +11,8 @@ html {
 }
 
 body {
-  @apply bg-navy-950 text-white font-body antialiased transition-colors duration-200;
+  @apply bg-slate-50 text-slate-900 font-body antialiased;
   overflow-x: hidden;
-}
-
-html.light body {
-  @apply bg-slate-50 text-slate-900;
 }
 
 ::selection {
@@ -32,31 +20,17 @@ html.light body {
   color: #0a1530;
 }
 
-html.dark ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 10px;
 }
-html.dark ::-webkit-scrollbar-track {
-  background: #071228;
-}
-html.dark ::-webkit-scrollbar-thumb {
-  background: #1d3a78;
-  border-radius: 8px;
-}
-html.dark ::-webkit-scrollbar-thumb:hover {
-  background: #2b4f96;
-}
-
-html.light ::-webkit-scrollbar {
-  width: 10px;
-}
-html.light ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: #f1f5f9;
 }
-html.light ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: #cbd5e1;
   border-radius: 8px;
 }
-html.light ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
 
@@ -71,10 +45,10 @@ html.light ::-webkit-scrollbar-thumb:hover {
     @apply inline-flex items-center justify-center gap-2 rounded-lg bg-flexo-yellow px-6 py-3 text-sm font-bold text-navy-950 transition-all duration-200 hover:bg-amber-400 hover:shadow-lg active:scale-[0.98];
   }
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-white/20 dark:border-white/20 border-slate-300 px-6 py-3 text-sm font-bold text-white dark:text-white text-slate-800 transition-all duration-200 hover:border-flexo-yellow hover:text-flexo-yellow dark:hover:text-flexo-yellow active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 px-6 py-3 text-sm font-bold text-slate-800 transition-all duration-200 hover:border-flexo-yellow hover:text-flexo-yellow active:scale-[0.98];
   }
   .card-glass {
-    @apply rounded-xl border border-white/10 dark:border-white/10 border-slate-200 bg-white/[0.03] dark:bg-white/[0.03] bg-white shadow-sm;
+    @apply rounded-xl border border-slate-200 bg-white shadow-sm;
   }
 }
 
@@ -94,13 +68,6 @@ html.light ::-webkit-scrollbar-thumb:hover {
 }
 
 .grid-texture {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-  background-size: 56px 56px;
-}
-
-html.light .grid-texture {
   background-image:
     linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);

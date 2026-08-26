@@ -20,15 +20,8 @@ export function getStructuredData() {
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+92-21-32581090',
-        contactType: 'sales & technical support',
-        areaServed: 'PK',
-        availableLanguage: ['English', 'Urdu']
-      },
-      {
-        '@type': 'ContactPoint',
         telephone: '+92-300-2567114',
-        contactType: 'emergency press support',
+        contactType: 'sales & technical support',
         areaServed: 'PK',
         availableLanguage: ['English', 'Urdu']
       }
@@ -40,7 +33,7 @@ export function getStructuredData() {
     '@type': 'LocalBusiness',
     name: 'Flexo Process (Private) Limited',
     image: 'https://flexoprocess.com/favicon.svg',
-    telephone: '+92-21-32581090',
+    telephone: '+92-300-2567114',
     email: 'info@flexoprocess.com',
     url: 'https://flexoprocess.com',
     address: {

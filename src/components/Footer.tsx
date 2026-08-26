@@ -10,9 +10,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenQuote }
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-900 dark:bg-navy-950 border-t border-slate-800 dark:border-white/15 text-slate-400 text-xs transition-colors duration-200">
+    <footer className="bg-slate-900 border-t border-slate-800 text-slate-400 text-xs transition-colors duration-200">
       {/* Pre-Footer Industrial Callout Strip */}
-      <div className="bg-slate-800/80 dark:bg-gradient-to-r dark:from-navy-900 dark:via-navy-800 dark:to-navy-900 border-b border-slate-700 dark:border-white/10 py-10">
+      <div className="bg-slate-800/80 border-b border-slate-700 py-10">
         <div className="container-x flex flex-col lg:flex-row items-center justify-between gap-6 text-center lg:text-left">
           <div>
             <span className="eyebrow mb-2">Ready to Upgrade Your Print Precision?</span>
@@ -33,11 +33,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenQuote }
               <ArrowRight className="w-4 h-4" />
             </button>
             <a
-              href="tel:+922132581090"
+              href="tel:+923002567114"
               className="btn-ghost text-xs py-3 px-6 !text-white !border-white/30 hover:!border-flexo-yellow hover:!text-flexo-yellow"
             >
               <Phone className="w-4 h-4 text-emerald-400" />
-              <span>Call: 021-32581090</span>
+              <span>Call: +92-300-2567114</span>
             </a>
           </div>
         </div>
@@ -93,7 +93,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenQuote }
               </li>
               <li>
                 <button onClick={() => onNavigateSection('services')} className="hover:text-flexo-yellow transition-colors">
-                  Prepress &amp; Mounting
+                  Services
                 </button>
               </li>
               <li>
@@ -135,17 +135,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenQuote }
             </h4>
             <div className="space-y-2 text-xs">
               <p className="flex items-start gap-2 text-slate-300">
-                <MapPin className="w-4 h-4 text-amber-500 dark:text-flexo-yellow shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
                 <span>C-18 A, Estate Avenue, S.I.T.E., Karachi - 75700, Pakistan</span>
               </p>
               <p className="flex items-center gap-2 text-slate-300">
                 <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
-                <a href="tel:+922132581090" className="hover:text-white transition-colors">
-                  +92-21-32581090 / 32582090
+                <a href="tel:+923002567114" className="hover:text-white transition-colors">
+                  +92-300-2567114
                 </a>
               </p>
               <p className="flex items-center gap-2 text-slate-300">
-                <Mail className="w-4 h-4 text-amber-500 dark:text-flexo-yellow shrink-0" />
+                <Mail className="w-4 h-4 text-amber-500 shrink-0" />
                 <a href="mailto:info@flexoprocess.com" className="hover:text-white transition-colors">
                   info@flexoprocess.com
                 </a>
@@ -157,7 +157,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenQuote }
       </div>
 
       {/* Bottom Legal Bar */}
-      <div className="border-t border-slate-800 dark:border-white/10 py-6 bg-slate-950 dark:bg-navy-950/90 text-slate-400">
+      <div className="border-t border-slate-800 py-6 bg-slate-950 text-slate-400">
         <div className="container-x flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
           <div>
             &copy; {currentYear} Flexo Process (Private) Limited. All rights reserved. Precision Plates. Perfect Prints.

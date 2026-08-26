@@ -7,42 +7,42 @@ export const WorkflowSection: React.FC = () => {
       step: '01',
       title: 'Prepress & Distortion Calibration',
       desc: 'Files are normalized, trapped to 0.08-0.20mm tolerances, and adjusted for exact cylinder elongation curves.',
-      icon: <Cpu className="w-5 h-5 text-amber-500 dark:text-flexo-yellow" />
+      icon: <Cpu className="w-5 h-5 text-amber-500" />
     },
     {
       step: '02',
       title: '4,000 DPI Laser CDI Ablation',
       desc: 'High-power German multi-beam fiber lasers vaporize the black LAMS mask with 6.35-micron spot precision.',
-      icon: <Zap className="w-5 h-5 text-amber-500 dark:text-flexo-yellow" />
+      icon: <Zap className="w-5 h-5 text-amber-500" />
     },
     {
       step: '03',
       title: 'Oxygen-Free UV-A Exposure',
       desc: 'Inert exposure cross-links the photopolymer base to lock in flat-top plateau dot geometry and 70° shoulders.',
-      icon: <Sun className="w-5 h-5 text-amber-500 dark:text-flexo-yellow" />
+      icon: <Sun className="w-5 h-5 text-amber-500" />
     },
     {
       step: '04',
       title: 'Automated Solvent Washout',
       desc: 'Closed-loop oscillating brush washers remove unexposed resin, preserving sub-0.8% micro-dot pillars.',
-      icon: <Droplets className="w-5 h-5 text-amber-500 dark:text-flexo-yellow" />
+      icon: <Droplets className="w-5 h-5 text-amber-500" />
     },
     {
       step: '05',
       title: 'Drying & UV-C De-Tack Curing',
       desc: 'Multi-stage temperature-controlled drying followed by UV-C finishing to impart chemical and solvent resistance.',
-      icon: <Flame className="w-5 h-5 text-amber-500 dark:text-flexo-yellow" />
+      icon: <Flame className="w-5 h-5 text-amber-500" />
     },
     {
       step: '06',
       title: 'Digital 3D Micrometer QA',
       desc: 'Every plate is verified for relief depth, floor gauge (±0.005mm), and barcode readability before dispatch.',
-      icon: <Microscope className="w-5 h-5 text-amber-500 dark:text-flexo-yellow" />
+      icon: <Microscope className="w-5 h-5 text-amber-500" />
     }
   ];
 
   return (
-    <section className="py-16 lg:py-20 bg-white dark:bg-navy-950 border-t border-slate-200 dark:border-white/10 relative overflow-hidden transition-colors duration-200">
+    <section className="py-16 lg:py-20 bg-white border-t border-slate-200 relative overflow-hidden transition-colors duration-200">
       <div className="container-x relative z-10">
         
         {/* Header */}
@@ -51,10 +51,10 @@ export const WorkflowSection: React.FC = () => {
             <Cpu className="w-3.5 h-3.5" />
             <span>Our Process</span>
           </div>
-          <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white tracking-tight mb-3">
+          <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 tracking-tight mb-3">
             Six stages, <span className="text-flexo-yellow">zero guesswork</span>
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+          <p className="text-slate-600 text-sm leading-relaxed">
             Every plate leaving our Karachi facility runs the same calibrated process.
           </p>
         </div>
@@ -64,27 +64,27 @@ export const WorkflowSection: React.FC = () => {
           {steps.map((s, idx) => (
             <div
               key={idx}
-              className="p-6 rounded-2xl bg-slate-50 dark:bg-navy-900/60 border border-slate-200 dark:border-white/10 hover:border-amber-500/40 dark:hover:border-flexo-yellow/40 transition-all duration-300 flex flex-col justify-between group hover:bg-slate-100/80 dark:hover:bg-navy-900 shadow-sm"
+              className="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-amber-500/40 transition-all duration-300 flex flex-col justify-between group hover:bg-slate-100/80 shadow-sm"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-white dark:bg-navy-950 border border-slate-200 dark:border-white/10 flex items-center justify-center group-hover:border-amber-500 dark:group-hover:border-flexo-yellow transition-colors shadow-sm">
+                  <div className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center group-hover:border-amber-500 transition-colors shadow-sm">
                     {s.icon}
                   </div>
-                  <span className="font-mono font-extrabold text-2xl text-slate-300 dark:text-white/20 group-hover:text-amber-500 dark:group-hover:text-flexo-yellow/40 transition-colors">
+                  <span className="font-mono font-extrabold text-2xl text-slate-300 group-hover:text-amber-500 transition-colors">
                     {s.step}
                   </span>
                 </div>
 
-                <h3 className="font-display font-bold text-lg text-slate-900 dark:text-white mb-2 group-hover:text-amber-600 dark:group-hover:text-flexo-yellow transition-colors">
+                <h3 className="font-display font-bold text-lg text-slate-900 mb-2 group-hover:text-amber-600 transition-colors">
                   {s.title}
                 </h3>
-                <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p className="text-xs text-slate-600 leading-relaxed">
                   {s.desc}
                 </p>
               </div>
 
-              <div className="mt-4 pt-3 border-t border-slate-200 dark:border-white/5 flex items-center gap-1.5 text-[11px] font-mono text-slate-500 dark:text-slate-400">
+              <div className="mt-4 pt-3 border-t border-slate-200 flex items-center gap-1.5 text-[11px] font-mono text-slate-500">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
                 <span>Zero-Tolerance Precision</span>
               </div>

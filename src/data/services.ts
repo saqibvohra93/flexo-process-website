@@ -11,83 +11,123 @@ export interface ServiceItem {
 
 export const SERVICES: ServiceItem[] = [
   {
-    id: 'prepress-services',
-    title: 'Prepress & Artwork Engineering',
-    subtitle: 'High-end file normalization, trapping, distortion & color management',
-    description: 'Our expert prepress engineering team transforms raw packaging designs into press-ready flexo separations. We calculate exact cylinder distortion factors, apply intelligent choke & spread trapping, and embed custom dot gain compensation (DGC) curves calibrated to your specific press and anilox setup.',
+    id: 'label-printing',
+    title: 'Label Printing',
+    subtitle: 'High precision digital flexo plates for self-adhesive labels, stickers & shrink sleeves',
+    description: 'Specialized flexographic plate making for narrow-web label printing presses across Pakistan. Engineered for high-clarity product labels, barcodes, cosmetic packaging, pharma labels, and multi-color print runs on paper, clear films, and metallic substrates with zero dot gain shift.',
+    icon: 'Tag',
+    equipment: 'German CDI Laser Imaging, High-Durometer (73-75 Shore A) Digital Photopolymer',
+    features: [
+      'Razor-sharp 2pt micro-typography and reverse text reproduction',
+      'Flat-top microdots down to 0.8% for smooth highlight vignettes fading to zero',
+      'GS1 Grade A barcode and QR code verification compliance',
+      'Full compatibility with UV, LED, and water-based label ink systems',
+      'Fast same-day and 24-hour dispatch for urgent press runs'
+    ],
+    deliverables: [
+      'High-Definition Photopolymer Label Printing Plates (1.14mm / 1.70mm)',
+      'Prepress trapping and distortion verification report',
+      'Certified 1-bit TIFF digital proof'
+    ]
+  },
+  {
+    id: 'flexible-packaging',
+    title: 'Flexible Packaging',
+    subtitle: 'Digital plates for CI and stack flexo presses on plastic films, foils & pouches',
+    description: 'Superior digital flexo plates crafted for flexible packaging converters in Karachi, Lahore, and across Pakistan. Designed for central impression (CI) and stack flexo machines printing on BOPP, CPP, PET, PE barrier films, food pouches, wrappers, and multi-layer laminates with gravure-rivaling solid ink laydown.',
     icon: 'Layers',
-    equipment: 'German & Esko Prepress Suite, Color Proofing Spectrophotometers',
+    equipment: '4,000 DPI Laser CDI Engine with HD MicroCell Surface Texturization',
     features: [
-      'Automatic & Manual Trapping (0.05mm to 0.20mm tolerances)',
-      'Press Fingerprinting & Dynamic Tone Value Increase (TVI) Curves',
-      'Barcode Optimization & GS1 Verification Grading',
-      'Expanded Color Gamut (ECG 7-Color) Separation',
-      'Step-and-Repeat imposition with register marks and microdots'
+      'Eliminates pinholing and mottle on non-porous transparent and metallized films',
+      'Expanded Color Gamut (ECG 7-color) prepress separation optimization',
+      'High chemical resistance against ester and alcohol-based solvent inks',
+      'Dimensional stability maintained across 500,000+ meter long print runs',
+      'Fast press make-ready with minimal substrate startup waste'
     ],
     deliverables: [
-      'Certified Digital Color Proof (Contract Proof)',
-      '1-bit TIFF Laser Files with embedded screening',
-      'Pre-Flight Inspection Quality Report'
+      'HD Digital Flexible Packaging Plates (1.70mm / 1.14mm)',
+      'Custom Tone Value Increase (TVI) dynamic compensation curves',
+      'Relief depth and floor gauge quality certificate'
     ]
   },
   {
-    id: 'imaging-services',
-    title: 'CDI Laser Direct Imaging',
-    subtitle: '4,000+ DPI high-definition laser ablation for flat-top microdots',
-    description: 'Using state-of-the-art German digital laser imagers, we ablate the black mask layer of photopolymer plates with sub-micron laser precision. This direct laser technique produces razor-sharp flat-top dots that eliminate oxygen inhibition, preventing highlight dot sharpening and on-press dot gain.',
+    id: 'corrugated-cartons',
+    title: 'Corrugated Cartons',
+    subtitle: 'Durable, fluting-suppressing flexo plates for corrugated boxes & sheets',
+    description: 'Heavy-duty digital photopolymer plates engineered specifically for corrugated carton post-print and pre-print box manufacturing. Formulated with high elasticity to absorb fluting variation and suppress washboard effect on kraft and recycled board while delivering crisp brand logos and solid ink transfer.',
+    icon: 'Box',
+    equipment: 'Large-Format Digital Laser Imager, Low-Durometer (38-45 Shore A) Photopolymer',
+    features: [
+      'Active washboard and fluting suppression on B, C, and E flute liners',
+      'High elasticity preventing board crush and Box Compression Test (BCT) loss',
+      'Deep relief floor engineering preventing dirty ink buildup in non-image areas',
+      'Optimized for high-speed automated carton printing and slotting lines',
+      'Resistant to mechanical edge chipping on abrasive kraft paper'
+    ],
+    deliverables: [
+      'Heavy-Duty Corrugated Flexo Plates (2.54mm / 2.84mm / 3.94mm)',
+      'Cylinder distortion and step-and-repeat imposition proofs',
+      'Mounting reference marks and registration microdots'
+    ]
+  },
+  {
+    id: 'pp-woven-bags',
+    title: 'PP Woven Bags',
+    subtitle: 'Rugged, abrasion-resistant flexo blocks for woven polypropylene sacks',
+    description: 'Specialized digital flexo plates formulated to withstand the heavy mechanical abrasion of woven polypropylene fabric. Delivers strong ink transfer, vibrant solid branding, and sharp caution text on flour bags, rice sacks, feed bags, fertilizer sacks, and reusable shopping totes.',
+    icon: 'Package',
+    equipment: 'Huaguang DR284M-II Heavy Industrial Photopolymer Processing',
+    features: [
+      'High-tensile elastomer resin resisting weave snagging and surface tearing',
+      'Superior ink laydown on treated and untreated rough PP tape surfaces',
+      'Steep 70-degree shoulder walls preventing ink bridging in small text and barcodes',
+      'Compatible with high-viscosity alcohol, solvent, and water-based sack inks',
+      'Long mechanical run life exceeding 250,000 bags per plate set'
+    ],
+    deliverables: [
+      'Huaguang DR284M-II Industrial Flexo Plates (2.84mm / 0.112")',
+      'Digital floor thickness verification log (±0.005mm)',
+      'Prepress barcode optimization for woven substrates'
+    ]
+  },
+  {
+    id: 'cement-bags',
+    title: 'Cement Bags',
+    subtitle: 'High-solid impact-resistant plates for multi-wall kraft paper & cement sacks',
+    description: 'Engineered for high-volume cement, chemical, and building material packaging lines. These high-solid photopolymer plates deliver maximum ink opacity and rub-resistance on rough, porous multi-wall kraft paper and perforated valve cement sacks under continuous press pressure.',
+    icon: 'Archive',
+    equipment: 'Automated UV-C De-Tack Post-Curing & Digital Laser CDI Exposure',
+    features: [
+      'High opacity ink transfer on heavy-absorption porous kraft sheets',
+      'Exceptional plate durability on continuous web sack-making machinery',
+      'Sharp reproduction of regulatory hazard symbols, batch codes, and logos',
+      'Resistant to press friction heat and industrial solvent washes',
+      'Precision relief depth preventing ink flooding in small compliance text'
+    ],
+    deliverables: [
+      'Heavy-Duty Multi-Wall Sack Plates (2.84mm / 3.94mm)',
+      'Relief depth and floor uniformity certificate',
+      'Prepress step-and-repeat layout for continuous sack formers'
+    ]
+  },
+  {
+    id: 'polypropylene-packaging',
+    title: 'Polypropylene Packaging',
+    subtitle: 'High-definition plates for BOPP, CPP, OPP films & custom folding cartons',
+    description: 'Precision digital plate solutions for polypropylene packaging converters printing on BOPP, CPP, OPP, thermoformed containers, and premium folding cartons. Allows converters to run delicate halftone photographic screens and solid background blocks simultaneously without press slowdowns.',
     icon: 'Sparkles',
-    equipment: 'High-Power Multi-Beam CDI Laser Imagers with HD MicroCell Screening',
+    equipment: 'Sub-Micron Laser Optics, Digital HD Plate Finishing Line',
     features: [
-      'High-Resolution 4,000 DPI Laser Ablation Engine',
-      'Flat-Top Dot Photopolymer Exposure Technology',
-      'Surface Micro-Cell Screening (Solid Screening for higher ink density)',
-      'Sub-0.8% Highlight Dot Retention down to 0% fade',
-      'Consistent plate-to-plate repeatability with digital calibration'
+      'Uniform ink film splitting across smooth, non-porous PP films',
+      'Minimized dot bridging in critical midtone tonal ranges (40% to 60%)',
+      'High resistance against plasticizer migration from film additives',
+      'Rapid run-in time with minimal make-ready substrate waste',
+      'Excellent register accuracy for high-speed multi-color jobs'
     ],
     deliverables: [
-      'High-Definition Photopolymer Printing Plates',
-      'Relief Depth & Floor Thickness Inspection Certificate',
-      'Digital 3D Micrometer Quality Assurance Log'
-    ]
-  },
-  {
-    id: 'plate-mounting',
-    title: 'Precision Plate Mounting & Proofing',
-    subtitle: 'Micron-accurate camera-guided mounting for zero make-ready downtime',
-    description: 'Misregistered plates cause up to 40% of pressroom make-ready waste. We provide camera-guided precision plate mounting on cylinders and sleeves using high-tack, dual-density cushion tapes. Every plate is verified under high-magnification split optics for perfect alignment before leaving our Karachi facility.',
-    icon: 'Maximize2',
-    equipment: 'High-Definition Dual Video Micro-Mounting Stations with Laser Alignment',
-    features: [
-      'Optical Dual-Camera Crosshair Registration (±15 micron accuracy)',
-      'Cushion Tape Density Matching (Soft for screens, Firm for solids)',
-      'Eliminates on-press plate shifting and tape bubbling',
-      'Sleeve and Cylinder mounting services for all press formats',
-      'Edge sealing protection against solvent and ink wash penetration'
-    ],
-    deliverables: [
-      'Mounted Cylinder/Sleeve ready for instant press drop-in',
-      'Registration Verification Video Proof',
-      'Tape Tension & Bond Certificate'
-    ]
-  },
-  {
-    id: 'technical-support',
-    title: 'On-Press Technical Support & Fingerprinting',
-    subtitle: 'Hands-on print troubleshooting, anilox audits & pressroom training',
-    description: 'We do not just manufacture plates, we partner with your press operators to maximize print yields and eliminate defects. Our senior flexographic engineers offer on-site press fingerprinting, anilox cell volume audits, ink viscosity calibration, and comprehensive pressroom troubleshooting across Pakistan.',
-    icon: 'Headphones',
-    equipment: 'X-Rite SpectroEye, Digital Plate Scopes, Anilox Micro-Volume Scanners',
-    features: [
-      'Full On-Site Press Fingerprinting & Calibration Runs',
-      'Anilox-to-Plate Compatibility & Ink Transfer Optimization',
-      'Troubleshooting: Pinholing, Haloing, Gear Streaks & Dot Bridging',
-      'Press Operator Training on Plate Handling & Maintenance',
-      'Dedicated 24/7 Hotline for urgent production breakdowns'
-    ],
-    deliverables: [
-      'Customized Press Fingerprint Curves & ICC Profiles',
-      'Comprehensive Press Audit Diagnostic Report',
-      'Standard Operating Procedure (SOP) Plate Care Manual'
+      'HD Digital Polypropylene Packaging Plates (1.14mm / 1.70mm)',
+      'Digital color separation proofs',
+      'Pressroom fingerprinting and calibration data'
     ]
   }
 ];

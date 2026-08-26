@@ -89,7 +89,7 @@ function AppContent() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-navy-950 text-slate-900 dark:text-white font-body selection:bg-flexo-yellow selection:text-navy-950 flex flex-col transition-colors duration-200">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-body selection:bg-flexo-yellow selection:text-navy-950 flex flex-col">
       {/* Top Navigation */}
       <Navbar
         onOpenQuote={() => handleOpenQuote()}
