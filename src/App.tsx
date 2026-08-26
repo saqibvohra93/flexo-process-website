@@ -106,11 +106,11 @@ export function App() {
         {/* 2. Interactive Dot Gain & German HD Flat Top Comparator */}
         <DotComparator />
 
-        {/* 3. Interactive Plate Configurator & RFQ Builder */}
-        <PlateConfigurator onSelectSpec={handleSelectSpecFromConfigurator} />
-
-        {/* 4. Industries We Serve */}
+        {/* 3. Industries We Serve */}
         <IndustriesSection onSelectIndustryForQuote={handleSelectIndustryForQuote} />
+
+        {/* 4. Interactive Plate Configurator & Spec Builder */}
+        <PlateConfigurator onSelectSpec={handleSelectSpecFromConfigurator} />
 
         {/* 5. End-to-End Capabilities & Services */}
         <ServicesSection onSelectServiceForQuote={handleSelectServiceForQuote} />

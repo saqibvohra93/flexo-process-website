@@ -87,13 +87,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenQuote }
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigateSection('services')} className="hover:text-flexo-yellow transition-colors">
-                  Prepress &amp; Mounting
+                <button onClick={() => onNavigateSection('configurator')} className="hover:text-flexo-yellow transition-colors">
+                  Spec Builder / Configurator
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigateSection('configurator')} className="hover:text-flexo-yellow transition-colors">
-                  Plate Configurator
+                <button onClick={() => onNavigateSection('services')} className="hover:text-flexo-yellow transition-colors">
+                  Prepress &amp; Mounting
                 </button>
               </li>
               <li>
