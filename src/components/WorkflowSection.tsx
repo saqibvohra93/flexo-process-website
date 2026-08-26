@@ -7,37 +7,43 @@ export const WorkflowSection: React.FC = () => {
       step: '01',
       title: 'Prepress & Distortion Calibration',
       desc: 'Files are normalized, trapped to 0.08-0.20mm tolerances, and adjusted for exact cylinder elongation curves.',
-      icon: <Cpu className="w-5 h-5 text-amber-500" />
+      icon: <Cpu className="w-5 h-5 text-amber-500" />,
+      tagline: 'Precision file preparation'
     },
     {
       step: '02',
       title: '4,000 DPI Laser CDI Ablation',
       desc: 'High-power German multi-beam fiber lasers vaporize the black LAMS mask with 6.35-micron spot precision.',
-      icon: <Zap className="w-5 h-5 text-amber-500" />
+      icon: <Zap className="w-5 h-5 text-amber-500" />,
+      tagline: 'Sub-micron laser accuracy'
     },
     {
       step: '03',
       title: 'Oxygen-Free UV-A Exposure',
       desc: 'Inert exposure cross-links the photopolymer base to lock in flat-top plateau dot geometry and 70° shoulders.',
-      icon: <Sun className="w-5 h-5 text-amber-500" />
+      icon: <Sun className="w-5 h-5 text-amber-500" />,
+      tagline: 'Flat-top dot formation'
     },
     {
       step: '04',
       title: 'Automated Solvent Washout',
       desc: 'Closed-loop oscillating brush washers remove unexposed resin, preserving sub-0.8% micro-dot pillars.',
-      icon: <Droplets className="w-5 h-5 text-amber-500" />
+      icon: <Droplets className="w-5 h-5 text-amber-500" />,
+      tagline: 'Clean dot relief development'
     },
     {
       step: '05',
       title: 'Drying & UV-C De-Tack Curing',
       desc: 'Multi-stage temperature-controlled drying followed by UV-C finishing to impart chemical and solvent resistance.',
-      icon: <Flame className="w-5 h-5 text-amber-500" />
+      icon: <Flame className="w-5 h-5 text-amber-500" />,
+      tagline: 'Chemical resistance curing'
     },
     {
       step: '06',
       title: 'Digital 3D Micrometer QA',
       desc: 'Every plate is verified for relief depth, floor gauge (±0.005mm), and barcode readability before dispatch.',
-      icon: <Microscope className="w-5 h-5 text-amber-500" />
+      icon: <Microscope className="w-5 h-5 text-amber-500" />,
+      tagline: '100% digital quality check'
     }
   ];
 
@@ -86,7 +92,7 @@ export const WorkflowSection: React.FC = () => {
 
               <div className="mt-4 pt-3 border-t border-slate-200 flex items-center gap-1.5 text-[11px] font-mono text-slate-500">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
-                <span>Zero-Tolerance Precision</span>
+                <span>{s.tagline}</span>
               </div>
             </div>
           ))}
