@@ -18,6 +18,12 @@ export const ArticlesHub: React.FC<ArticlesHubProps> = ({ onOpenQuoteWithTopic }
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
+  // Mouse drag-to-scroll states
+  const isDraggingRef = useRef(false);
+  const startXRef = useRef(0);
+  const scrollLeftRef = useRef(0);
+  const hasDraggedRef = useRef(false);
+
   const filteredArticles = ARTICLES.filter((art) => {
     const matchesCategory = selectedCategory === 'All' || art.category === selectedCategory;
     const matchesSearch =
@@ -52,20 +58,51 @@ export const ArticlesHub: React.FC<ArticlesHubProps> = ({ onOpenQuoteWithTopic }
     }
   };
 
+  // Mouse drag handlers
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!carouselRef.current) return;
+    isDraggingRef.current = true;
+    hasDraggedRef.current = false;
+    startXRef.current = e.pageX - carouselRef.current.offsetLeft;
+    scrollLeftRef.current = carouselRef.current.scrollLeft;
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDraggingRef.current || !carouselRef.current) return;
+    const x = e.pageX - carouselRef.current.offsetLeft;
+    const walk = (x - startXRef.current) * 1.5; // Drag sensitivity
+    if (Math.abs(walk) > 5) {
+      hasDraggedRef.current = true;
+    }
+    carouselRef.current.scrollLeft = scrollLeftRef.current - walk;
+    checkScrollability();
+  };
+
+  const handleMouseUpOrLeave = () => {
+    isDraggingRef.current = false;
+  };
+
   const ArticleCard = ({ art, isCarousel = false }: { art: ArticleItem; isCarousel?: boolean }) => (
-    <article className={`group rounded-xl bg-white dark:bg-navy-900/60 border border-slate-200 dark:border-white/10 hover:border-amber-500/40 dark:hover:border-flexo-yellow/40 overflow-hidden flex flex-col justify-between transition-colors duration-200 shadow-sm ${
-      isCarousel ? 'w-[85vw] sm:w-[320px] md:w-[340px] flex-shrink-0 snap-start' : 'w-full'
-    }`}>
+    <article
+      onClick={() => {
+        if (!hasDraggedRef.current) {
+          setActiveArticle(art);
+        }
+      }}
+      className={`group rounded-xl bg-white dark:bg-navy-900/60 border border-slate-200 dark:border-white/10 hover:border-amber-500/40 dark:hover:border-flexo-yellow/40 overflow-hidden flex flex-col justify-between transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer select-none ${
+        isCarousel ? 'w-[85vw] sm:w-[320px] md:w-[340px] flex-shrink-0 snap-start' : 'w-full'
+      }`}
+    >
       <div className="relative h-44 w-full overflow-hidden bg-slate-200 dark:bg-navy-950">
         <img
           src={art.imageUrl}
           alt={`${art.title} - Flexo Process Technical Guide`}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-95 dark:opacity-80 group-hover:opacity-100"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-95 dark:opacity-80 group-hover:opacity-100 pointer-events-none"
           loading="lazy"
           decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 dark:from-navy-950 dark:via-navy-950/30 to-transparent" />
-        <div className="absolute top-3 left-3">
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 dark:from-navy-950 dark:via-navy-950/30 to-transparent pointer-events-none" />
+        <div className="absolute top-3 left-3 pointer-events-none">
           <span className="text-[10px] font-semibold bg-white/95 dark:bg-navy-950/90 text-slate-900 dark:text-flexo-yellow border border-slate-200 dark:border-flexo-yellow/25 px-2.5 py-0.5 rounded-md shadow-sm">
             {art.category}
           </span>
@@ -95,7 +132,11 @@ export const ArticlesHub: React.FC<ArticlesHubProps> = ({ onOpenQuoteWithTopic }
             {art.author}
           </span>
           <button
-            onClick={() => setActiveArticle(art)}
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              setActiveArticle(art);
+            }}
             className="text-xs font-bold text-amber-600 dark:text-flexo-yellow flex items-center gap-1 hover:underline"
           >
             <span>Read Guide</span>
@@ -110,7 +151,7 @@ export const ArticlesHub: React.FC<ArticlesHubProps> = ({ onOpenQuoteWithTopic }
     <section id="knowledge-hub" className="py-16 lg:py-20 bg-slate-50 dark:bg-navy-950 border-t border-slate-200 dark:border-white/10 relative transition-colors duration-200">
       <div className="container-x relative z-10">
 
-        {/* Section Header with Left / Right Scroll Controls */}
+        {/* Section Header with View Mode Switcher */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-8">
           <div className="max-w-xl">
             <div className="eyebrow mb-3">
@@ -125,43 +166,10 @@ export const ArticlesHub: React.FC<ArticlesHubProps> = ({ onOpenQuoteWithTopic }
             </p>
           </div>
 
-          {/* Action Tools: Left/Right Arrow Carousel Buttons + Grid Switcher */}
           <div className="flex items-center gap-3 shrink-0 self-start sm:self-auto">
-            {viewMode === 'carousel' && (
-              <div className="flex items-center gap-2 bg-white dark:bg-navy-900/90 border border-slate-200 dark:border-white/10 rounded-xl p-1 shadow-sm">
-                <button
-                  type="button"
-                  onClick={() => handleScroll('left')}
-                  disabled={!canScrollLeft}
-                  className={`p-2 rounded-lg transition-colors ${
-                    canScrollLeft
-                      ? 'bg-slate-100 dark:bg-navy-950 text-slate-800 dark:text-white hover:text-amber-600 dark:hover:text-flexo-yellow hover:bg-slate-200 dark:hover:bg-white/5 border border-slate-200 dark:border-white/10'
-                      : 'text-slate-400 dark:text-slate-600 cursor-not-allowed opacity-40'
-                  }`}
-                  aria-label="Scroll left"
-                >
-                  <ChevronLeft className="w-4 h-4" />
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => handleScroll('right')}
-                  disabled={!canScrollRight}
-                  className={`p-2 rounded-lg transition-colors ${
-                    canScrollRight
-                      ? 'bg-slate-100 dark:bg-navy-950 text-slate-800 dark:text-white hover:text-amber-600 dark:hover:text-flexo-yellow hover:bg-slate-200 dark:hover:bg-white/5 border border-slate-200 dark:border-white/10'
-                      : 'text-slate-400 dark:text-slate-600 cursor-not-allowed opacity-40'
-                  }`}
-                  aria-label="Scroll right"
-                >
-                  <ChevronRight className="w-4 h-4" />
-                </button>
-              </div>
-            )}
-
             <button
               onClick={() => setViewMode(viewMode === 'carousel' ? 'grid' : 'carousel')}
-              className="btn-ghost text-xs py-2 px-4 flex items-center gap-2"
+              className="btn-ghost text-xs py-2 px-4 flex items-center gap-2 shadow-sm"
             >
               <LayoutGrid className="w-3.5 h-3.5 text-amber-500 dark:text-flexo-yellow" />
               <span>{viewMode === 'carousel' ? `View All Grid (${filteredArticles.length})` : 'Carousel View'}</span>
@@ -199,13 +207,42 @@ export const ArticlesHub: React.FC<ArticlesHubProps> = ({ onOpenQuoteWithTopic }
           </div>
         </div>
 
-        {/* CAROUSEL VIEW (Horizontal Scroll with Left & Right Buttons) */}
+        {/* CAROUSEL VIEW (Side-mounted floating Left & Right Navigation Buttons + Touch/Mouse Drag Scroll) */}
         {viewMode === 'carousel' ? (
-          <div className="relative group">
+          <div className="relative">
+            {/* Left Side Floating Arrow Button */}
+            {canScrollLeft && (
+              <button
+                type="button"
+                onClick={() => handleScroll('left')}
+                className="absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white dark:bg-navy-900 text-slate-900 dark:text-white border border-slate-200 dark:border-white/20 shadow-xl flex items-center justify-center hover:scale-110 hover:text-amber-600 dark:hover:text-flexo-yellow hover:border-amber-500/50 transition-all duration-200"
+                aria-label="Scroll left"
+              >
+                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+              </button>
+            )}
+
+            {/* Right Side Floating Arrow Button */}
+            {canScrollRight && (
+              <button
+                type="button"
+                onClick={() => handleScroll('right')}
+                className="absolute -right-3 sm:-right-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white dark:bg-navy-900 text-slate-900 dark:text-white border border-slate-200 dark:border-white/20 shadow-xl flex items-center justify-center hover:scale-110 hover:text-amber-600 dark:hover:text-flexo-yellow hover:border-amber-500/50 transition-all duration-200"
+                aria-label="Scroll right"
+              >
+                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+              </button>
+            )}
+
+            {/* Horizontal Scroll Track (Mouse drag + Touch swipe + Keyboard arrow keys) */}
             <div
               ref={carouselRef}
               onScroll={checkScrollability}
-              className="flex gap-5 overflow-x-auto pb-4 pt-1 scroll-smooth snap-x snap-mandatory scrollbar-none"
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUpOrLeave}
+              onMouseLeave={handleMouseUpOrLeave}
+              className="flex gap-5 overflow-x-auto pb-4 pt-1 scroll-smooth snap-x snap-mandatory scrollbar-none cursor-grab active:cursor-grabbing px-1"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {filteredArticles.map((art) => (
@@ -213,12 +250,10 @@ export const ArticlesHub: React.FC<ArticlesHubProps> = ({ onOpenQuoteWithTopic }
               ))}
             </div>
 
-            {/* Subtle mobile gesture indicator */}
-            <div className="flex items-center justify-between text-[11px] text-slate-500 mt-2 px-1">
-              <span>Scroll or swipe to explore all {filteredArticles.length} guides</span>
-              <span className="hidden sm:inline-flex items-center gap-1 font-mono text-slate-400">
-                Use <kbd className="px-1.5 py-0.5 rounded bg-slate-200 dark:bg-white/5 border border-slate-300 dark:border-white/10 text-xs">&larr;</kbd> <kbd className="px-1.5 py-0.5 rounded bg-slate-200 dark:bg-white/5 border border-slate-300 dark:border-white/10 text-xs">&rarr;</kbd> arrows above
-              </span>
+            {/* Clean bottom guidance */}
+            <div className="flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 mt-2 px-1">
+              <span>Swipe, click &amp; drag, or use side arrows to browse all {filteredArticles.length} guides</span>
+              <span>Showing {filteredArticles.length} articles</span>
             </div>
           </div>
         ) : (
