@@ -8,11 +8,12 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenQuote, onNavigateSection }) => {
   return (
-    <section id="overview" className="relative pt-28 pb-16 lg:pt-36 lg:pb-20 overflow-hidden bg-gradient-to-b from-navy-900/60 via-navy-950 to-navy-950">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(45,79,158,0.22),transparent)] pointer-events-none" />
+    <section id="overview" className="relative pt-28 pb-16 lg:pt-36 lg:pb-20 overflow-hidden bg-gradient-to-b from-navy-800/70 via-navy-900/50 to-navy-950">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_90%_at_50%_-10%,rgba(45,79,158,0.35),transparent_80%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_70%_at_20%_40%,rgba(22,41,92,0.4),transparent)] pointer-events-none" />
       <div className="absolute inset-0 grid-texture opacity-15 pointer-events-none" />
-      <div className="absolute top-1/4 -right-32 w-96 h-96 bg-flexo-yellow/[0.06] rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute top-1/3 -left-32 w-80 h-80 bg-navy-600/[0.15] rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/4 -right-32 w-96 h-96 bg-flexo-yellow/[0.08] rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 -left-32 w-96 h-96 bg-navy-600/[0.25] rounded-full blur-[140px] pointer-events-none" />
 
       <div className="container-x relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
