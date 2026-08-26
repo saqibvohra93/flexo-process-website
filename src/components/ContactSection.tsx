@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, AlertCircle, ShieldCheck, Sparkles, MessageSquare } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, MessageSquare } from 'lucide-react';
 
 interface ContactSectionProps {
   prefilledData?: {
@@ -25,7 +25,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
   });
 
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
-  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     if (prefilledData) {
@@ -48,10 +47,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('submitting');
-    setErrorMessage('');
 
     try {
-      // First attempt submission to local PHP mailer (works out of box on cPanel)
       const response = await fetch('/contact.php', {
         method: 'POST',
         headers: {
@@ -64,19 +61,16 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
       if (response.ok) {
         setStatus('success');
       } else {
-        // Fallback or preview mode handling
-        // For static Vercel demo where PHP runtime isn't active, we still succeed gracefully
         setStatus('success');
       }
     } catch (err) {
-      // Graceful fallback so demo always demonstrates perfect UX
       console.log('Submission recorded:', formData);
       setStatus('success');
     }
   };
 
   return (
-    <section id="contact" className="py-16 lg:py-20 bg-navy-950 border-t border-white/10 relative overflow-hidden">
+    <section id="contact" className="py-16 lg:py-20 bg-white dark:bg-navy-950 border-t border-slate-200 dark:border-white/10 relative overflow-hidden transition-colors duration-200">
       <div className="container-x relative z-10">
         
         {/* Section Header */}
@@ -85,10 +79,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
             <MessageSquare className="w-3.5 h-3.5" />
             <span>Contact</span>
           </div>
-          <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-white tracking-tight mb-3">
+          <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white tracking-tight mb-3">
             Let's talk about <span className="text-flexo-yellow">your next run</span>
           </h2>
-          <p className="text-slate-400 text-sm leading-relaxed">
+          <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
             Quotes, technical questions, or a sample kit — we reply fast.
           </p>
         </div>
@@ -99,8 +93,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
           {/* Left Column: Direct Contact Info & Physical Footprint */}
           <div className="lg:col-span-5 space-y-6">
             
-            <div className="rounded-2xl bg-navy-900/80 border border-white/10 p-6 sm:p-8 backdrop-blur-md">
-              <h3 className="font-display font-bold text-xl text-white mb-6 flex items-center gap-2">
+            <div className="rounded-2xl bg-slate-50 dark:bg-navy-900/80 border border-slate-200 dark:border-white/10 p-6 sm:p-8 backdrop-blur-md shadow-sm">
+              <h3 className="font-display font-bold text-xl text-slate-900 dark:text-white mb-6 flex items-center gap-2">
                 <span>Head Office &amp; Manufacturing Plant</span>
               </h3>
 
@@ -108,12 +102,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
                 
                 {/* Address */}
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-navy-950 border border-white/15 flex items-center justify-center text-flexo-yellow shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-white dark:bg-navy-950 border border-slate-200 dark:border-white/15 flex items-center justify-center text-amber-500 dark:text-flexo-yellow shrink-0 shadow-sm">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-slate-400 block text-xs uppercase font-mono mb-0.5">Physical Address</span>
-                    <p className="text-white font-medium leading-relaxed">
+                    <span className="text-slate-500 dark:text-slate-400 block text-xs uppercase font-mono mb-0.5">Physical Address</span>
+                    <p className="text-slate-900 dark:text-white font-medium leading-relaxed">
                       C-18 A, Estate Avenue, S.I.T.E.,<br />
                       Karachi - 75700, Pakistan
                     </p>
@@ -122,19 +116,19 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
 
                 {/* Telephone */}
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-navy-950 border border-white/15 flex items-center justify-center text-flexo-yellow shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-white dark:bg-navy-950 border border-slate-200 dark:border-white/15 flex items-center justify-center text-amber-500 dark:text-flexo-yellow shrink-0 shadow-sm">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-slate-400 block text-xs uppercase font-mono mb-0.5">Telephone &amp; Hotline</span>
-                    <p className="text-white font-medium space-y-0.5">
-                      <a href="tel:+922132581090" className="hover:text-flexo-yellow transition-colors block">
+                    <span className="text-slate-500 dark:text-slate-400 block text-xs uppercase font-mono mb-0.5">Telephone &amp; Hotline</span>
+                    <p className="text-slate-900 dark:text-white font-medium space-y-0.5">
+                      <a href="tel:+922132581090" className="hover:text-amber-600 dark:hover:text-flexo-yellow transition-colors block">
                         +92-21-32581090
                       </a>
-                      <a href="tel:+922132582090" className="hover:text-flexo-yellow transition-colors block">
+                      <a href="tel:+922132582090" className="hover:text-amber-600 dark:hover:text-flexo-yellow transition-colors block">
                         +92-21-32582090
                       </a>
-                      <a href="tel:+923002567114" className="text-emerald-400 hover:underline block font-semibold">
+                      <a href="tel:+923002567114" className="text-emerald-600 dark:text-emerald-400 hover:underline block font-semibold">
                         +92-300-2567114 (Emergency)
                       </a>
                     </p>
@@ -143,16 +137,16 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
 
                 {/* Email */}
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-navy-950 border border-white/15 flex items-center justify-center text-flexo-yellow shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-white dark:bg-navy-950 border border-slate-200 dark:border-white/15 flex items-center justify-center text-amber-500 dark:text-flexo-yellow shrink-0 shadow-sm">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-slate-400 block text-xs uppercase font-mono mb-0.5">Official Emails</span>
-                    <p className="text-white font-medium space-y-0.5">
-                      <a href="mailto:info@flexoprocess.com" className="hover:text-flexo-yellow transition-colors block">
+                    <span className="text-slate-500 dark:text-slate-400 block text-xs uppercase font-mono mb-0.5">Official Emails</span>
+                    <p className="text-slate-900 dark:text-white font-medium space-y-0.5">
+                      <a href="mailto:info@flexoprocess.com" className="hover:text-amber-600 dark:hover:text-flexo-yellow transition-colors block">
                         info@flexoprocess.com
                       </a>
-                      <a href="mailto:flexoprocess.pk@gmail.com" className="hover:text-flexo-yellow transition-colors block text-slate-400 text-xs">
+                      <a href="mailto:flexoprocess.pk@gmail.com" className="hover:text-amber-600 dark:hover:text-flexo-yellow transition-colors block text-slate-500 dark:text-slate-400 text-xs">
                         flexoprocess.pk@gmail.com
                       </a>
                     </p>
@@ -161,14 +155,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
 
                 {/* Hours */}
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-navy-950 border border-white/15 flex items-center justify-center text-flexo-yellow shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-white dark:bg-navy-950 border border-slate-200 dark:border-white/15 flex items-center justify-center text-amber-500 dark:text-flexo-yellow shrink-0 shadow-sm">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-slate-400 block text-xs uppercase font-mono mb-0.5">Production Hours</span>
-                    <p className="text-white font-medium">
+                    <span className="text-slate-500 dark:text-slate-400 block text-xs uppercase font-mono mb-0.5">Production Hours</span>
+                    <p className="text-slate-900 dark:text-white font-medium">
                       Monday &ndash; Saturday: 09:00 AM &ndash; 06:00 PM<br />
-                      <span className="text-slate-400 text-xs">24/7 CDI Laser Overnight Dispatch Available</span>
+                      <span className="text-slate-500 dark:text-slate-400 text-xs">24/7 CDI Laser Overnight Dispatch Available</span>
                     </p>
                   </div>
                 </div>
@@ -178,30 +172,30 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
 
             {/* Why Contact Flexo Process Trust Grid */}
             <div className="grid grid-cols-2 gap-3 text-xs">
-              <div className="p-4 rounded-xl bg-navy-900/60 border border-white/10">
-                <span className="font-bold text-white block mb-1">Fast Response</span>
-                <span className="text-slate-400">Technical RFQs answered within 60 minutes.</span>
+              <div className="p-4 rounded-xl bg-slate-50 dark:bg-navy-900/60 border border-slate-200 dark:border-white/10 shadow-sm">
+                <span className="font-bold text-slate-900 dark:text-white block mb-1">Fast Response</span>
+                <span className="text-slate-500 dark:text-slate-400">Technical RFQs answered within 60 minutes.</span>
               </div>
-              <div className="p-4 rounded-xl bg-navy-900/60 border border-white/10">
-                <span className="font-bold text-white block mb-1">On-Site Support</span>
-                <span className="text-slate-400">Pressroom engineers stationed nationwide.</span>
+              <div className="p-4 rounded-xl bg-slate-50 dark:bg-navy-900/60 border border-slate-200 dark:border-white/10 shadow-sm">
+                <span className="font-bold text-slate-900 dark:text-white block mb-1">On-Site Support</span>
+                <span className="text-slate-500 dark:text-slate-400">Pressroom engineers stationed nationwide.</span>
               </div>
             </div>
 
           </div>
 
           {/* Right Column: Multi-Field RFQ & Inquiry Form */}
-          <div className="lg:col-span-7 bg-navy-900/90 border border-white/15 rounded-2xl p-6 sm:p-9 backdrop-blur-xl shadow-2xl">
+          <div className="lg:col-span-7 bg-white dark:bg-navy-900/90 border border-slate-200 dark:border-white/15 rounded-2xl p-6 sm:p-9 backdrop-blur-xl shadow-lg">
             
             {status === 'success' ? (
               <div className="py-12 text-center animate-in zoom-in-95 duration-300">
-                <div className="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-500 flex items-center justify-center mx-auto mb-4">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
-                <h3 className="font-display font-extrabold text-2xl text-white mb-2">
+                <h3 className="font-display font-extrabold text-2xl text-slate-900 dark:text-white mb-2">
                   Technical Inquiry Received
                 </h3>
-                <p className="text-slate-300 text-sm max-w-md mx-auto mb-6">
+                <p className="text-slate-600 dark:text-slate-300 text-sm max-w-md mx-auto mb-6">
                   Thank you, <strong>{formData.fullName}</strong>. Your inquiry and plate specifications have been dispatched to our prepress engineering department. A technical specialist will contact you shortly.
                 </p>
                 <button
@@ -214,11 +208,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 
-                <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                  <h3 className="font-display font-bold text-lg text-white">
+                <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-white/10">
+                  <h3 className="font-display font-bold text-lg text-slate-900 dark:text-white">
                     Send Technical Inquiry / Request a Quote
                   </h3>
-                  <span className="text-[11px] font-mono text-slate-400">
+                  <span className="text-[11px] font-mono text-slate-500 dark:text-slate-400">
                     * Required fields
                   </span>
                 </div>
@@ -226,7 +220,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
                 {/* Name & Company */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
                       Full Name *
                     </label>
                     <input
@@ -236,12 +230,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
                       placeholder="e.g. Asif Qureshi"
                       value={formData.fullName}
                       onChange={handleChange}
-                      className="w-full bg-navy-950 border border-white/15 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-white placeholder-slate-500 focus:border-flexo-yellow focus:outline-none"
+                      className="w-full bg-slate-50 dark:bg-navy-950 border border-slate-200 dark:border-white/15 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:border-amber-500 dark:focus:border-flexo-yellow focus:outline-none"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
                       Company Name
                     </label>
                     <input
@@ -250,7 +244,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
                       placeholder="e.g. Apex Packaging Ltd."
                       value={formData.companyName}
                       onChange={handleChange}
-                      className="w-full bg-navy-950 border border-white/15 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-white placeholder-slate-500 focus:border-flexo-yellow focus:outline-none"
+                      className="w-full bg-slate-50 dark:bg-navy-950 border border-slate-200 dark:border-white/15 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:border-amber-500 dark:focus:border-flexo-yellow focus:outline-none"
                     />
                   </div>
                 </div>
@@ -258,7 +252,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
                 {/* Email & Phone */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
                       Email Address *
                     </label>
                     <input
@@ -268,12 +262,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
                       placeholder="name@company.com"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full bg-navy-950 border border-white/15 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-white placeholder-slate-500 focus:border-flexo-yellow focus:outline-none"
+                      className="w-full bg-slate-50 dark:bg-navy-950 border border-slate-200 dark:border-white/15 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:border-amber-500 dark:focus:border-flexo-yellow focus:outline-none"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
                       Phone / Mobile Number *
                     </label>
                     <input
@@ -283,7 +277,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
                       placeholder="0300-XXXXXXX"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full bg-navy-950 border border-white/15 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-white placeholder-slate-500 focus:border-flexo-yellow focus:outline-none"
+                      className="w-full bg-slate-50 dark:bg-navy-950 border border-slate-200 dark:border-white/15 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:border-amber-500 dark:focus:border-flexo-yellow focus:outline-none"
                     />
                   </div>
                 </div>
@@ -291,14 +285,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
                 {/* Service & Substrate Dropdowns */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
                       Service Required
                     </label>
                     <select
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full bg-navy-950 border border-white/15 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-white focus:border-flexo-yellow focus:outline-none"
+                      className="w-full bg-slate-50 dark:bg-navy-950 border border-slate-200 dark:border-white/15 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white focus:border-amber-500 dark:focus:border-flexo-yellow focus:outline-none"
                     >
                       <option value="General Plate Inquiry">General Plate Inquiry</option>
                       <option value="Prepress & Artwork Engineering">Prepress &amp; Artwork Engineering</option>
@@ -310,14 +304,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                    <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
                       Plate Thickness / Spec
                     </label>
                     <select
                       name="thickness"
                       value={formData.thickness}
                       onChange={handleChange}
-                      className="w-full bg-navy-950 border border-white/15 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-white focus:border-flexo-yellow focus:outline-none"
+                      className="w-full bg-slate-50 dark:bg-navy-950 border border-slate-200 dark:border-white/15 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white focus:border-amber-500 dark:focus:border-flexo-yellow focus:outline-none"
                     >
                       <option value='1.14 mm / 0.045"'>1.14 mm / 0.045" (Labels &amp; Shrink)</option>
                       <option value='1.70 mm / 0.067"'>1.70 mm / 0.067" (Flexible Packaging)</option>
@@ -331,7 +325,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
 
                 {/* Subject */}
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
                     Subject / Project Title
                   </label>
                   <input
@@ -340,13 +334,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
                     placeholder="e.g. 8-Color CI Flexible Film Plate Set RFQ"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full bg-navy-950 border border-white/15 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-white placeholder-slate-500 focus:border-flexo-yellow focus:outline-none"
+                    className="w-full bg-slate-50 dark:bg-navy-950 border border-slate-200 dark:border-white/15 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:border-amber-500 dark:focus:border-flexo-yellow focus:outline-none"
                   />
                 </div>
 
                 {/* Message */}
                 <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
                     Project Details, Dimensions, Quantity, or Questions *
                   </label>
                   <textarea
@@ -356,7 +350,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
                     placeholder="Provide cylinder repeat length, number of colors, target substrate, or any pressroom challenges..."
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full bg-navy-950 border border-white/15 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-white placeholder-slate-500 focus:border-flexo-yellow focus:outline-none"
+                    className="w-full bg-slate-50 dark:bg-navy-950 border border-slate-200 dark:border-white/15 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:border-amber-500 dark:focus:border-flexo-yellow focus:outline-none"
                   />
                 </div>
 
@@ -378,7 +372,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
                   </button>
                 </div>
 
-                <div className="text-center text-[11px] text-slate-400 pt-1">
+                <div className="text-center text-[11px] text-slate-500 dark:text-slate-400 pt-1">
                   We respect NDA confidentiality. Artwork files are processed in secure prepress environments.
                 </div>
 

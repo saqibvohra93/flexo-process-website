@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HelpCircle, ChevronDown, ChevronUp, Sparkles, MessageSquare } from 'lucide-react';
+import { HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
 import { FAQS } from '../data/faq';
 
 export const FaqSection: React.FC = () => {
@@ -10,7 +10,7 @@ export const FaqSection: React.FC = () => {
   };
 
   return (
-    <section className="py-16 lg:py-20 bg-navy-900/40 border-t border-white/10 relative">
+    <section className="py-16 lg:py-20 bg-slate-100/60 dark:bg-navy-900/40 border-t border-slate-200 dark:border-white/10 relative transition-colors duration-200">
       <div className="container-x relative z-10">
         
         {/* Header */}
@@ -19,10 +19,10 @@ export const FaqSection: React.FC = () => {
             <HelpCircle className="w-3.5 h-3.5" />
             <span>FAQ</span>
           </div>
-          <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-white tracking-tight mb-3">
+          <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 dark:text-white tracking-tight mb-3">
             Common <span className="text-flexo-yellow">questions</span>
           </h2>
-          <p className="text-slate-400 text-sm leading-relaxed">
+          <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
             Lead times, plate thicknesses, file formats and ink compatibility.
           </p>
         </div>
@@ -34,28 +34,28 @@ export const FaqSection: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="rounded-2xl bg-navy-950/80 border border-white/10 overflow-hidden transition-all duration-200"
+                className="rounded-2xl bg-white dark:bg-navy-950/80 border border-slate-200 dark:border-white/10 overflow-hidden transition-all duration-200 shadow-sm"
               >
                 <button
                   onClick={() => toggleAccordion(idx)}
-                  className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 hover:bg-white/[0.02]"
+                  className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 hover:bg-slate-50 dark:hover:bg-white/[0.02]"
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-center gap-3.5">
-                    <span className="text-xs font-mono font-bold text-flexo-yellow bg-flexo-yellow/10 px-2.5 py-1 rounded-md border border-flexo-yellow/30 shrink-0">
+                    <span className="text-xs font-mono font-bold text-amber-700 dark:text-flexo-yellow bg-amber-500/10 dark:bg-flexo-yellow/10 px-2.5 py-1 rounded-md border border-amber-500/20 dark:border-flexo-yellow/30 shrink-0">
                       Q{idx + 1}
                     </span>
-                    <span className="font-display font-bold text-base sm:text-lg text-white">
+                    <span className="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white">
                       {faq.question}
                     </span>
                   </div>
                   <div className="shrink-0 text-slate-400">
-                    {isOpen ? <ChevronUp className="w-5 h-5 text-flexo-yellow" /> : <ChevronDown className="w-5 h-5" />}
+                    {isOpen ? <ChevronUp className="w-5 h-5 text-amber-500 dark:text-flexo-yellow" /> : <ChevronDown className="w-5 h-5" />}
                   </div>
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 sm:px-6 pb-6 pt-1 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-white/5 bg-white/[0.01]">
+                  <div className="px-5 sm:px-6 pb-6 pt-1 text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-100 dark:border-white/5 bg-slate-50/50 dark:bg-white/[0.01]">
                     <div className="text-[11px] font-mono text-slate-400 mb-2 uppercase tracking-wider">
                       Category: {faq.category}
                     </div>

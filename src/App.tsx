@@ -11,9 +11,10 @@ import { FaqSection } from './components/FaqSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { QuoteModal } from './components/QuoteModal';
+import { ThemeProvider } from './context/ThemeContext';
 import { getStructuredData } from './data/schema';
 
-export function App() {
+function AppContent() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
   const [quoteTopic, setQuoteTopic] = useState<string>('');
   const [contactPrefill, setContactPrefill] = useState<{
@@ -88,7 +89,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-navy-950 text-white font-body selection:bg-flexo-yellow selection:text-navy-950 flex flex-col">
+    <div className="min-h-screen bg-slate-50 dark:bg-navy-950 text-slate-900 dark:text-white font-body selection:bg-flexo-yellow selection:text-navy-950 flex flex-col transition-colors duration-200">
       {/* Top Navigation */}
       <Navbar
         onOpenQuote={() => handleOpenQuote()}
@@ -141,6 +142,14 @@ export function App() {
         defaultTopic={quoteTopic}
       />
     </div>
+  );
+}
+
+export function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   );
 }
 

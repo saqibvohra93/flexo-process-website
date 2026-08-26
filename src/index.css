@@ -6,13 +6,25 @@
   color-scheme: dark;
 }
 
+html.dark {
+  color-scheme: dark;
+}
+
+html.light {
+  color-scheme: light;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  @apply bg-navy-950 text-white font-body antialiased;
+  @apply bg-navy-950 text-white font-body antialiased transition-colors duration-200;
   overflow-x: hidden;
+}
+
+html.light body {
+  @apply bg-slate-50 text-slate-900;
 }
 
 ::selection {
@@ -20,18 +32,32 @@ body {
   color: #0a1530;
 }
 
-::-webkit-scrollbar {
+html.dark ::-webkit-scrollbar {
   width: 10px;
 }
-::-webkit-scrollbar-track {
+html.dark ::-webkit-scrollbar-track {
   background: #071228;
 }
-::-webkit-scrollbar-thumb {
+html.dark ::-webkit-scrollbar-thumb {
   background: #1d3a78;
   border-radius: 8px;
 }
-::-webkit-scrollbar-thumb:hover {
+html.dark ::-webkit-scrollbar-thumb:hover {
   background: #2b4f96;
+}
+
+html.light ::-webkit-scrollbar {
+  width: 10px;
+}
+html.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+html.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 8px;
+}
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }
 
 @layer components {
@@ -45,10 +71,10 @@ body {
     @apply inline-flex items-center justify-center gap-2 rounded-lg bg-flexo-yellow px-6 py-3 text-sm font-bold text-navy-950 transition-all duration-200 hover:bg-amber-400 hover:shadow-lg active:scale-[0.98];
   }
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-white/20 px-6 py-3 text-sm font-bold text-white transition-all duration-200 hover:border-flexo-yellow hover:text-flexo-yellow active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-white/20 dark:border-white/20 border-slate-300 px-6 py-3 text-sm font-bold text-white dark:text-white text-slate-800 transition-all duration-200 hover:border-flexo-yellow hover:text-flexo-yellow dark:hover:text-flexo-yellow active:scale-[0.98];
   }
   .card-glass {
-    @apply rounded-xl border border-white/10 bg-white/[0.03];
+    @apply rounded-xl border border-white/10 dark:border-white/10 border-slate-200 bg-white/[0.03] dark:bg-white/[0.03] bg-white shadow-sm;
   }
 }
 
@@ -71,6 +97,13 @@ body {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+html.light .grid-texture {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
   background-size: 56px 56px;
 }
 
