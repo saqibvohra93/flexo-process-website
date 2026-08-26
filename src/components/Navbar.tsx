@@ -31,12 +31,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote, onNavigateSection }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Clean White Navbar */}
+      {/* Dark translucent navbar with backdrop-blur */}
       <nav
         className={`transition-all duration-200 border-b ${
           isScrolled
-            ? 'bg-white/98 backdrop-blur-xl border-slate-200/90 shadow-md py-2.5'
-            : 'bg-white/95 backdrop-blur-md border-slate-200/60 shadow-sm py-3'
+            ? 'bg-navy-950/95 backdrop-blur-xl border-white/10 shadow-lg py-2.5'
+            : 'bg-navy-950/80 backdrop-blur-md border-white/5 py-3'
         }`}
       >
         <div className="container-x flex items-center justify-between gap-4">
@@ -53,13 +53,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote, onNavigateSection }
             />
           </button>
 
-          {/* Desktop Nav Items (Dark text on white navbar) */}
-          <div className="hidden lg:flex items-center gap-6 text-[13px] font-semibold text-slate-700 flex-nowrap">
+          {/* Desktop Nav Items */}
+          <div className="hidden lg:flex items-center gap-6 text-[13px] font-semibold text-slate-300 flex-nowrap">
             {NAV_LINKS.map(link => (
               <button
                 key={link.id}
                 onClick={() => handleLinkClick(link.id)}
-                className="hover:text-amber-600 transition-colors whitespace-nowrap"
+                className="hover:text-flexo-yellow transition-colors whitespace-nowrap"
               >
                 {link.label}
               </button>
@@ -70,9 +70,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote, onNavigateSection }
           <div className="hidden lg:flex items-center gap-4 shrink-0">
             <a
               href="tel:+922132581090"
-              className="hidden xl:flex items-center gap-1.5 text-[13px] font-medium text-slate-700 hover:text-slate-950 transition-colors whitespace-nowrap"
+              className="hidden xl:flex items-center gap-1.5 text-[13px] font-medium text-slate-300 hover:text-white transition-colors whitespace-nowrap"
             >
-              <Phone className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+              <Phone className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
               <span>021-32581090</span>
             </a>
             <button
@@ -87,29 +87,29 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote, onNavigateSection }
           {/* Mobile Menu Trigger */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg bg-slate-100 border border-slate-200 text-slate-700 hover:text-slate-950 hover:bg-slate-200 shrink-0"
+            className="lg:hidden p-2 rounded-lg bg-white/5 border border-white/10 text-slate-300 hover:text-white shrink-0"
             aria-label="Toggle Navigation"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
 
-        {/* Mobile Navigation Drawer (White background) */}
+        {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-slate-200 px-5 py-5 shadow-xl animate-in fade-in slide-in-from-top-2 duration-200">
+          <div className="lg:hidden bg-navy-950/98 border-t border-white/10 px-5 py-5 backdrop-blur-xl animate-in fade-in slide-in-from-top-2 duration-200">
             <div className="flex flex-col gap-1">
               {NAV_LINKS.map(link => (
                 <button
                   key={link.id}
                   onClick={() => handleLinkClick(link.id)}
-                  className="flex items-center justify-between text-left py-3 px-3 rounded-lg text-sm font-semibold text-slate-800 hover:bg-slate-100 hover:text-amber-600"
+                  className="flex items-center justify-between text-left py-3 px-3 rounded-lg text-sm font-semibold text-slate-200 hover:bg-white/5 hover:text-flexo-yellow"
                 >
                   <span>{link.label}</span>
-                  <ChevronRight className="w-4 h-4 text-slate-400" />
+                  <ChevronRight className="w-4 h-4 text-slate-500" />
                 </button>
               ))}
 
-              <div className="pt-4 mt-2 border-t border-slate-200 flex flex-col gap-3">
+              <div className="pt-4 mt-2 border-t border-white/10 flex flex-col gap-3">
                 <button
                   onClick={() => {
                     setMobileMenuOpen(false);
@@ -122,9 +122,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote, onNavigateSection }
                 </button>
                 <a
                   href="tel:+922132581090"
-                  className="flex items-center justify-center gap-2 text-sm text-slate-700 font-medium py-2 hover:text-slate-950"
+                  className="flex items-center justify-center gap-2 text-sm text-slate-300 py-2 hover:text-white"
                 >
-                  <Phone className="w-4 h-4 text-emerald-600" />
+                  <Phone className="w-4 h-4 text-emerald-400" />
                   <span>021-32581090</span>
                 </a>
               </div>
