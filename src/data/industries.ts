@@ -65,7 +65,7 @@ export const INDUSTRIES: IndustryItem[] = [
     description: 'Durable, high-resilience photopolymer plates that drastically suppress fluting marks (washboard effect) on fluted cardboard, shipping shippers, and micro-flute pre-print packaging. Delivers crisp line art, branding, and uniform solid blocks.',
     imageUrl: '/images/industries/corrugated.jpg',
     imageAlt: 'Fort Point Beer Co kraft corrugated cardboard shipping boxes with crisp geometric printing',
-    plateRecommendation: '2.54 mm – 3.94 mm Corrugated Grade Plates',
+    plateRecommendation: '2.54 mm to 3.94 mm Corrugated Grade Plates',
     keyBenefits: [
       'Suppresses washboarding on B, C, and E flute liners',
       'High plate elasticity prevents edge chipping and wear',

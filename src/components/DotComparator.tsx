@@ -92,7 +92,7 @@ export const DotComparator: React.FC = () => {
                 Parabolic Dome &amp; Impression Sensitivity
               </h3>
               <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                Atmospheric oxygen truncates dot crowns into bullet domes. As press impression fluctuates by just 15 microns, the round top squashes outward — causing harsh vignette cutoffs and muddy midtones.
+                Atmospheric oxygen truncates dot crowns into bullet domes. As press impression fluctuates by just 15 microns, the round top squashes outward, causing harsh vignette cutoffs and muddy midtones.
               </p>
 
               {/* Graphic Simulation */}

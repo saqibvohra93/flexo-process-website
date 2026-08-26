@@ -33,7 +33,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
             Artwork in, <span className="text-flexo-yellow">press-ready plates out</span>
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-            Prepress, laser imaging, mounting and on-press support — handled end to end.
+            Prepress, laser imaging, mounting and on-press support, handled end to end.
           </p>
         </div>
 

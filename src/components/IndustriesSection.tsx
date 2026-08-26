@@ -23,7 +23,7 @@ export const IndustriesSection: React.FC<IndustriesSectionProps> = ({ onSelectIn
             Plates built for <span className="text-flexo-yellow">your substrate</span>
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-            From fine pharmaceutical labels to abrasive cement sacks — each formulation is matched to the job.
+            From fine pharmaceutical labels to abrasive cement sacks, each formulation is matched to the job.
           </p>
         </div>
 

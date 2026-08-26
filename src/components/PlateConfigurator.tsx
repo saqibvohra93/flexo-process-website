@@ -53,7 +53,7 @@ export const PlateConfigurator: React.FC<PlateConfiguratorProps> = ({ onSelectSp
             Not sure which plate <span className="text-flexo-yellow">you need?</span>
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-            Pick your substrate and press setup — we'll show you the right spec.
+            Pick your substrate and press setup, we'll show you the right spec.
           </p>
         </div>
 

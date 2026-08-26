@@ -52,7 +52,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote, onNavigateSection }
           <button
             onClick={() => handleLinkClick('overview')}
             className="flex items-center shrink-0"
-            aria-label="Flexo Process — Home"
+            aria-label="Flexo Process Home"
           >
             <img
               src="/logo.png"

@@ -56,7 +56,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenQuote }
             />
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              Digital flexographic printing plates (flexo blocks) for labels, flexible packaging, corrugated cartons and PP woven sacks — made in Karachi with German CDI laser technology.
+              Digital flexographic printing plates (flexo blocks) for labels, flexible packaging, corrugated cartons and PP woven sacks, made in Karachi with German CDI laser technology.
             </p>
 
             <div className="flex items-center gap-2 text-[11px] text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 p-2.5 rounded-lg w-fit">
@@ -111,19 +111,19 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenQuote }
             </h4>
             <ul className="space-y-2 text-xs">
               <li className="text-slate-300">
-                <strong className="text-white">1.14 mm (0.045")</strong> &ndash; Narrow-Web &amp; Labels
+                <strong className="text-white">1.14 mm (0.045")</strong> for Narrow-Web &amp; Labels
               </li>
               <li className="text-slate-300">
-                <strong className="text-white">1.70 mm (0.067")</strong> &ndash; Flexible Film (BOPP/PET)
+                <strong className="text-white">1.70 mm (0.067")</strong> for Flexible Film (BOPP/PET)
               </li>
               <li className="text-slate-300">
-                <strong className="text-white">2.54 mm (0.100")</strong> &ndash; Fluted Corrugated
+                <strong className="text-white">2.54 mm (0.100")</strong> for Fluted Corrugated
               </li>
               <li className="text-slate-300">
-                <strong className="text-white">2.84 mm (0.112")</strong> &ndash; Huaguang DR284M-II Sacks
+                <strong className="text-white">2.84 mm (0.112")</strong> for Huaguang DR284M-II Sacks
               </li>
               <li className="text-slate-300">
-                <strong className="text-white">3.94 mm (0.155")</strong> &ndash; Heavy Industrial Sacks
+                <strong className="text-white">3.94 mm (0.155")</strong> for Heavy Industrial Sacks
               </li>
             </ul>
           </div>

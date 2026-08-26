@@ -6,7 +6,7 @@ export const WorkflowSection: React.FC = () => {
     {
       step: '01',
       title: 'Prepress & Distortion Calibration',
-      desc: 'Files are normalized, trapped to 0.08–0.20mm tolerances, and adjusted for exact cylinder elongation curves.',
+      desc: 'Files are normalized, trapped to 0.08-0.20mm tolerances, and adjusted for exact cylinder elongation curves.',
       icon: <Cpu className="w-5 h-5 text-amber-500 dark:text-flexo-yellow" />
     },
     {

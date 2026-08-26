@@ -18,7 +18,7 @@ export const SERVICES: ServiceItem[] = [
     icon: 'Layers',
     equipment: 'German & Esko Prepress Suite, Color Proofing Spectrophotometers',
     features: [
-      'Automatic & Manual Trapping (0.05mm – 0.20mm tolerances)',
+      'Automatic & Manual Trapping (0.05mm to 0.20mm tolerances)',
       'Press Fingerprinting & Dynamic Tone Value Increase (TVI) Curves',
       'Barcode Optimization & GS1 Verification Grading',
       'Expanded Color Gamut (ECG 7-Color) Separation',
@@ -74,7 +74,7 @@ export const SERVICES: ServiceItem[] = [
     id: 'technical-support',
     title: 'On-Press Technical Support & Fingerprinting',
     subtitle: 'Hands-on print troubleshooting, anilox audits & pressroom training',
-    description: 'We don’t just manufacture plates — we partner with your press operators to maximize print yields and eliminate defects. Our senior flexographic engineers offer on-site press fingerprinting, anilox cell volume audits, ink viscosity calibration, and comprehensive pressroom troubleshooting across Pakistan.',
+    description: 'We do not just manufacture plates, we partner with your press operators to maximize print yields and eliminate defects. Our senior flexographic engineers offer on-site press fingerprinting, anilox cell volume audits, ink viscosity calibration, and comprehensive pressroom troubleshooting across Pakistan.',
     icon: 'Headphones',
     equipment: 'X-Rite SpectroEye, Digital Plate Scopes, Anilox Micro-Volume Scanners',
     features: [

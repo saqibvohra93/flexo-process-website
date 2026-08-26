@@ -83,7 +83,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
             Let's talk about <span className="text-flexo-yellow">your next run</span>
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-            Quotes, technical questions, or a sample kit — we reply fast.
+            Quotes, technical questions, or a sample kit, we reply fast.
           </p>
         </div>
 
@@ -161,7 +161,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
                   <div>
                     <span className="text-slate-500 dark:text-slate-400 block text-xs uppercase font-mono mb-0.5">Production Hours</span>
                     <p className="text-slate-900 dark:text-white font-medium">
-                      Monday &ndash; Saturday: 09:00 AM &ndash; 06:00 PM<br />
+                      Monday &amp; Saturday: 09:00 AM &amp; 06:00 PM<br />
                       <span className="text-slate-500 dark:text-slate-400 text-xs">24/7 CDI Laser Overnight Dispatch Available</span>
                     </p>
                   </div>

@@ -39,7 +39,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuote, onNavigateSection }) =>
 
             <p className="text-base sm:text-lg text-slate-700 dark:text-slate-300 font-normal leading-relaxed max-w-lg mb-8">
               Pakistan's premier manufacturer of digital flexographic printing plates
-              <span className="text-slate-950 dark:text-white font-semibold"> (Flexo Blocks)</span> — engineered
+              <span className="text-slate-950 dark:text-white font-semibold"> (Flexo Blocks)</span>, engineered
               for labels, flexible packaging, corrugated cartons and PP woven sacks.
             </p>
 
@@ -88,7 +88,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuote, onNavigateSection }) =>
               <div className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 flex items-center justify-between bg-white/90 dark:bg-navy-950/90 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 text-center sm:text-left shadow-lg">
                 <div>
                   <span className="text-[10px] sm:text-[11px] text-slate-500 dark:text-slate-400 block">Thickness</span>
-                  <span className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">1.14–3.94mm</span>
+                  <span className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">1.14 - 3.94mm</span>
                 </div>
                 <div className="w-px h-7 sm:h-8 bg-slate-200 dark:bg-white/10" />
                 <div>
