@@ -83,6 +83,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuote, onNavigateSection }) =>
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
 
+              {/* Top right floating chip: 40% Longer Plate Life */}
+              <div className="absolute top-4 right-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-900/75 backdrop-blur-md border border-white/20 text-white shadow-lg">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-xs font-bold tracking-wide">
+                  <strong className="text-emerald-400 font-extrabold">40%</strong> Longer Plate Life
+                </span>
+              </div>
+
               {/* Minimal floating spec badge */}
               <div className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 flex items-center justify-between bg-white/90 backdrop-blur-md border border-slate-200 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 text-center sm:text-left shadow-lg">
                 <div>
