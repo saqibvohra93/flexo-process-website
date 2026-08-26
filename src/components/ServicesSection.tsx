@@ -68,10 +68,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
                   <h3 className="font-display font-bold text-xl text-slate-900 group-hover:text-amber-600 transition-colors mb-1.5">
                     {srv.title}
                   </h3>
-                  <p className="text-xs font-mono text-amber-600 mb-3 line-clamp-1">
+                  <p className="text-xs font-mono text-amber-600 mb-3">
                     {srv.subtitle}
                   </p>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 line-clamp-3">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
                     {srv.description}
                   </p>
 
@@ -80,7 +80,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
                     {srv.features.slice(0, 3).map((feat, i) => (
                       <div key={i} className="flex items-start gap-2">
                         <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                        <span className="line-clamp-1">{feat}</span>
+                        <span>{feat}</span>
                       </div>
                     ))}
                   </div>
