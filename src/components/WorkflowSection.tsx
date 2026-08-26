@@ -42,23 +42,20 @@ export const WorkflowSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-navy-950 border-t border-white/10 relative overflow-hidden">
+    <section className="py-16 lg:py-20 bg-navy-950 border-t border-white/10 relative overflow-hidden">
       <div className="container-x relative z-10">
         
         {/* Header */}
         <div className="max-w-3xl mb-14 text-left">
           <div className="eyebrow mb-3">
             <Cpu className="w-3.5 h-3.5" />
-            <span>German Manufacturing Pipeline</span>
+            <span>Our Process</span>
           </div>
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4">
-            6-Stage Precision{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-flexo-yellow to-flexo-orange">
-              Plate Making Workflow
-            </span>
+          <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-white tracking-tight mb-3">
+            Six stages, <span className="text-flexo-yellow">zero guesswork</span>
           </h2>
-          <p className="text-slate-300 text-base leading-relaxed">
-            Every photopolymer plate manufactured at our Karachi S.I.T.E. facility undergoes an ISO-calibrated six-stage process to guarantee 100% repeatability from job to job.
+          <p className="text-slate-400 text-sm leading-relaxed">
+            Every plate leaving our Karachi facility runs the same calibrated process.
           </p>
         </div>
 

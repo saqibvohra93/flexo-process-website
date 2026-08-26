@@ -40,23 +40,20 @@ export const PlateConfigurator: React.FC<PlateConfiguratorProps> = ({ onSelectSp
   };
 
   return (
-    <section id="configurator" className="py-20 lg:py-28 bg-navy-950 relative overflow-hidden">
+    <section id="configurator" className="py-16 lg:py-20 bg-navy-950 relative overflow-hidden">
       <div className="container-x relative z-10">
         
         {/* Section Header */}
         <div className="max-w-3xl mb-12 text-left">
           <div className="eyebrow mb-3">
             <Sliders className="w-3.5 h-3.5" />
-            <span>Interactive Engineering Tool</span>
+            <span>Spec Builder</span>
           </div>
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4">
-            Interactive Plate &amp; Substrate{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-flexo-yellow to-flexo-orange">
-              Specification Builder
-            </span>
+          <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-white tracking-tight mb-3">
+            Not sure which plate <span className="text-flexo-yellow">you need?</span>
           </h2>
-          <p className="text-slate-300 text-base leading-relaxed">
-            Select your press setup and substrate requirements below to find the exact photopolymer formulation, durometer, relief floor, and CDI laser screening profile tailored for your packaging runs.
+          <p className="text-slate-400 text-sm leading-relaxed">
+            Pick your substrate and press setup — we'll show you the right spec.
           </p>
         </div>
 
@@ -79,7 +76,7 @@ export const PlateConfigurator: React.FC<PlateConfiguratorProps> = ({ onSelectSp
                     onClick={() => handleSubstrateChange(sub.id)}
                     className={`text-left p-3 rounded-xl border text-xs font-medium transition-all ${
                       selectedSubstrate === sub.id
-                        ? 'bg-flexo-yellow/15 border-flexo-yellow text-white shadow-[0_0_15px_rgba(245,197,24,0.15)]'
+                        ? 'bg-flexo-yellow/10 border-flexo-yellow text-white'
                         : 'bg-navy-950/60 border-white/10 text-slate-300 hover:border-white/25 hover:text-white'
                     }`}
                   >

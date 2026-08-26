@@ -20,23 +20,20 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
   };
 
   return (
-    <section id="services" className="py-20 lg:py-28 bg-navy-900/50 border-t border-white/10 relative">
+    <section id="services" className="py-16 lg:py-20 bg-navy-900/50 border-t border-white/10 relative">
       <div className="container-x relative z-10">
         
         {/* Section Header */}
         <div className="max-w-3xl mb-14 text-left">
           <div className="eyebrow mb-3">
             <Wrench className="w-3.5 h-3.5" />
-            <span>End-to-End Capabilities</span>
+            <span>Services</span>
           </div>
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4">
-            Comprehensive Prepress &amp;{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-flexo-yellow to-flexo-orange">
-              Plate Manufacturing Solutions
-            </span>
+          <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-white tracking-tight mb-3">
+            Artwork in, <span className="text-flexo-yellow">press-ready plates out</span>
           </h2>
-          <p className="text-slate-300 text-base leading-relaxed">
-            We deliver complete flexographic lifecycle support — from high-precision file trapping and laser CDI plate ablation to camera-guided cylinder mounting and on-site pressroom fingerprinting.
+          <p className="text-slate-400 text-sm leading-relaxed">
+            Prepress, laser imaging, mounting and on-press support — handled end to end.
           </p>
         </div>
 

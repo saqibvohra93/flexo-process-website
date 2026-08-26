@@ -10,23 +10,20 @@ export const FaqSection: React.FC = () => {
   };
 
   return (
-    <section className="py-20 lg:py-28 bg-navy-900/40 border-t border-white/10 relative">
+    <section className="py-16 lg:py-20 bg-navy-900/40 border-t border-white/10 relative">
       <div className="container-x relative z-10">
         
         {/* Header */}
         <div className="max-w-3xl mb-12 text-left">
           <div className="eyebrow mb-3">
             <HelpCircle className="w-3.5 h-3.5" />
-            <span>Frequently Asked Questions</span>
+            <span>FAQ</span>
           </div>
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4">
-            Technical &amp; Commercial{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-flexo-yellow to-flexo-orange">
-              Inquiry Answers
-            </span>
+          <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-white tracking-tight mb-3">
+            Common <span className="text-flexo-yellow">questions</span>
           </h2>
-          <p className="text-slate-300 text-base leading-relaxed">
-            Quick technical answers regarding turnaround lead times, plate thicknesses, prepress distortion calculations, and pressroom chemical compatibility.
+          <p className="text-slate-400 text-sm leading-relaxed">
+            Lead times, plate thicknesses, file formats and ink compatibility.
           </p>
         </div>
 

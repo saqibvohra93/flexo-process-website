@@ -10,23 +10,20 @@ export const IndustriesSection: React.FC<IndustriesSectionProps> = ({ onSelectIn
   const [activeModalIndustry, setActiveModalIndustry] = useState<IndustryItem | null>(null);
 
   return (
-    <section id="industries" className="py-20 lg:py-28 bg-navy-950 border-t border-white/10 relative">
+    <section id="industries" className="py-16 lg:py-20 bg-navy-950 border-t border-white/10 relative">
       <div className="container-x relative z-10">
         
         {/* Section Header */}
         <div className="max-w-3xl mb-14 text-left">
           <div className="eyebrow mb-3">
             <Package className="w-3.5 h-3.5" />
-            <span>Market Applications &amp; Sectors</span>
+            <span>Industries</span>
           </div>
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4">
-            Industries We Serve with{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-flexo-yellow to-flexo-orange">
-              Precision Plate Solutions
-            </span>
+          <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-white tracking-tight mb-3">
+            Plates built for <span className="text-flexo-yellow">your substrate</span>
           </h2>
-          <p className="text-slate-300 text-base leading-relaxed">
-            From micron-sharp 2pt pharmaceutical labels to abrasive high-tensile cement sacks, our custom photopolymer plate formulations guarantee vibrant colors, flawless registration, and long-lasting pressroom durability.
+          <p className="text-slate-400 text-sm leading-relaxed">
+            From fine pharmaceutical labels to abrasive cement sacks — each formulation is matched to the job.
           </p>
         </div>
 

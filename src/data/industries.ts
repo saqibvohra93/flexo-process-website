@@ -100,7 +100,7 @@ export const INDUSTRIES: IndustryItem[] = [
     title: 'Cement Bags & Multi-Wall Sacks',
     tagline: 'Rugged ink transfer on porous kraft and industrial packaging',
     description: 'High-solid, impact-resistant flexo plates designed specifically for rough, abrasive multi-wall kraft paper and perforated cement sack substrates. Ensures maximum opacity and high rub-resistance in demanding packaging environments.',
-    imageUrl: 'https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1000&q=80',
     plateRecommendation: '2.84 mm Heavy-Duty Industrial Photopolymer',
     keyBenefits: [
       'Maximum ink laydown on rough, high-absorption kraft sheets',

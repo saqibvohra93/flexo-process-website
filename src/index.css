@@ -16,8 +16,8 @@ body {
 }
 
 ::selection {
-  background: #f5c518;
-  color: #0b1b3d;
+  background: #f0b429;
+  color: #0a1530;
 }
 
 ::-webkit-scrollbar {
@@ -39,16 +39,16 @@ body {
     @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
   }
   .eyebrow {
-    @apply inline-flex items-center gap-2 text-[11px] sm:text-xs font-bold tracking-[0.28em] uppercase text-flexo-yellow;
+    @apply inline-flex items-center gap-2 text-[11px] sm:text-xs font-bold tracking-[0.18em] uppercase text-flexo-yellow;
   }
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-flexo-yellow px-7 py-3.5 text-sm font-extrabold uppercase tracking-wider text-navy-900 transition-all duration-300 hover:bg-white hover:shadow-[0_0_40px_rgba(245,197,24,0.35)] active:scale-95;
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-flexo-yellow px-6 py-3 text-sm font-bold text-navy-950 transition-all duration-200 hover:bg-amber-400 hover:shadow-lg active:scale-[0.98];
   }
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-7 py-3.5 text-sm font-extrabold uppercase tracking-wider text-white transition-all duration-300 hover:border-flexo-yellow hover:text-flexo-yellow active:scale-95;
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-white/20 px-6 py-3 text-sm font-bold text-white transition-all duration-200 hover:border-flexo-yellow hover:text-flexo-yellow active:scale-[0.98];
   }
   .card-glass {
-    @apply rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-sm;
+    @apply rounded-xl border border-white/10 bg-white/[0.03];
   }
 }
 
@@ -75,6 +75,6 @@ body {
 }
 
 .halftone {
-  background-image: radial-gradient(rgba(245, 197, 24, 0.16) 1.2px, transparent 1.2px);
+  background-image: radial-gradient(rgba(240, 180, 41, 0.12) 1.2px, transparent 1.2px);
   background-size: 14px 14px;
 }

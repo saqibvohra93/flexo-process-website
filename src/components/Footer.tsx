@@ -27,7 +27,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenQuote }
           <div className="flex flex-wrap items-center justify-center gap-3">
             <button
               onClick={onOpenQuote}
-              className="btn-primary text-xs py-3 px-6 shadow-[0_0_30px_rgba(245,197,24,0.3)]"
+              className="btn-primary text-xs py-3 px-6"
             >
               <span>Request a Quote</span>
               <ArrowRight className="w-4 h-4" />
@@ -49,27 +49,19 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenQuote }
           
           {/* Brand Col */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-navy-800 border border-white/20 flex items-center justify-center text-flexo-yellow font-display font-extrabold text-lg">
-                FP
-              </div>
-              <div>
-                <span className="font-display font-bold text-base text-white block">
-                  FLEXO PROCESS
-                </span>
-                <span className="text-[10px] text-slate-400 tracking-widest uppercase">
-                  (PRIVATE) LIMITED
-                </span>
-              </div>
-            </div>
+            <img
+              src="/logo.png"
+              alt="Flexo Process (Private) Limited"
+              className="h-10 w-auto object-contain"
+            />
 
-            <p className="text-xs text-slate-300 leading-relaxed">
-              Pakistan’s premier flexographic plate manufacturing authority. Powered by German CDI laser direct imaging and oxygen-free Flat-Top Dot technology for labels, flexible barrier film, corrugated fluted board, and PP woven sacks.
+            <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
+              Digital flexographic printing plates (flexo blocks) for labels, flexible packaging, corrugated cartons and PP woven sacks — made in Karachi with German CDI laser technology.
             </p>
 
-            <div className="flex items-center gap-2 text-[11px] text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 p-2.5 rounded-xl w-fit">
+            <div className="flex items-center gap-2 text-[11px] text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 p-2.5 rounded-lg w-fit">
               <ShieldCheck className="w-4 h-4 shrink-0" />
-              <span>ISO Standard Photopolymer &amp; CDI Laser Quality Control</span>
+              <span>ISO Standard Quality Control</span>
             </div>
           </div>
 

@@ -3,7 +3,7 @@ export interface ArticleItem {
   slug: string;
   title: string;
   summary: string;
-  category: 'Prepress & Imaging' | 'Packaging & Substrates' | 'Press Optimization' | 'Troubleshooting';
+  category: 'Buyer\'s Guides' | 'Prepress & Imaging' | 'Packaging & Substrates' | 'Press Optimization' | 'Troubleshooting';
   readTime: string;
   publishedDate: string;
   author: string;
@@ -14,9 +14,68 @@ export interface ArticleItem {
   content: string[];
   specsTable?: { label: string; value: string }[];
   seoKeywords: string[];
+  featured?: boolean;
 }
 
 export const ARTICLES: ArticleItem[] = [
+  {
+    id: 'art-00a',
+    slug: 'choosing-flexo-plate-printing-block-partner-buyers-guide',
+    title: "Choosing a Flexo Plate & Printing Block Partner: A Buyer's Guide for Packaging Brands",
+    summary: 'A practical guide for brand owners and packaging companies on what actually separates a good flexo block supplier from a great one — before you sign the next PO.',
+    category: "Buyer's Guides",
+    readTime: '5 min read',
+    publishedDate: '2026-02-20',
+    author: 'Khurram Shehzad',
+    authorRole: 'Chief Flexo Technical Consultant',
+    imageUrl: 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=1000&q=80',
+    tags: ['Buyer\'s Guide', 'Flexo Blocks', 'Vendor Selection', 'Packaging Procurement'],
+    featured: true,
+    keyTakeaways: [
+      'Price-per-plate is the wrong starting metric — cost-per-thousand-meters printed is what actually matters.',
+      'Ask any flexo block supplier for their relief depth and floor thickness tolerance in writing, not just plate thickness.',
+      'A supplier who cannot explain their dot gain compensation curve for your specific press is guessing, not engineering.',
+      'Sample proof kits before a full order tell you more than any spec sheet ever will.'
+    ],
+    content: [
+      'If you run a packaging business, at some point someone on your team will ask "who do we use for flexo blocks?" and the honest answer is often "whoever quoted fastest last time." That works fine until a job goes wrong on press and you\'re trying to figure out whether it was the ink, the anilox, or the plate.',
+      'The companies that get this right treat plate making as an engineering partner, not a commodity purchase. A few things worth checking before you commit to a supplier for your next packaging run.',
+      'First, ask how they handle prepress. Do they just laser whatever file you send, or do they check trapping, minimum dot size, and cylinder distortion for your specific press repeat length? The second one saves you a re-run.',
+      'Second, ask about plate consistency across a set. If your 8-color job has plates from the same batch running at different thicknesses, your registration will drift no matter how good your mounting team is.',
+      'Third — and this is the one most buyers skip — ask for a sample plate on your actual substrate before the full order. A supplier confident in their work will offer this without you asking twice.',
+      'At Flexo Process, we work with both prepress-savvy converters and brand owners who have never ordered a plate in their life. Either way, we start with the same question: what substrate, what press, what problem are you trying to solve. The plate spec follows from that, not the other way around.'
+    ],
+    seoKeywords: ['flexo block supplier pakistan', 'flexographic plate vendor selection', 'buying flexo plates guide', 'packaging printing partner']
+  },
+  {
+    id: 'art-00b',
+    slug: 'in-house-vs-outsourced-flexo-block-making',
+    title: 'In-House vs. Outsourced Flexo Block Making: What Growing Packaging Companies Should Know',
+    summary: 'As converters scale, the "should we build our own plate room" question comes up eventually. Here\'s a grounded look at the real costs on both sides.',
+    category: "Buyer's Guides",
+    readTime: '6 min read',
+    publishedDate: '2026-02-15',
+    author: 'Mohsin Raza',
+    authorRole: 'Senior Industrial Packaging Engineer',
+    imageUrl: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1000&q=80',
+    tags: ['Flexo Blocks', 'In-House Prepress', 'Cost Analysis', 'Packaging Business'],
+    featured: true,
+    keyTakeaways: [
+      'A basic CDI laser imaging setup plus processor and exposure unit runs well into six figures (USD) before you\'ve made a single plate.',
+      'Outsourcing keeps your plate technology current without you carrying the equipment depreciation.',
+      'In-house makes sense once you\'re consistently running 15+ plate changes a week across multiple presses.',
+      'Most mid-sized converters land on a hybrid: outsource complex/HD work, keep simple repeat jobs in-house if they already own basic equipment.'
+    ],
+    content: [
+      'Every packaging company that grows past a certain size eventually has this conversation: are we spending too much on outside plate making, and should we just do it ourselves?',
+      'The honest answer depends on volume, not ambition. A single CDI laser imager, exposure unit, and washout processor is a serious capital investment, and that\'s before you\'ve hired someone who actually knows how to run prepress separations and cylinder distortion calculations.',
+      'What most companies underestimate is the maintenance and calibration overhead. Laser optics need periodic recalibration, exposure units need bulb replacement schedules, and washout chemistry needs monitoring. None of that shows up in the initial quote for equipment.',
+      'On the other hand, outsourcing to a specialist means you\'re not carrying that depreciation, and you get access to whatever laser resolution or photopolymer formulation is current — without upgrading a machine every few years.',
+      'The pattern we see most often among growing converters: keep it outsourced until you\'re running enough plate changes weekly that turnaround time itself becomes the bottleneck, not cost. At that point, a hybrid model — outsourcing anything HD or unusual, running simple repeat jobs on basic in-house kit — tends to make the most financial sense.',
+      'If you\'re a brand owner rather than a converter, this decision usually isn\'t yours to make at all — but it\'s worth knowing which model your printing partner uses, since it affects both your turnaround time and your pricing.'
+    ],
+    seoKeywords: ['in house flexo plate making', 'outsource flexo blocks', 'plate room cost', 'flexo prepress investment']
+  },
   {
     id: 'art-01',
     slug: 'flat-top-dot-vs-round-top-dot-german-optics',
@@ -29,6 +88,7 @@ export const ARTICLES: ArticleItem[] = [
     authorRole: 'Head of Prepress & Laser Optics, Flexo Process',
     imageUrl: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80',
     tags: ['Flat-Top Dot', 'German Optics', 'Dot Gain', 'Laser CDI', 'HD Flexo'],
+    featured: true,
     keyTakeaways: [
       'Round-top dots suffer from parabolic crowns that expand exponentially under minimal impression pressure.',
       'Flat-top dot geometries create uniform contact surfaces that resist impression creep across 500,000+ meter runs.',
@@ -155,7 +215,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2026-01-14',
     author: 'Mohsin Raza',
     authorRole: 'Senior Industrial Packaging Engineer',
-    imageUrl: 'https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1000&q=80',
     tags: ['PP Woven Bags', 'Cement Bags', 'Huaguang DR284M-II', 'Abrasion Resistance', 'Industrial Sacks'],
     keyTakeaways: [
       'PP woven tape fabric is highly abrasive and destroys standard soft photopolymers within 50,000 meters.',
@@ -348,7 +408,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2025-11-15',
     author: 'Mohsin Raza',
     authorRole: 'Senior Materials & Chemical Specialist',
-    imageUrl: 'https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1000&q=80',
     tags: ['Plate Swell', 'Ink Compatibility', 'UV Inks', 'Solvent Inks', 'Plate Care'],
     keyTakeaways: [
       'Ester and ketone solvents penetrate standard polymer matrices, swelling plate thickness by up to 80 microns.',
@@ -382,6 +442,7 @@ export const ARTICLES: ArticleItem[] = [
     authorRole: 'Chief Flexo Technical Consultant',
     imageUrl: 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=1000&q=80',
     tags: ['HD Flexo vs Gravure', 'Packaging Trends 2026', 'Sustainability', 'SKU Agility', 'Converter Economics'],
+    featured: true,
     keyTakeaways: [
       'Plate cylinder lead times are 24 hours for HD Flexo vs. 15-20 days for engraved gravure cylinders.',
       'Plate costs are 60-75% lower than copper/chromium gravure cylinder engraving sets.',

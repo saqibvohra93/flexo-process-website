@@ -6,23 +6,20 @@ export const DotComparator: React.FC = () => {
   const [activeImpression, setActiveImpression] = useState<'low' | 'medium' | 'high'>('medium');
 
   return (
-    <section id="technology" className="py-20 lg:py-28 bg-navy-900/60 border-y border-white/10 relative overflow-hidden">
+    <section id="technology" className="py-16 lg:py-20 bg-navy-900/60 border-y border-white/10 relative overflow-hidden">
       <div className="container-x relative z-10">
         
         {/* Section Header */}
         <div className="max-w-3xl mb-14 text-left">
           <div className="eyebrow mb-3">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Interactive Quality Comparison</span>
+            <span>Technology</span>
           </div>
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4">
-            Standard Round-Top vs.{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-flexo-yellow to-flexo-orange">
-              German HD Flat-Top Dots
-            </span>
+          <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-white tracking-tight mb-3">
+            Why our dots <span className="text-flexo-yellow">hold on press</span>
           </h2>
-          <p className="text-slate-300 text-base leading-relaxed">
-            Drag the interactive comparator slider below to inspect microscopic dot behavior on press. See why standard round-top dots suffer from parabolic impression gain while Flexo Process Flat-Top Dot technology delivers rock-solid highlight fidelity.
+          <p className="text-slate-400 text-sm leading-relaxed">
+            Drag the slider to see how flat-top dots resist the impression gain that plagues standard plates.
           </p>
         </div>
 
@@ -110,7 +107,7 @@ export const DotComparator: React.FC = () => {
                     <div className="flex flex-col items-center gap-2">
                       <div className="relative">
                         {/* Flat top dot with steep shoulders */}
-                        <div className="w-10 h-16 bg-gradient-to-b from-flexo-yellow via-amber-400 to-amber-600 border-t-2 border-x border-white/80 shadow-[0_0_15px_rgba(245,197,24,0.4)]" />
+                        <div className="w-10 h-16 bg-gradient-to-b from-flexo-yellow via-amber-400 to-amber-600 border-t-2 border-x border-white/80" />
                       </div>
                       <span className="text-[11px] font-mono text-emerald-400 font-bold">
                         Stable 0.8% - 1.2% Dot
@@ -126,7 +123,7 @@ export const DotComparator: React.FC = () => {
 
                 {/* Vertical Divider Slider Line */}
                 <div
-                  className="absolute top-0 bottom-0 w-1 bg-flexo-yellow shadow-[0_0_20px_#f5c518] cursor-ew-resize flex items-center justify-center pointer-events-none"
+                  className="absolute top-0 bottom-0 w-1 bg-flexo-yellow cursor-ew-resize flex items-center justify-center pointer-events-none"
                   style={{ left: `${sliderPosition}%` }}
                 >
                   <div className="w-8 h-8 rounded-full bg-navy-950 border-2 border-flexo-yellow flex items-center justify-center text-flexo-yellow shadow-xl -ml-0.5">

@@ -76,23 +76,20 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-28 bg-navy-950 border-t border-white/10 relative overflow-hidden">
+    <section id="contact" className="py-16 lg:py-20 bg-navy-950 border-t border-white/10 relative overflow-hidden">
       <div className="container-x relative z-10">
         
         {/* Section Header */}
         <div className="max-w-3xl mb-14 text-left">
           <div className="eyebrow mb-3">
             <MessageSquare className="w-3.5 h-3.5" />
-            <span>Direct Commercial &amp; Technical Desk</span>
+            <span>Contact</span>
           </div>
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4">
-            Contact Flexo Process{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-flexo-yellow to-flexo-orange">
-              (Private) Limited
-            </span>
+          <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-white tracking-tight mb-3">
+            Let's talk about <span className="text-flexo-yellow">your next run</span>
           </h2>
-          <p className="text-slate-300 text-base leading-relaxed">
-            We’re here to help you with high-quality flexographic printing plate solutions. Contact our prepress experts for quotations, technical support, or sample proof kits.
+          <p className="text-slate-400 text-sm leading-relaxed">
+            Quotes, technical questions, or a sample kit — we reply fast.
           </p>
         </div>
 
@@ -368,7 +365,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="btn-primary w-full py-3.5 text-xs sm:text-sm justify-center shadow-[0_0_30px_rgba(245,197,24,0.3)]"
+                    className="btn-primary w-full py-3.5 text-xs sm:text-sm justify-center"
                   >
                     {status === 'submitting' ? (
                       <span>Transmitting Inquiry...</span>
