@@ -30,9 +30,10 @@ export const ArticlesHub: React.FC<ArticlesHubProps> = ({ onOpenQuoteWithTopic }
       <div className="relative h-40 w-full overflow-hidden bg-navy-950">
         <img
           src={art.imageUrl}
-          alt={art.title}
+          alt={`${art.title} - Flexo Process Technical Guide`}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
           loading="lazy"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/30 to-transparent" />
         <div className="absolute top-3 left-3">

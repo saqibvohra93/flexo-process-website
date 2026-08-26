@@ -4,6 +4,7 @@ export interface IndustryItem {
   tagline: string;
   description: string;
   imageUrl: string;
+  imageAlt: string;
   plateRecommendation: string;
   keyBenefits: string[];
   specs: {
@@ -21,6 +22,7 @@ export const INDUSTRIES: IndustryItem[] = [
     tagline: 'Micron-level sharpness for cosmetic, pharma & prime retail labels',
     description: 'High-precision digital flexographic plates engineered for narrow-web presses. Achieve ultra-fine highlights, 2pt reverse micro-text, perfect barcodes, and flawless multi-color registration on self-adhesive papers, films, and shrink sleeves.',
     imageUrl: 'https://images.unsplash.com/photo-1589365278144-c9e705f843ba?auto=format&fit=crop&w=1000&q=80',
+    imageAlt: 'High-definition flexographic printed product labels and cosmetic bottles',
     plateRecommendation: '1.14 mm (0.045") Ultra-Fine HD Digital Photopolymer',
     keyBenefits: [
       'Zero dot gain shift with Flat-Top Dot laser optics',
@@ -41,6 +43,7 @@ export const INDUSTRIES: IndustryItem[] = [
     tagline: 'High-density solid ink transfer and smooth vignettes for food pouches',
     description: 'Superior digital plates specifically formulated for high-speed central impression (CI) and stack flexo presses. Perfect for food pouches, snack laminates, shrink film, and retort packaging where color consistency and fast press speeds are essential.',
     imageUrl: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1000&q=80',
+    imageAlt: 'Flexographic printed food pouches and barrier flexible packaging films',
     plateRecommendation: '1.70 mm (0.067") Versatile Packaging Photopolymer',
     keyBenefits: [
       'Eliminates pinholing and orange peel in solid ink lays',
@@ -61,6 +64,7 @@ export const INDUSTRIES: IndustryItem[] = [
     tagline: 'Fluting suppression & rich solid coverage on kraft liners',
     description: 'Durable, high-resilience photopolymer plates that drastically suppress fluting marks (washboard effect) on fluted cardboard, shipping shippers, and micro-flute pre-print packaging. Delivers crisp typography and uniform solid blocks.',
     imageUrl: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1000&q=80',
+    imageAlt: 'Corrugated cardboard shipping cartons and fluted box packaging',
     plateRecommendation: '2.54 mm – 3.94 mm Corrugated Grade Plates',
     keyBenefits: [
       'Suppresses washboarding on B, C, and E flute liners',
@@ -81,6 +85,7 @@ export const INDUSTRIES: IndustryItem[] = [
     tagline: 'Heavy-duty resilience for textured polypropylene weaves',
     description: 'Specially engineered high-solid photopolymer plates built to endure the extreme mechanical abrasion of woven polypropylene fabric. Delivers rich, vibrant solid colors and bold branding on rice, flour, chemical, and feed sacks.',
     imageUrl: 'https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&w=1000&q=80',
+    imageAlt: 'Woven polypropylene industrial sacks and agricultural bulk bags',
     plateRecommendation: 'Huaguang DR284M-II (2.84 mm / 0.112")',
     keyBenefits: [
       'High tensile strength resists tape tearing and weave snagging',
@@ -101,6 +106,7 @@ export const INDUSTRIES: IndustryItem[] = [
     tagline: 'Rugged ink transfer on porous kraft and industrial packaging',
     description: 'High-solid, impact-resistant flexo plates designed specifically for rough, abrasive multi-wall kraft paper and perforated cement sack substrates. Ensures maximum opacity and high rub-resistance in demanding packaging environments.',
     imageUrl: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1000&q=80',
+    imageAlt: 'Stacked multi-wall kraft paper cement sacks in industrial warehouse',
     plateRecommendation: '2.84 mm Heavy-Duty Industrial Photopolymer',
     keyBenefits: [
       'Maximum ink laydown on rough, high-absorption kraft sheets',
@@ -121,6 +127,7 @@ export const INDUSTRIES: IndustryItem[] = [
     tagline: 'Sharp screen fidelity for BOPP, CPP & thermoformed plastics',
     description: 'Precision engineered plates for BOPP, CPP, and OPP substrate conversions. Enables converters to run delicate halftone patterns, soft vignettes, and heavy solid coverage simultaneously without compromising press speed.',
     imageUrl: 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=1000&q=80',
+    imageAlt: 'BOPP and CPP polypropylene film rolls and plastic packaging substrates',
     plateRecommendation: '1.70 mm / 1.14 mm Digital Plate Grade',
     keyBenefits: [
       'Even surface energy for uniform ink film splitting',

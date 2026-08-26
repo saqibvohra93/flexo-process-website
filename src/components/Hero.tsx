@@ -66,9 +66,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuote, onNavigateSection }) =>
             <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80"
-                alt="High-precision digital flexographic photopolymer printing plate production"
+                alt="High-precision digital flexographic photopolymer printing plate production using German CDI laser technology"
                 className="w-full h-[320px] sm:h-[420px] lg:h-[480px] object-cover"
                 loading="eager"
+                decoding="async"
+                fetchPriority="high"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-navy-950/10 to-transparent" />
 

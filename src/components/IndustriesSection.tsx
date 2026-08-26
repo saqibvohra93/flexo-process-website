@@ -38,9 +38,10 @@ export const IndustriesSection: React.FC<IndustriesSectionProps> = ({ onSelectIn
               <div className="relative h-48 w-full overflow-hidden bg-navy-950">
                 <img
                   src={ind.imageUrl}
-                  alt={ind.title}
+                  alt={ind.imageAlt || `${ind.title} flexographic printing plates`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent" />
                 
