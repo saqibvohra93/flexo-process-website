@@ -69,7 +69,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
                 <div className="space-y-2 mb-6 text-xs text-slate-200">
                   {srv.features.slice(0, 3).map((feat, i) => (
                     <div key={i} className="flex items-start gap-2.5">
-                      <CheckCircle2 className="w-4 h-4 text-flexo-yellow shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                       <span>{feat}</span>
                     </div>
                   ))}
@@ -139,7 +139,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300">
                 {activeServiceModal.features.map((f, i) => (
                   <div key={i} className="flex items-start gap-2 bg-white/[0.02] p-2 rounded-lg border border-white/5">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-flexo-yellow shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
                     <span>{f}</span>
                   </div>
                 ))}

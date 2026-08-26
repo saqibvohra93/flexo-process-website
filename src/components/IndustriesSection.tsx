@@ -65,7 +65,7 @@ export const IndustriesSection: React.FC<IndustriesSectionProps> = ({ onSelectIn
                   <div className="space-y-1.5 mb-5 text-xs text-slate-200">
                     {ind.keyBenefits.slice(0, 2).map((b, i) => (
                       <div key={i} className="flex items-start gap-2">
-                        <Check className="w-3.5 h-3.5 text-flexo-yellow shrink-0 mt-0.5" />
+                        <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
                         <span className="text-slate-300">{b}</span>
                       </div>
                     ))}
@@ -145,7 +145,7 @@ export const IndustriesSection: React.FC<IndustriesSectionProps> = ({ onSelectIn
               <div className="space-y-2 text-xs text-slate-300">
                 {activeModalIndustry.keyBenefits.map((b, i) => (
                   <div key={i} className="flex items-center gap-2.5">
-                    <Check className="w-4 h-4 text-flexo-yellow shrink-0" />
+                    <Check className="w-4 h-4 text-emerald-400 shrink-0" />
                     <span>{b}</span>
                   </div>
                 ))}

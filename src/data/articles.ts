@@ -57,7 +57,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2026-02-15',
     author: 'Mohsin Raza',
     authorRole: 'Senior Industrial Packaging Engineer',
-    imageUrl: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1565610222536-ef125c59da2e?auto=format&fit=crop&w=1000&q=80',
     tags: ['Flexo Blocks', 'In-House Prepress', 'Cost Analysis', 'Packaging Business'],
     featured: true,
     keyTakeaways: [
@@ -151,7 +151,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2026-01-28',
     author: 'Engr. Tariq Mehmood',
     authorRole: 'Head of Prepress & Laser Optics, Flexo Process',
-    imageUrl: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1589365278144-c9e705f843ba?auto=format&fit=crop&w=1000&q=80',
     tags: ['Narrow Web', 'Shore A Durometer', 'Prime Labels', 'Cushion Tape', 'UV Inks'],
     keyTakeaways: [
       'Harder plates (73-75 Shore A) prevent dot deformation on fine highlight screens and micro-text.',
@@ -215,7 +215,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2026-01-14',
     author: 'Mohsin Raza',
     authorRole: 'Senior Industrial Packaging Engineer',
-    imageUrl: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1000&q=80',
     tags: ['PP Woven Bags', 'Cement Bags', 'Huaguang DR284M-II', 'Abrasion Resistance', 'Industrial Sacks'],
     keyTakeaways: [
       'PP woven tape fabric is highly abrasive and destroys standard soft photopolymers within 50,000 meters.',
@@ -343,7 +343,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2025-12-10',
     author: 'Engr. Tariq Mehmood',
     authorRole: 'Head of Prepress & Laser Optics, Flexo Process',
-    imageUrl: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?auto=format&fit=crop&w=1000&q=80',
     tags: ['Relief Depth', 'Plate Floor', 'Plate Bounce', 'Back Exposure', 'Press Vibration'],
     keyTakeaways: [
       'Total plate thickness equals the base floor thickness plus the active relief depth.',
@@ -408,7 +408,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2025-11-15',
     author: 'Mohsin Raza',
     authorRole: 'Senior Materials & Chemical Specialist',
-    imageUrl: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1000&q=80',
     tags: ['Plate Swell', 'Ink Compatibility', 'UV Inks', 'Solvent Inks', 'Plate Care'],
     keyTakeaways: [
       'Ester and ketone solvents penetrate standard polymer matrices, swelling plate thickness by up to 80 microns.',
@@ -633,7 +633,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2025-08-20',
     author: 'Khurram Shehzad',
     authorRole: 'Chief Flexo Technical Consultant',
-    imageUrl: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?auto=format&fit=crop&w=1000&q=80',
     tags: ['Anilox Selection', 'Anilox to Plate Ratio', 'Cell Volume BCM', 'Press Calibration', 'HD Flexo'],
     keyTakeaways: [
       'Maintain an anilox-to-plate screen ruling ratio of at least 4.5:1 to 6:1 to prevent dot dipping.',

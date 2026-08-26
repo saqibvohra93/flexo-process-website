@@ -20,7 +20,7 @@ export const INDUSTRIES: IndustryItem[] = [
     title: 'Label Printing & Narrow Web',
     tagline: 'Micron-level sharpness for cosmetic, pharma & prime retail labels',
     description: 'High-precision digital flexographic plates engineered for narrow-web presses. Achieve ultra-fine highlights, 2pt reverse micro-text, perfect barcodes, and flawless multi-color registration on self-adhesive papers, films, and shrink sleeves.',
-    imageUrl: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1589365278144-c9e705f843ba?auto=format&fit=crop&w=1000&q=80',
     plateRecommendation: '1.14 mm (0.045") Ultra-Fine HD Digital Photopolymer',
     keyBenefits: [
       'Zero dot gain shift with Flat-Top Dot laser optics',
@@ -40,7 +40,7 @@ export const INDUSTRIES: IndustryItem[] = [
     title: 'Flexible Packaging & Barrier Films',
     tagline: 'High-density solid ink transfer and smooth vignettes for food pouches',
     description: 'Superior digital plates specifically formulated for high-speed central impression (CI) and stack flexo presses. Perfect for food pouches, snack laminates, shrink film, and retort packaging where color consistency and fast press speeds are essential.',
-    imageUrl: 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1000&q=80',
     plateRecommendation: '1.70 mm (0.067") Versatile Packaging Photopolymer',
     keyBenefits: [
       'Eliminates pinholing and orange peel in solid ink lays',
@@ -80,7 +80,7 @@ export const INDUSTRIES: IndustryItem[] = [
     title: 'PP Woven Bags & Industrial Sacks',
     tagline: 'Heavy-duty resilience for textured polypropylene weaves',
     description: 'Specially engineered high-solid photopolymer plates built to endure the extreme mechanical abrasion of woven polypropylene fabric. Delivers rich, vibrant solid colors and bold branding on rice, flour, chemical, and feed sacks.',
-    imageUrl: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&w=1000&q=80',
     plateRecommendation: 'Huaguang DR284M-II (2.84 mm / 0.112")',
     keyBenefits: [
       'High tensile strength resists tape tearing and weave snagging',
@@ -100,7 +100,7 @@ export const INDUSTRIES: IndustryItem[] = [
     title: 'Cement Bags & Multi-Wall Sacks',
     tagline: 'Rugged ink transfer on porous kraft and industrial packaging',
     description: 'High-solid, impact-resistant flexo plates designed specifically for rough, abrasive multi-wall kraft paper and perforated cement sack substrates. Ensures maximum opacity and high rub-resistance in demanding packaging environments.',
-    imageUrl: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1000&q=80',
     plateRecommendation: '2.84 mm Heavy-Duty Industrial Photopolymer',
     keyBenefits: [
       'Maximum ink laydown on rough, high-absorption kraft sheets',
