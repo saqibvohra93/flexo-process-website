@@ -56,11 +56,6 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
                   decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
-                <div className="absolute top-3 left-3">
-                  <span className="text-[11px] font-mono font-bold bg-white/95 text-amber-700 border border-amber-500/30 px-2.5 py-1 rounded-md shadow-sm">
-                    {srv.equipment.split(',')[0]}
-                  </span>
-                </div>
               </div>
 
               <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between">
