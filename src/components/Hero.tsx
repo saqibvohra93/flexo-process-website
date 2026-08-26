@@ -32,8 +32,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuote, onNavigateSection }) =>
               German CDI Laser Plate Technology &bull; HD Flat-Top
             </div>
 
-            <h1 className="font-display font-extrabold text-3xl sm:text-5xl lg:text-[3.4rem] tracking-tight text-slate-900 leading-[1.1] mb-5">
-              Flexo Graphic <span className="text-amber-600">Digital Plates</span>
+            <h1 className="font-display font-extrabold text-3xl sm:text-5xl lg:text-[3.4rem] tracking-tight text-[#FF7A00] leading-[1.1] mb-5">
+              Flexo Graphic Digital Plates
             </h1>
 
             <p className="text-base sm:text-lg text-slate-700 font-normal leading-relaxed max-w-lg mb-8">
