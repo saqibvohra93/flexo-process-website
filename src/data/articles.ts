@@ -123,13 +123,13 @@ export const ARTICLES: ArticleItem[] = [
     tags: ['Corrugated Cartons', 'Fluting Suppression', 'Washboard Effect', '2.84mm Plates', 'Prepress'],
     keyTakeaways: [
       'Washboarding occurs when stiff plates deform unevenly over the crests and valleys of corrugated flutes.',
-      'Utilizing 2.54mm to 3.94mm photopolymers with 38-42 Shore A durometer absorbs flute topography without crushing liners.',
+      'Utilizing 2.84mm to 4.70mm photopolymers with 30-42 Shore A durometer absorbs flute topography without crushing liners.',
       'Micro-cell surface texturization increases ink laydown by up to 18% with zero extra ink consumption.',
       'Relief depth must be strictly calibrated between 1.10mm and 1.40mm to prevent shoulder ink build-up.'
     ],
     specsTable: [
-      { label: 'Recommended Thickness', value: '2.54 mm, 2.84 mm, 3.94 mm' },
-      { label: 'Durometer Range', value: '38 - 45 Shore A' },
+      { label: 'Recommended Thickness', value: '2.84 mm, 3.94 mm, 4.70 mm' },
+      { label: 'Durometer Range', value: '30 - 42 Shore A' },
       { label: 'Screen Ruling Target', value: '85 - 120 LPI' },
       { label: 'Relief Floor Depth', value: '1.10 - 1.40 mm' }
     ],

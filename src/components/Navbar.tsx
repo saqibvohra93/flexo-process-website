@@ -46,9 +46,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote, onNavigateSection }
             aria-label="Flexo Process Home"
           >
             <img
-              src="/logo.png"
+              src="/images/logo-black.png"
               alt="Flexo Process (Private) Limited"
-              className="h-8 sm:h-9 w-auto object-contain"
+              className="h-8 sm:h-9 md:h-10 w-auto object-contain"
             />
           </button>
 

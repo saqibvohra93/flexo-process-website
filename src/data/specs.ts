@@ -37,18 +37,6 @@ export const PLATE_SPECIFICATIONS: PlateSpec[] = [
     description: 'The industry workhorse for wide-web and mid-web flexible packaging. Delivers dense, uniform solid ink coverage without pinholing while maintaining crisp vignettes and gradient fades to zero.'
   },
   {
-    id: 'dr254',
-    name: 'Heavy-Duty Corrugated & Pre-Print Plate (2.54mm)',
-    thickness: '2.54 mm / 0.100"',
-    hardness: '42 - 45 Shore A',
-    reliefDepth: '0.90 to 1.20 mm',
-    maxLpi: '100 - 133 LPI',
-    minDot: '1.5% at 110 LPI',
-    bestFor: 'Corrugated cartons, fluted boxes, micro-flute pre-print, heavy paper sacks',
-    inkTypes: ['Water-based Flexo', 'Specialty Emulsions'],
-    description: 'Formulated with high elasticity and deep floor relief to suppress fluting marks (washboarding) across kraft and recycled corrugated liners while resisting premature edge wear.'
-  },
-  {
     id: 'dr284',
     name: 'Huaguang DR284M-II Heavy Industrial Plate (2.84mm)',
     thickness: '2.84 mm / 0.112"',
@@ -56,9 +44,9 @@ export const PLATE_SPECIFICATIONS: PlateSpec[] = [
     reliefDepth: '1.10 to 1.40 mm',
     maxLpi: '85 - 110 LPI',
     minDot: '2.0% at 85 LPI',
-    bestFor: 'PP Woven sacks, valve cement bags, fertilizer bags, rough craft liners, bulk packaging',
-    inkTypes: ['Heavy Solvent-based', 'High-Viscosity Water-based'],
-    description: 'High-tensile, abrasion-resistant photopolymer plate crafted to handle tough, abrasive woven polypropylene and porous kraft surfaces with unmatched ink laydown and resilience.'
+    bestFor: 'Corrugated cartons, PP Woven sacks, valve cement bags, fertilizer bags, rough kraft liners',
+    inkTypes: ['Water-based Flexo', 'Heavy Solvent-based', 'High-Viscosity Sack Inks'],
+    description: 'High-tensile, abrasion-resistant photopolymer plate crafted to handle tough fluted corrugated liners, abrasive woven polypropylene and porous kraft surfaces with unmatched resilience.'
   },
   {
     id: 'dr394',
@@ -71,14 +59,26 @@ export const PLATE_SPECIFICATIONS: PlateSpec[] = [
     bestFor: 'Rough corrugated shippers, agricultural sacks, heavy industrial multi-wall kraft bags',
     inkTypes: ['Water-based', 'Alcohol-based'],
     description: 'Maximum resilience and deep shoulder relief engineered to withstand uneven substrates and extreme press pressures without shoulder ink buildup.'
+  },
+  {
+    id: 'dr470',
+    name: 'Extra Deep Relief Industrial Plate (4.70mm)',
+    thickness: '4.70 mm / 0.185"',
+    hardness: '30 - 34 Shore A',
+    reliefDepth: '1.60 to 2.20 mm',
+    maxLpi: '55 - 75 LPI',
+    minDot: '3.5% at 65 LPI',
+    bestFor: 'Heavy fluted corrugated board, large format shippers, multi-wall sacks, coarse industrial liners',
+    inkTypes: ['Water-based Flexo', 'Specialty Emulsions', 'Heavy Solvent-based'],
+    description: 'Extra thick photopolymer plate providing maximum cushioning and shock absorption on coarse fluted corrugated boards, preventing board crush and fluting lines.'
   }
 ];
 
 export const SUBSTRATE_OPTIONS = [
   { id: 'labels', label: 'Prime Labels & Shrink Sleeves', defaultThick: '1.14 mm', lpi: '175 LPI' },
   { id: 'flexpack', label: 'Flexible Packaging (BOPP/PET/CPP/PE)', defaultThick: '1.70 mm', lpi: '150-175 LPI' },
-  { id: 'corrugated', label: 'Corrugated Cartons & Fluted Board', defaultThick: '2.54 mm', lpi: '100-133 LPI' },
+  { id: 'corrugated', label: 'Corrugated Cartons & Fluted Board', defaultThick: '2.84 mm', lpi: '85-110 LPI' },
   { id: 'ppwoven', label: 'PP Woven Sacks & Geotextiles', defaultThick: '2.84 mm', lpi: '85-100 LPI' },
-  { id: 'cement', label: 'Cement Bags & Multi-Wall Sacks', defaultThick: '2.84 mm', lpi: '85 LPI' },
-  { id: 'polypropylene', label: 'Polypropylene & Thermoformed Packaging', defaultThick: '1.70 mm', lpi: '150 LPI' },
+  { id: 'cement', label: 'Cement Bags (Paper & Plastic)', defaultThick: '2.84 mm', lpi: '85 LPI' },
+  { id: 'polypropylene', label: 'Polypropylene & Rigid Films', defaultThick: '1.70 mm', lpi: '150 LPI' },
 ];

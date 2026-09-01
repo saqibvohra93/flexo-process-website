@@ -72,11 +72,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuote, onNavigateSection }) =>
 
           {/* Right: Real Printing Press & Plate Engineering Image */}
           <div className="lg:col-span-6 relative">
-            <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-2xl">
+            <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-2xl bg-slate-900">
               <img
-                src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80"
-                alt="High-precision digital flexographic photopolymer printing plate production using German CDI laser technology"
-                className="w-full h-[320px] sm:h-[420px] lg:h-[480px] object-cover"
+                src="/images/hero-plate.jpg"
+                alt="High-precision digital flexographic photopolymer printing plate quality inspection on light table with prepress engineers"
+                className="w-full h-[320px] sm:h-[420px] lg:h-[480px] object-cover object-center"
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
@@ -95,7 +95,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuote, onNavigateSection }) =>
               <div className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 flex items-center justify-between bg-white/90 backdrop-blur-md border border-slate-200 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 text-center sm:text-left shadow-lg">
                 <div>
                   <span className="text-[10px] sm:text-[11px] text-slate-500 block">Thickness</span>
-                  <span className="text-xs sm:text-sm font-bold text-slate-900">1.14 - 3.94mm</span>
+                  <span className="text-xs sm:text-sm font-bold text-slate-900">1.14 - 4.70mm</span>
                 </div>
                 <div className="w-px h-7 sm:h-8 bg-slate-200" />
                 <div>

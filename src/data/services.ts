@@ -18,8 +18,8 @@ export const SERVICES: ServiceItem[] = [
     subtitle: 'High precision digital flexo plates for self-adhesive labels, stickers & shrink sleeves',
     description: 'High-precision digital plates for narrow-web label presses on paper, film, and metallic substrates. Zero dot gain shift with GS1 Grade A barcode compliance.',
     icon: 'Tag',
-    imageUrl: '/images/industries/labels.jpg',
-    imageAlt: "Josh's Kitchen hexagonal jar product labels with high-definition botanical color printing",
+    imageUrl: '/images/industries/labels.png',
+    imageAlt: 'High-speed printed flexographic label rolls and narrow-web packaging',
     equipment: 'German CDI Laser Imaging, High-Durometer (73-75 Shore A) Digital Photopolymer',
     features: [
       'Razor-sharp 2pt micro-typography and reverse text reproduction',
@@ -40,8 +40,8 @@ export const SERVICES: ServiceItem[] = [
     subtitle: 'Digital plates for CI and stack flexo presses on plastic films, foils & pouches',
     description: 'Digital flexo plates for CI and stack flexo machines on BOPP, CPP, PET, PE films, food pouches, and laminates. Eliminates pinholing with gravure-rivaling solid ink density.',
     icon: 'Layers',
-    imageUrl: '/images/industries/flexible-packaging.jpg',
-    imageAlt: 'High-barrier flexible packaging stand-up pouches for food, coffee, dried fruit, and snacks',
+    imageUrl: '/images/industries/flexible-packaging.png',
+    imageAlt: 'High-definition printed flexible packaging stand-up barrier pouches for retail products',
     equipment: '4,000 DPI Laser CDI Engine with HD MicroCell Surface Texturization',
     features: [
       'Eliminates pinholing and mottle on non-porous transparent and metallized films',
@@ -62,9 +62,9 @@ export const SERVICES: ServiceItem[] = [
     subtitle: 'Durable, fluting-suppressing flexo plates for corrugated boxes & sheets',
     description: 'Heavy-duty photopolymer plates for post-print and pre-print corrugated. High elasticity absorbs fluting variation and suppresses washboard effect on kraft and recycled board.',
     icon: 'Box',
-    imageUrl: '/images/industries/corrugated.jpg',
-    imageAlt: 'Fort Point Beer Co kraft corrugated cardboard shipping boxes with crisp geometric printing',
-    equipment: 'Large-Format Digital Laser Imager, Low-Durometer (38-45 Shore A) Photopolymer',
+    imageUrl: '/images/industries/corrugated.png',
+    imageAlt: 'Multi-layer fluted corrugated cardboard sheets and shipping cartons',
+    equipment: 'Large-Format Digital Laser Imager, Low-Durometer (30-42 Shore A) Photopolymer',
     features: [
       'Active washboard and fluting suppression on B, C, and E flute liners',
       'High elasticity preventing board crush and Box Compression Test (BCT) loss',
@@ -73,7 +73,7 @@ export const SERVICES: ServiceItem[] = [
       'Resistant to mechanical edge chipping on abrasive kraft paper'
     ],
     deliverables: [
-      'Heavy-Duty Corrugated Flexo Plates (2.54mm / 2.84mm / 3.94mm)',
+      'Heavy-Duty Corrugated Flexo Plates (2.84mm / 3.94mm / 4.70mm)',
       'Cylinder distortion and step-and-repeat imposition proofs',
       'Mounting reference marks and registration microdots'
     ]
@@ -84,8 +84,8 @@ export const SERVICES: ServiceItem[] = [
     subtitle: 'Rugged, abrasion-resistant flexo blocks for woven polypropylene sacks',
     description: 'High-tensile digital flexo plates for woven polypropylene fabric. Delivers vibrant branding and sharp caution text on rice, flour, feed, and fertilizer bags.',
     icon: 'Package',
-    imageUrl: '/images/industries/pp-woven.jpg',
-    imageAlt: 'Colorful printed PP woven and non-woven reusable shopping tote bags with custom logo and sunflower print',
+    imageUrl: '/images/industries/pp-woven.png',
+    imageAlt: 'Colorful printed woven polypropylene sacks and industrial bulk bags',
     equipment: 'Huaguang DR284M-II Heavy Industrial Photopolymer Processing',
     features: [
       'High-tensile elastomer resin resisting weave snagging and surface tearing',
@@ -102,12 +102,12 @@ export const SERVICES: ServiceItem[] = [
   },
   {
     id: 'cement-bags',
-    title: 'Cement Bags',
+    title: 'Paper Cement Bags',
     subtitle: 'High-solid impact-resistant plates for multi-wall kraft paper & cement sacks',
     description: 'High-solid photopolymer plates for high-volume cement and building material packaging. Maximum ink opacity and rub-resistance on rough multi-wall kraft and valve cement sacks.',
     icon: 'Archive',
-    imageUrl: '/images/industries/cement-sacks.jpg',
-    imageAlt: 'Benchmark Perfect Mash 20kg multi-wall industrial sack bag standing on wooden pallet in warehouse',
+    imageUrl: '/images/industries/cement-sacks.png',
+    imageAlt: 'Heavy-duty multi-wall kraft paper cement sacks and valve bags',
     equipment: 'Automated UV-C De-Tack Post-Curing & Digital Laser CDI Exposure',
     features: [
       'High opacity ink transfer on heavy-absorption porous kraft sheets',
@@ -117,29 +117,29 @@ export const SERVICES: ServiceItem[] = [
       'Precision relief depth preventing ink flooding in small compliance text'
     ],
     deliverables: [
-      'Heavy-Duty Multi-Wall Sack Plates (2.84mm / 3.94mm)',
+      'Heavy-Duty Multi-Wall Sack Plates (2.84mm / 3.94mm / 4.70mm)',
       'Relief depth and floor uniformity certificate',
       'Prepress step-and-repeat layout for continuous sack formers'
     ]
   },
   {
-    id: 'polypropylene-packaging',
-    title: 'Polypropylene Packaging',
-    subtitle: 'High-definition plates for BOPP, CPP, OPP films & custom folding cartons',
-    description: 'Precision plates for BOPP, CPP, OPP films, thermoformed containers, and folding cartons. Delicate halftone screens and solid coverage without press slowdowns.',
+    id: 'plastic-cement-bags',
+    title: 'Plastic Cement Bags',
+    subtitle: 'Precision digital plates for laminated plastic and polymeric cement sacks',
+    description: 'Specially engineered digital photopolymer plates for laminated plastic cement sacks (BOPP/PP woven & polyethylene valve sacks). Delivers crisp regulatory printing, high ink anchorage, and slip-resistant surface laydown.',
     icon: 'Sparkles',
-    imageUrl: '/images/industries/polypropylene.jpg',
-    imageAlt: 'Custom printed retail product folding cartons and mailer boxes with multi-color branding',
+    imageUrl: '/images/industries/plastic-cement-bags.png',
+    imageAlt: 'Stack of premium printed white plastic cement sacks with ISI certification markings',
     equipment: 'Sub-Micron Laser Optics, Digital HD Plate Finishing Line',
     features: [
-      'Uniform ink film splitting across smooth, non-porous PP films',
-      'Minimized dot bridging in critical midtone tonal ranges (40% to 60%)',
-      'High resistance against plasticizer migration from film additives',
-      'Rapid run-in time with minimal make-ready substrate waste',
-      'Excellent register accuracy for high-speed multi-color jobs'
+      'Uniform ink film transfer on non-porous laminated polymeric sack films',
+      'High scratch and rub resistance under high-friction stacking conditions',
+      'Sharp reproduction of ISI/ISO certification marks and fine regulatory text',
+      'Rapid drying ink laydown compatibility with high-speed automated bag formers',
+      'Excellent register accuracy for 4-to-6 color automated lines'
     ],
     deliverables: [
-      'HD Digital Polypropylene Packaging Plates (1.14mm / 1.70mm)',
+      'HD Digital Plastic Cement Sack Plates (1.70mm / 2.84mm)',
       'Digital color separation proofs',
       'Pressroom fingerprinting and calibration data'
     ]

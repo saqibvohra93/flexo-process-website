@@ -168,6 +168,61 @@ export const DotComparator: React.FC = () => {
 
         </div>
 
+        {/* Real Plate & Laser CDI Technology Visual Gallery */}
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm flex flex-col group">
+            <div className="relative h-60 sm:h-72 w-full bg-slate-900 overflow-hidden">
+              <img
+                src="/images/technology/flexo-digital-print.png"
+                alt="Flexo digital print microscopic laser dot inspection on nyloflex FTM photopolymer plate"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+              <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900/80 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Microscopic Laser Quality Inspection</span>
+              </div>
+            </div>
+            <div className="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 className="font-display font-bold text-base sm:text-lg text-slate-900 mb-1">
+                  Sub-Micron Laser Flat-Top Dot Inspection
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Every batch of digital plates is inspected under high-precision optical magnification to verify flat-top plateau geometry, shoulder steepness, and 0.8% highlight dot retention.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm flex flex-col group">
+            <div className="relative h-60 sm:h-72 w-full bg-slate-900 overflow-hidden">
+              <img
+                src="/images/technology/flexo-rolls.png"
+                alt="High-precision digital photopolymer sleeves and continuous flexographic print rolls"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+              <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900/80 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold">
+                <span className="w-2 h-2 rounded-full bg-amber-400" />
+                <span>Continuous Sleeves &amp; Print Cylinders</span>
+              </div>
+            </div>
+            <div className="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 className="font-display font-bold text-base sm:text-lg text-slate-900 mb-1">
+                  Precision Sleeves &amp; Plate Roll Mounting
+                </h3>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  High-tensile photopolymer sleeves and precision-mounted plate cylinders calibrated to exact repeat circumferences for seamless high-speed CI and narrow-web presses.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );

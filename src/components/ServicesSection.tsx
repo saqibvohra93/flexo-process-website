@@ -47,15 +47,15 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
               className="group rounded-2xl bg-white border border-slate-200 hover:border-amber-500/50 overflow-hidden transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-lg"
             >
               {/* Service Image */}
-              <div className="relative h-44 w-full overflow-hidden bg-slate-200">
+              <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-100">
                 <img
                   src={srv.imageUrl}
                   alt={srv.imageAlt}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-95"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                   decoding="async"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
               </div>
 
               <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between">

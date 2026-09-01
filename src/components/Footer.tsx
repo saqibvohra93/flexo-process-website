@@ -50,9 +50,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenQuote }
           {/* Brand Col */}
           <div className="lg:col-span-4 space-y-4">
             <img
-              src="/logo.png"
+              src="/images/logo-white.png"
               alt="Flexo Process (Private) Limited"
-              className="h-10 w-auto object-contain"
+              className="h-9 sm:h-10 w-auto object-contain"
             />
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
@@ -107,7 +107,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenQuote }
           {/* Plate Formats */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="font-display font-bold text-sm text-white uppercase tracking-wider">
-              Plate Specifications
+              Supported Specifications
             </h4>
             <ul className="space-y-2 text-xs">
               <li className="text-slate-300">
@@ -117,13 +117,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenQuote }
                 <strong className="text-white">1.70 mm (0.067")</strong> for Flexible Film (BOPP/PET)
               </li>
               <li className="text-slate-300">
-                <strong className="text-white">2.54 mm (0.100")</strong> for Fluted Corrugated
+                <strong className="text-white">2.84 mm (0.112")</strong> for Corrugated &amp; PP Woven Sacks
               </li>
               <li className="text-slate-300">
-                <strong className="text-white">2.84 mm (0.112")</strong> for Huaguang DR284M-II Sacks
+                <strong className="text-white">3.94 mm (0.155")</strong> for Deep Relief Kraft Bags
               </li>
               <li className="text-slate-300">
-                <strong className="text-white">3.94 mm (0.155")</strong> for Heavy Industrial Sacks
+                <strong className="text-white">4.70 mm (0.185")</strong> for Heavy-Duty Fluted Board
               </li>
             </ul>
           </div>

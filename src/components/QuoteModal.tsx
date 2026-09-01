@@ -157,7 +157,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({ isOpen, onClose, default
                     <option value="Flexible Packaging (BOPP/PET)">Flexible Packaging (BOPP/PET)</option>
                     <option value="Corrugated Cartons">Corrugated Cartons</option>
                     <option value="PP Woven Bags">PP Woven Sacks</option>
-                    <option value="Cement Bags">Cement Multi-Wall Bags</option>
+                    <option value="Cement Bags (Paper & Plastic)">Cement Bags (Paper &amp; Plastic)</option>
                   </select>
                 </div>
                 <div>

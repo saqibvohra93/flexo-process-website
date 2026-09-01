@@ -13,7 +13,7 @@ export const FAQS: FaqItem[] = [
   {
     category: 'Technical Specifications',
     question: 'What plate thicknesses and photopolymer grades do you offer?',
-    answer: 'We stock and process a full range of digital photopolymer plate thicknesses including 1.14 mm (0.045"), 1.70 mm (0.067"), 2.54 mm (0.100"), 2.84 mm (0.112"), and 3.94 mm (0.155"). We offer specialty grades for narrow-web labels, flexible barrier films, corrugated fluted board, and heavy-duty PP woven/cement sacks (including Huaguang DR284M-II and premium German photopolymers).'
+    answer: 'We stock and process a full range of digital photopolymer plate thicknesses including 1.14 mm (0.045"), 1.70 mm (0.067"), 2.84 mm (0.112"), 3.94 mm (0.155"), and 4.70 mm (0.185"). We offer specialty grades for narrow-web labels, flexible barrier films, corrugated fluted board, and heavy-duty PP woven/cement sacks (including Huaguang DR284M-II and premium German photopolymers).'
   },
   {
     category: 'Prepress & Technology',

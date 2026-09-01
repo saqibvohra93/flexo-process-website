@@ -77,7 +77,7 @@ export function getStructuredData() {
     '@type': 'Product',
     name: 'HD Digital Flexographic Photopolymer Printing Plates',
     image: 'https://flexoprocess.com/favicon.svg',
-    description: 'High-precision German CDI laser photopolymer plates available in 1.14mm, 1.70mm, 2.54mm, and 2.84mm thicknesses for narrow web, flexible packaging, corrugated boxes, and PP woven bags.',
+    description: 'High-precision German CDI laser photopolymer plates available in 1.14mm, 1.70mm, 2.84mm, 3.94mm, and 4.70mm thicknesses for narrow web, flexible packaging, corrugated boxes, and PP woven bags.',
     brand: {
       '@type': 'Brand',
       name: 'Flexo Process'

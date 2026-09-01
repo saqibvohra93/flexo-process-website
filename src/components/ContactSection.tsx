@@ -310,9 +310,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
                     >
                       <option value='1.14 mm / 0.045"'>1.14 mm / 0.045" (Labels &amp; Shrink)</option>
                       <option value='1.70 mm / 0.067"'>1.70 mm / 0.067" (Flexible Packaging)</option>
-                      <option value='2.54 mm / 0.100"'>2.54 mm / 0.100" (Corrugated)</option>
-                      <option value='2.84 mm / 0.112"'>2.84 mm / 0.112" (PP Woven &amp; Cement)</option>
-                      <option value='3.94 mm / 0.155"'>3.94 mm / 0.155" (Heavy Sacks)</option>
+                      <option value='2.84 mm / 0.112"'>2.84 mm / 0.112" (Corrugated, PP Woven &amp; Cement)</option>
+                      <option value='3.94 mm / 0.155"'>3.94 mm / 0.155" (Deep Relief Heavy Sacks)</option>
+                      <option value='4.70 mm / 0.185"'>4.70 mm / 0.185" (Heavy-Duty Fluted Board)</option>
                       <option value="Help Me Choose">Help Me Choose Optimal Plate</option>
                     </select>
                   </div>
