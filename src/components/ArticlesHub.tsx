@@ -8,6 +8,38 @@ interface ArticlesHubProps {
 
 const CATEGORIES = ["All", "Buyer's Guides", 'Prepress & Imaging', 'Packaging & Substrates', 'Press Optimization', 'Troubleshooting'];
 
+const articleImageBase = (imageUrl: string) => imageUrl.replace(/\.jpe?g$/i, '');
+
+const ArticleImage: React.FC<{
+  imageUrl: string;
+  alt: string;
+  className?: string;
+  sizes: string;
+  loading?: 'lazy' | 'eager';
+}> = ({ imageUrl, alt, className, sizes, loading = 'lazy' }) => {
+  const base = articleImageBase(imageUrl);
+  return (
+    <picture>
+      <source
+        type="image/webp"
+        srcSet={`${base}-sm.webp 768w, ${base}.webp 1280w`}
+        sizes={sizes}
+      />
+      <img
+        src={`${base}.jpg`}
+        srcSet={`${base}.jpg 1280w`}
+        sizes={sizes}
+        alt={alt}
+        className={className}
+        loading={loading}
+        decoding="async"
+        width={1280}
+        height={854}
+      />
+    </picture>
+  );
+};
+
 export const ArticlesHub: React.FC<ArticlesHubProps> = ({ onOpenQuoteWithTopic }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -94,12 +126,11 @@ export const ArticlesHub: React.FC<ArticlesHubProps> = ({ onOpenQuoteWithTopic }
       }`}
     >
       <div className="relative h-44 w-full overflow-hidden bg-slate-200 ">
-        <img
-          src={art.imageUrl}
+        <ArticleImage
+          imageUrl={art.imageUrl}
           alt={`${art.title} - Flexo Process Technical Guide`}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-95  group-hover:opacity-100 pointer-events-none"
-          loading="lazy"
-          decoding="async"
+          sizes="(min-width: 768px) 340px, 85vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60   to-transparent pointer-events-none" />
         <div className="absolute top-3 left-3 pointer-events-none">
@@ -294,10 +325,12 @@ export const ArticlesHub: React.FC<ArticlesHubProps> = ({ onOpenQuoteWithTopic }
             </h2>
 
             <div className="relative h-44 sm:h-56 w-full overflow-hidden rounded-xl mb-6 bg-slate-200">
-              <img
-                src={activeArticle.imageUrl}
+              <ArticleImage
+                imageUrl={activeArticle.imageUrl}
                 alt={`${activeArticle.title} - Flexo Process Technical Guide`}
                 className="w-full h-full object-cover"
+                sizes="(min-width: 768px) 720px, 92vw"
+                loading="eager"
               />
             </div>
 
