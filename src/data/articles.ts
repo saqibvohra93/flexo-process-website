@@ -28,7 +28,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2026-02-20',
     author: 'Khurram Shehzad',
     authorRole: 'Chief Flexo Technical Consultant',
-    imageUrl: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/hero-plate.jpg',
     tags: ['Buyer\'s Guide', 'Flexo Blocks', 'Vendor Selection', 'Packaging Procurement'],
     featured: true,
     keyTakeaways: [
@@ -57,7 +57,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2026-02-15',
     author: 'Mohsin Raza',
     authorRole: 'Senior Industrial Packaging Engineer',
-    imageUrl: 'https://images.unsplash.com/photo-1565610222536-ef125c59da2e?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/technology/flexo-rolls.png',
     tags: ['Flexo Blocks', 'In-House Prepress', 'Cost Analysis', 'Packaging Business'],
     featured: true,
     keyTakeaways: [
@@ -86,7 +86,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2026-02-12',
     author: 'Engr. Tariq Mehmood',
     authorRole: 'Head of Prepress & Laser Optics, Flexo Process',
-    imageUrl: 'https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/technology/flexo-digital-print.png',
     tags: ['Flat-Top Dot', 'German Optics', 'Dot Gain', 'Laser CDI', 'HD Flexo'],
     featured: true,
     keyTakeaways: [
@@ -119,7 +119,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2026-02-05',
     author: 'Mohsin Raza',
     authorRole: 'Senior Corrugated Solutions Specialist',
-    imageUrl: 'https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/industries/corrugated.png',
     tags: ['Corrugated Cartons', 'Fluting Suppression', 'Washboard Effect', '2.84mm Plates', 'Prepress'],
     keyTakeaways: [
       'Washboarding occurs when stiff plates deform unevenly over the crests and valleys of corrugated flutes.',
@@ -151,7 +151,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2026-01-28',
     author: 'Engr. Tariq Mehmood',
     authorRole: 'Head of Prepress & Laser Optics, Flexo Process',
-    imageUrl: 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/industries/labels.png',
     tags: ['Narrow Web', 'Shore A Durometer', 'Prime Labels', 'Cushion Tape', 'UV Inks'],
     keyTakeaways: [
       'Harder plates (73-75 Shore A) prevent dot deformation on fine highlight screens and micro-text.',
@@ -183,7 +183,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2026-01-20',
     author: 'Khurram Shehzad',
     authorRole: 'Chief Flexo Technical Consultant',
-    imageUrl: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/industries/flexible-packaging.png',
     tags: ['BOPP Packaging', 'Food Pouches', '175 LPI', 'CI Flexo', 'Rotogravure Alternative'],
     keyTakeaways: [
       'HD Flexo enables flexographic converters to achieve gravure-quality photographic vignettes on barrier films.',
@@ -215,7 +215,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2026-01-14',
     author: 'Mohsin Raza',
     authorRole: 'Senior Industrial Packaging Engineer',
-    imageUrl: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/industries/pp-woven.png',
     tags: ['PP Woven Bags', 'Cement Bags', 'Huaguang DR284M-II', 'Abrasion Resistance', 'Industrial Sacks'],
     keyTakeaways: [
       'PP woven tape fabric is highly abrasive and destroys standard soft photopolymers within 50,000 meters.',
@@ -247,7 +247,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2026-01-08',
     author: 'Khurram Shehzad',
     authorRole: 'Chief Flexo Technical Consultant',
-    imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/hero-plate.jpg',
     tags: ['Pressroom ROI', 'Make-Ready Reduction', 'CDI Efficiency', 'B2B Printing Operations'],
     keyTakeaways: [
       'Press downtime costs between $200 and $600 per hour depending on web width and speed.',
@@ -279,7 +279,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2025-12-29',
     author: 'Engr. Tariq Mehmood',
     authorRole: 'Head of Prepress & Laser Optics, Flexo Process',
-    imageUrl: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/technology/flexo-digital-print.png',
     tags: ['ECG', '7-Color Process', 'Pantone Matching', 'Prepress Separation', 'Color Gamut'],
     keyTakeaways: [
       'Fixed-palette 7-color printing (CMYK + Orange + Green + Violet) covers over 92% of the Pantone Formula Guide.',
@@ -311,7 +311,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2025-12-18',
     author: 'Mohsin Raza',
     authorRole: 'Senior Prepress Workflow Specialist',
-    imageUrl: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/technology/flexo-rolls.png',
     tags: ['Pre-Flight', 'Trapping', 'Bleed', 'Minimum Dot', 'Packaging Design'],
     keyTakeaways: [
       'Trapping values should be tailored to press web width: 0.08mm for narrow-web, 0.15mm-0.25mm for wide-web CI.',
@@ -343,7 +343,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2025-12-10',
     author: 'Engr. Tariq Mehmood',
     authorRole: 'Head of Prepress & Laser Optics, Flexo Process',
-    imageUrl: 'https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/industries/flexible-packaging.png',
     tags: ['Relief Depth', 'Plate Floor', 'Plate Bounce', 'Back Exposure', 'Press Vibration'],
     keyTakeaways: [
       'Total plate thickness equals the base floor thickness plus the active relief depth.',
@@ -375,7 +375,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2025-11-28',
     author: 'Khurram Shehzad',
     authorRole: 'Chief Flexo Technical Consultant',
-    imageUrl: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/industries/labels.png',
     tags: ['Troubleshooting', 'Pinholing', 'Haloing', 'Gear Streaks', 'Print Defects', 'Pressroom Solutions'],
     keyTakeaways: [
       'Pinholing is caused by surface tension mismatch or insufficient ink transfer; cured by micro-screened plates.',
@@ -408,7 +408,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2025-11-15',
     author: 'Mohsin Raza',
     authorRole: 'Senior Materials & Chemical Specialist',
-    imageUrl: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/industries/labels.png',
     tags: ['Plate Swell', 'Ink Compatibility', 'UV Inks', 'Solvent Inks', 'Plate Care'],
     keyTakeaways: [
       'Ester and ketone solvents penetrate standard polymer matrices, swelling plate thickness by up to 80 microns.',
@@ -440,7 +440,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2025-11-02',
     author: 'Khurram Shehzad',
     authorRole: 'Chief Flexo Technical Consultant',
-    imageUrl: 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/technology/flexo-digital-print.png',
     tags: ['HD Flexo vs Gravure', 'Packaging Trends 2026', 'Sustainability', 'SKU Agility', 'Converter Economics'],
     featured: true,
     keyTakeaways: [
@@ -473,7 +473,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2025-10-22',
     author: 'Engr. Tariq Mehmood',
     authorRole: 'Head of Prepress & Laser Optics, Flexo Process',
-    imageUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/hero-plate.jpg',
     tags: ['Cold Foil', 'Spot Varnish', 'Cosmetic Labels', 'Embellishments', 'Luxury Packaging'],
     keyTakeaways: [
       'Cold foil adhesive requires exact plate micro-relief to prevent adhesive squeeze-out and foil edge raggedness.',
@@ -505,7 +505,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2025-10-14',
     author: 'Mohsin Raza',
     authorRole: 'Senior Prepress Workflow Specialist',
-    imageUrl: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/industries/cement-sacks.png',
     tags: ['Quality Assurance', 'SOP Checklist', 'Mounting Room', 'Prepress Inspection', 'Zero Defect'],
     keyTakeaways: [
       'Always inspect plate relief depth and floor gauge with a digital dial micrometer before cylinder mounting.',
@@ -537,7 +537,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2025-10-01',
     author: 'Khurram Shehzad',
     authorRole: 'Chief Flexo Technical Consultant',
-    imageUrl: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/technology/flexo-rolls.png',
     tags: ['Sustainability', 'Eco Flexo', 'Solvent Recovery', 'LED-UV Exposure', 'Green Packaging'],
     keyTakeaways: [
       'Modern digital washout units recover and recycle over 85% of processing solvents in closed-loop distillation.',
@@ -569,7 +569,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2025-09-18',
     author: 'Engr. Tariq Mehmood',
     authorRole: 'Head of Prepress & Laser Optics, Flexo Process',
-    imageUrl: 'https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/industries/flexible-packaging.png',
     tags: ['Laser Ablation', 'CDI Optics', 'Fiber Laser', 'Sub-Micron Imaging', 'HD Prepress'],
     keyTakeaways: [
       'Multi-beam fiber lasers provide consistent laser energy distribution across wide plate formats (up to 50x80 inches).',
@@ -601,7 +601,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2025-09-04',
     author: 'Mohsin Raza',
     authorRole: 'Senior Corrugated & Materials Specialist',
-    imageUrl: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/industries/plastic-cement-bags.png',
     tags: ['Micro-Screening', 'Solid Ink Density', 'Surface Texturization', 'Kraft Paper', 'PP Films'],
     keyTakeaways: [
       'Smooth, glossy solid plates suffer from hydraulic ink pooling, causing pinholes and uneven ink laydowns.',
@@ -633,7 +633,7 @@ export const ARTICLES: ArticleItem[] = [
     publishedDate: '2025-08-20',
     author: 'Khurram Shehzad',
     authorRole: 'Chief Flexo Technical Consultant',
-    imageUrl: 'https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?auto=format&fit=crop&w=1000&q=80',
+    imageUrl: '/images/hero-plate.jpg',
     tags: ['Anilox Selection', 'Anilox to Plate Ratio', 'Cell Volume BCM', 'Press Calibration', 'HD Flexo'],
     keyTakeaways: [
       'Maintain an anilox-to-plate screen ruling ratio of at least 4.5:1 to 6:1 to prevent dot dipping.',

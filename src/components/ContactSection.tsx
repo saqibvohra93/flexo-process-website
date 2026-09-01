@@ -156,7 +156,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
                   <div>
                     <span className="text-slate-500 block text-xs uppercase font-mono mb-0.5">Production Hours</span>
                     <p className="text-slate-900 font-medium">
-                      Monday to Saturday: 09:00 AM &amp; 06:00 PM<br />
+                      Monday to Saturday: 09:00 AM - 06:00 PM<br />
                       <span className="text-slate-500 text-xs">24/7 CDI Laser Overnight Dispatch Available</span>
                     </p>
                   </div>
