@@ -37,8 +37,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuote, onNavigateSection }) =>
             </h1>
 
             <p className="text-base sm:text-lg text-slate-700 font-normal leading-relaxed max-w-lg mb-8">
-              Pakistan's premier manufacturer of digital flexographic printing plates
-              <span className="text-slate-950 font-semibold"> (Flexo Blocks)</span>, engineered
+              Pakistan's premier manufacturer of Digital Flexographic Printing Plates, engineered
               for labels, flexible packaging, corrugated cartons and PP woven sacks.
             </p>
 

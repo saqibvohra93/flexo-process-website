@@ -81,7 +81,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: 'pp-woven-bags',
     title: 'PP Woven Bags',
-    subtitle: 'Rugged, abrasion-resistant flexo blocks for woven polypropylene sacks',
+    subtitle: 'Rugged, abrasion-resistant flexographic plates for woven polypropylene sacks',
     description: 'High-tensile digital flexo plates for woven polypropylene fabric. Delivers vibrant branding and sharp caution text on rice, flour, feed, and fertilizer bags.',
     icon: 'Package',
     imageUrl: '/images/industries/pp-woven.png',

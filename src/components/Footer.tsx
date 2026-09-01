@@ -56,7 +56,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenQuote }
             />
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              Digital flexographic printing plates (flexo blocks) for labels, flexible packaging, corrugated cartons and PP woven sacks, made in Karachi with German CDI laser technology.
+              Digital Flexographic Printing Plates for labels, flexible packaging, corrugated cartons and PP woven sacks, made in Karachi with German CDI laser technology.
             </p>
 
             <div className="flex items-center gap-2 text-[11px] text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 p-2.5 rounded-lg w-fit">

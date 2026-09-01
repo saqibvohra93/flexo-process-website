@@ -20,37 +20,37 @@ export interface ArticleItem {
 export const ARTICLES: ArticleItem[] = [
   {
     id: 'art-00a',
-    slug: 'choosing-flexo-plate-printing-block-partner-buyers-guide',
-    title: "Choosing a Flexo Plate & Printing Block Partner: A Buyer's Guide for Packaging Brands",
-    summary: 'A practical guide for brand owners and packaging companies on what actually separates a good flexo block supplier from a great one before you sign the next PO.',
+    slug: 'choosing-flexo-digital-plate-partner-buyers-guide',
+    title: "Choosing a Digital Flexographic Plate Partner: A Buyer's Guide for Packaging Brands",
+    summary: 'A practical guide for brand owners and packaging companies on what actually separates a good digital flexographic plate manufacturer from a great one before you sign the next PO.',
     category: "Buyer's Guides",
     readTime: '5 min read',
     publishedDate: '2026-02-20',
     author: 'Khurram Shehzad',
     authorRole: 'Chief Flexo Technical Consultant',
     imageUrl: '/images/hero-plate.jpg',
-    tags: ['Buyer\'s Guide', 'Flexo Blocks', 'Vendor Selection', 'Packaging Procurement'],
+    tags: ['Buyer\'s Guide', 'Digital Plates', 'Vendor Selection', 'Packaging Procurement'],
     featured: true,
     keyTakeaways: [
       'Price-per-plate is the wrong starting metric; cost-per-thousand-meters printed is what actually matters.',
-      'Ask any flexo block supplier for their relief depth and floor thickness tolerance in writing, not just plate thickness.',
+      'Ask any plate supplier for their relief depth and floor thickness tolerance in writing, not just plate thickness.',
       'A supplier who cannot explain their dot gain compensation curve for your specific press is guessing, not engineering.',
       'Sample proof kits before a full order tell you more than any spec sheet ever will.'
     ],
     content: [
-      'If you run a packaging business, at some point someone on your team will ask "who do we use for flexo blocks?" and the honest answer is often "whoever quoted fastest last time." That works fine until a job goes wrong on press and you\'re trying to figure out whether it was the ink, the anilox, or the plate.',
+      'If you run a packaging business, at some point someone on your team will ask "who do we use for flexo digital plates?" and the honest answer is often "whoever quoted fastest last time." That works fine until a job goes wrong on press and you\'re trying to figure out whether it was the ink, the anilox, or the plate.',
       'The companies that get this right treat plate making as an engineering partner, not a commodity purchase. A few things worth checking before you commit to a supplier for your next packaging run.',
       'First, ask how they handle prepress. Do they just laser whatever file you send, or do they check trapping, minimum dot size, and cylinder distortion for your specific press repeat length? The second one saves you a re-run.',
       'Second, ask about plate consistency across a set. If your 8-color job has plates from the same batch running at different thicknesses, your registration will drift no matter how good your mounting team is.',
       'Third (and this is the one most buyers skip), ask for a sample plate on your actual substrate before the full order. A supplier confident in their work will offer this without you asking twice.',
       'At Flexo Process, we work with both prepress-savvy converters and brand owners who have never ordered a plate in their life. Either way, we start with the same question: what substrate, what press, what problem are you trying to solve. The plate spec follows from that, not the other way around.'
     ],
-    seoKeywords: ['flexo block supplier pakistan', 'flexographic plate vendor selection', 'buying flexo plates guide', 'packaging printing partner']
+    seoKeywords: ['flexo digital plate supplier pakistan', 'flexographic plate vendor selection', 'buying flexo plates guide', 'packaging printing partner']
   },
   {
     id: 'art-00b',
-    slug: 'in-house-vs-outsourced-flexo-block-making',
-    title: 'In-House vs. Outsourced Flexo Block Making: What Growing Packaging Companies Should Know',
+    slug: 'in-house-vs-outsourced-flexo-plate-making',
+    title: 'In-House vs. Outsourced Flexo Graphic Digital Plate Making: What Growing Packaging Companies Should Know',
     summary: 'As converters scale, the "should we build our own plate room" question comes up eventually. Here is a grounded look at the real costs on both sides.',
     category: "Buyer's Guides",
     readTime: '6 min read',
@@ -58,7 +58,7 @@ export const ARTICLES: ArticleItem[] = [
     author: 'Mohsin Raza',
     authorRole: 'Senior Industrial Packaging Engineer',
     imageUrl: '/images/technology/flexo-rolls.png',
-    tags: ['Flexo Blocks', 'In-House Prepress', 'Cost Analysis', 'Packaging Business'],
+    tags: ['Digital Plates', 'In-House Prepress', 'Cost Analysis', 'Packaging Business'],
     featured: true,
     keyTakeaways: [
       'A basic CDI laser imaging setup plus processor and exposure unit runs well into six figures (USD) before you\'ve made a single plate.',
@@ -74,7 +74,7 @@ export const ARTICLES: ArticleItem[] = [
       'The pattern we see most often among growing converters: keep it outsourced until you\'re running enough plate changes weekly that turnaround time itself becomes the bottleneck, not cost. At that point, a hybrid model (outsourcing anything HD or unusual, running simple repeat jobs on basic in-house kit) tends to make the most financial sense.',
       'If you\'re a brand owner rather than a converter, this decision usually isn\'t yours to make at all, but it\'s worth knowing which model your printing partner uses, since it affects both your turnaround time and your pricing.'
     ],
-    seoKeywords: ['in house flexo plate making', 'outsource flexo blocks', 'plate room cost', 'flexo prepress investment']
+    seoKeywords: ['in house flexo plate making', 'outsource flexo digital plates', 'plate room cost', 'flexo prepress investment']
   },
   {
     id: 'art-01',
