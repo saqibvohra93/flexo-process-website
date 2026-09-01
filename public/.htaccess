@@ -1,3 +1,6 @@
+# Ensure cPanel Apache serves modern image formats with the correct MIME type
+AddType image/webp .webp
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
