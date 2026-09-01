@@ -50,7 +50,7 @@ export const ARTICLES: ArticleItem[] = [
   {
     id: 'art-00b',
     slug: 'in-house-vs-outsourced-flexo-plate-making',
-    title: 'In-House vs. Outsourced Flexo Graphic Digital Plate Making: What Growing Packaging Companies Should Know',
+    title: 'In-House vs. Outsourced Flexographic Digital Plate Making: What Growing Packaging Companies Should Know',
     summary: 'As converters scale, the "should we build our own plate room" question comes up eventually. Here is a grounded look at the real costs on both sides.',
     category: "Buyer's Guides",
     readTime: '6 min read',

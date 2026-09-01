@@ -33,7 +33,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuote, onNavigateSection }) =>
             </div>
 
             <h1 className="font-display font-extrabold text-3xl sm:text-5xl lg:text-[3.4rem] tracking-tight text-[#FF7A00] leading-[1.1] mb-5">
-              Flexo Graphic Digital Plates
+              Flexographic Digital Plates
             </h1>
 
             <p className="text-base sm:text-lg text-slate-700 font-normal leading-relaxed max-w-lg mb-8">
