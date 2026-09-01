@@ -52,7 +52,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenQuote }
             <img
               src="/images/logo-white.png"
               alt="Flexo Process (Private) Limited"
-              className="h-9 sm:h-10 w-auto object-contain"
+              className="h-12 sm:h-14 lg:h-16 w-auto object-contain"
             />
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
