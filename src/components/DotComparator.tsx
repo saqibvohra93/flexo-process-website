@@ -197,11 +197,11 @@ export const DotComparator: React.FC = () => {
           </div>
 
           <div className="rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-md flex flex-col group">
-            <div className="relative h-64 sm:h-72 w-full bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden flex items-center justify-center p-4">
+            <div className="relative h-64 sm:h-72 w-full bg-slate-100 overflow-hidden flex items-center justify-center">
               <img
                 src="/images/technology/flexo-rolls.png"
                 alt="High-precision digital photopolymer sleeves and continuous flexographic print rolls"
-                className="w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-500 drop-shadow-md"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 loading="eager"
                 decoding="async"
               />
