@@ -8,7 +8,7 @@ export function getStructuredData() {
     '@type': 'Organization',
     name: 'Flexo Process (Private) Limited',
     url: 'https://flexoprocess.com',
-    logo: 'https://flexoprocess.com/favicon.svg',
+    logo: 'https://flexoprocess.com/favicon.png',
     description: "Pakistan's premier manufacturer of high-definition digital flexographic printing plates engineered with German CDI laser technology for labels, flexible packaging, corrugated boxes, PP woven sacks, and cement bags.",
     address: {
       '@type': 'PostalAddress',
@@ -32,7 +32,7 @@ export function getStructuredData() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Flexo Process (Private) Limited',
-    image: 'https://flexoprocess.com/favicon.svg',
+    image: 'https://flexoprocess.com/favicon.png',
     telephone: '+92-300-2567114',
     email: 'info@flexoprocess.com',
     url: 'https://flexoprocess.com',
@@ -76,7 +76,7 @@ export function getStructuredData() {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: 'HD Digital Flexographic Photopolymer Printing Plates',
-    image: 'https://flexoprocess.com/favicon.svg',
+    image: 'https://flexoprocess.com/favicon.png',
     description: 'High-precision German CDI laser photopolymer plates available in 1.14mm, 1.70mm, 2.84mm, 3.94mm, and 4.70mm thicknesses for narrow web, flexible packaging, corrugated boxes, and PP woven bags.',
     brand: {
       '@type': 'Brand',
