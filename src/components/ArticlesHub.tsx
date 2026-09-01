@@ -293,6 +293,14 @@ export const ArticlesHub: React.FC<ArticlesHubProps> = ({ onOpenQuoteWithTopic }
               {activeArticle.title}
             </h2>
 
+            <div className="relative h-44 sm:h-56 w-full overflow-hidden rounded-xl mb-6 bg-slate-200">
+              <img
+                src={activeArticle.imageUrl}
+                alt={`${activeArticle.title} - Flexo Process Technical Guide`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+
             <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-50  border border-slate-200  mb-6 text-xs">
               <div className="w-9 h-9 rounded-full bg-amber-500/15  border border-amber-500/30  flex items-center justify-center text-amber-700  font-bold">
                 <User className="w-4 h-4" />
