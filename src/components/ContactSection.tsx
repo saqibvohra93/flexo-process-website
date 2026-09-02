@@ -121,12 +121,15 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
                   </div>
                   <div>
                     <span className="text-slate-500 block text-xs uppercase font-mono mb-0.5">Telephone &amp; Hotline</span>
-                    <p className="text-slate-900 font-medium space-y-0.5">
+                    <div className="text-slate-900 font-medium space-y-0.5">
                       <a href="tel:+923002567114" className="hover:text-amber-600 transition-colors block">
-                        +92-300-2567114
+                        +92 300 2567114
+                      </a>
+                      <a href="tel:+923008237030" className="hover:text-amber-600 transition-colors block">
+                        +92 300 8237030
                       </a>
                       <span className="text-slate-500 text-xs block">Instant WhatsApp &amp; Hotline Support</span>
-                    </p>
+                    </div>
                   </div>
                 </div>
 
@@ -141,8 +144,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledData })
                       <a href="mailto:info@flexoprocess.com" className="hover:text-amber-600 transition-colors block">
                         info@flexoprocess.com
                       </a>
-                      <a href="mailto:flexoprocess.pk@gmail.com" className="hover:text-amber-600 transition-colors block text-slate-500 text-xs">
-                        flexoprocess.pk@gmail.com
+                      <a href="mailto:faisal@flexoprocess.com" className="hover:text-amber-600 transition-colors block text-xs text-slate-700">
+                        faisal@flexoprocess.com
+                      </a>
+                      <a href="mailto:saleem@flexoprocess.com" className="hover:text-amber-600 transition-colors block text-xs text-slate-700">
+                        saleem@flexoprocess.com
+                      </a>
+                      <a href="mailto:flexoprocesspk@gmail.com" className="hover:text-amber-600 transition-colors block text-slate-500 text-xs">
+                        flexoprocesspk@gmail.com
                       </a>
                     </p>
                   </div>

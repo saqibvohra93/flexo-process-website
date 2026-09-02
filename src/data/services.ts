@@ -42,7 +42,7 @@ export const SERVICES: ServiceItem[] = [
     icon: 'Layers',
     imageUrl: '/images/industries/flexible-packaging.png',
     imageAlt: 'High-definition printed flexible packaging stand-up barrier pouches for retail products',
-    equipment: '4,000 DPI Laser CDI Engine with HD MicroCell Surface Texturization',
+    equipment: '5,000 DPI Laser CDI Engine with HD MicroCell Surface Texturization',
     features: [
       'Eliminates pinholing and mottle on non-porous transparent and metallized films',
       'Expanded Color Gamut (ECG 7-color) prepress separation optimization',

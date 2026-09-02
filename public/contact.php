@@ -47,7 +47,9 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 // Destination recipients
 $recipients = [
     "info@flexoprocess.com",
-    "flexoprocess.pk@gmail.com"
+    "faisal@flexoprocess.com",
+    "saleem@flexoprocess.com",
+    "flexoprocesspk@gmail.com"
 ];
 $to = implode(", ", $recipients);
 

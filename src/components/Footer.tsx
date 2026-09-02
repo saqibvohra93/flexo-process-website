@@ -138,18 +138,31 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenQuote }
                 <MapPin className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
                 <span>C-18 A, Estate Avenue, S.I.T.E., Karachi - 75700, Pakistan</span>
               </p>
-              <p className="flex items-center gap-2 text-slate-300">
-                <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
-                <a href="tel:+923002567114" className="hover:text-white transition-colors">
-                  +92-300-2567114
-                </a>
-              </p>
-              <p className="flex items-center gap-2 text-slate-300">
-                <Mail className="w-4 h-4 text-amber-500 shrink-0" />
-                <a href="mailto:info@flexoprocess.com" className="hover:text-white transition-colors">
-                  info@flexoprocess.com
-                </a>
-              </p>
+              <div className="flex items-start gap-2 text-slate-300">
+                <Phone className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <div className="space-y-1">
+                  <a href="tel:+923002567114" className="hover:text-white transition-colors block">
+                    +92 300 2567114
+                  </a>
+                  <a href="tel:+923008237030" className="hover:text-white transition-colors block">
+                    +92 300 8237030
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-start gap-2 text-slate-300">
+                <Mail className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                <div className="space-y-1">
+                  <a href="mailto:info@flexoprocess.com" className="hover:text-white transition-colors block">
+                    info@flexoprocess.com
+                  </a>
+                  <a href="mailto:faisal@flexoprocess.com" className="hover:text-white transition-colors block">
+                    faisal@flexoprocess.com
+                  </a>
+                  <a href="mailto:saleem@flexoprocess.com" className="hover:text-white transition-colors block">
+                    saleem@flexoprocess.com
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 

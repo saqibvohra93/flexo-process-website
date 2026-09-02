@@ -43,7 +43,7 @@ vercel.json       SPA rewrite + headers config for Vercel preview hosting
 
 The RFQ and contact forms POST JSON to `/contact.php`.
 
-- **On cPanel**: upload the built `dist/` contents to `public_html/`. `contact.php` uses PHP's native `mail()` to deliver submissions to `info@flexoprocess.com` and `flexoprocess.pk@gmail.com`. Update the `$to` address in `public/contact.php` if needed, and confirm your hosting account has `mail()` enabled (most shared cPanel plans do) or swap in SMTP credentials.
+- **On cPanel**: upload the built `dist/` contents to `public_html/`. `contact.php` uses PHP's native `mail()` to deliver submissions to `info@flexoprocess.com`, `faisal@flexoprocess.com`, `saleem@flexoprocess.com`, and `flexoprocesspk@gmail.com`. Confirm your hosting account has `mail()` enabled (most shared cPanel plans do) or swap in SMTP credentials.
 - **On Vercel (static demo)**: there is no PHP runtime, so the fetch call fails silently and the UI falls back to a success state for demo purposes. To wire up real email delivery on Vercel, swap the `fetch('/contact.php', ...)` calls in `ContactSection.tsx` and `QuoteModal.tsx` for a serverless function or a service like Web3Forms / Formspree / Resend.
 
 ## Deployment

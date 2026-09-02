@@ -458,7 +458,7 @@ export const ARTICLES: ArticleItem[] = [
     content: [
       'For decades, rotogravure was the undisputed king of high-volume flexible packaging across Asia and the Middle East. However, the packaging landscape has fundamentally shifted. E-commerce, private-label branding, and fast seasonal promotions have driven average run lengths down from 100,000 meters to 15,000 meters or less.',
       'Under these market dynamics, paying thousands of dollars for heavy copper-plated steel gravure cylinders and waiting two to three weeks for delivery severely handicaps a converter’s competitiveness.',
-      'With German 4,000 DPI laser CDI imaging, flat-top photopolymers, and surface micro-screening, HD Flexo has closed the quality gap entirely. Converters can achieve identical solid ink densities on transparent barrier films, ultra-smooth vignettes fading to zero, and crisp 2pt typography, all with plate sets produced and delivered in 24 hours at a fraction of the capital cost.',
+      'With German 5,000 DPI laser CDI imaging, flat-top photopolymers, and surface micro-screening, HD Flexo has closed the quality gap entirely. Converters can achieve identical solid ink densities on transparent barrier films, ultra-smooth vignettes fading to zero, and crisp 2pt typography, all with plate sets produced and delivered in 24 hours at a fraction of the capital cost.',
       'Major multinational food, beverage, and personal care brands are now qualifying HD Flexo converters across Pakistan for prime shelf packaging, unlocking immense growth for forward-thinking flexo operations.'
     ],
     seoKeywords: ['flexo vs rotogravure', 'hd flexo flexible packaging', 'gravure cylinder replacement', 'flexo process packaging pakistan']
@@ -579,14 +579,14 @@ export const ARTICLES: ArticleItem[] = [
     ],
     specsTable: [
       { label: 'Laser Source', value: 'High-Power Fiber Laser Array' },
-      { label: 'Optical Resolution', value: '4,000 DPI (6.35 micron spot)' },
+      { label: 'Optical Resolution', value: '5,000 DPI (6.35 micron spot)' },
       { label: 'Mask Thickness', value: '3 - 5 microns LAMS' },
       { label: 'Beam Uniformity', value: '99.4% cross-cylinder accuracy' }
     ],
     content: [
       'At the heart of modern digital flexography is the CDI (Cyrel Digital Imager) laser ablation process. The photopolymer plate is pre-coated with a microscopic black Laser Ablatable Mask (LAMS) layer. A high-precision infrared laser vaporizes this black mask according to 1-bit TIFF prepress files, creating the optical stencil for subsequent UV exposure.',
       'Older single-beam laser imagers suffered from thermal latency: heating the mask too slowly created melted, ragged mask edges that diffused UV light, resulting in bloated, poorly defined dot pillars.',
-      'Flexo Process utilizes state-of-the-art German multi-beam fiber laser arrays operating at 4,000 DPI resolution. The laser energy pulses in sub-nanosecond bursts with a concentrated 6.35-micron focal spot size, vaporizing the black mask instantly with zero thermal bleed.',
+      'Flexo Process utilizes state-of-the-art German multi-beam fiber laser arrays operating at 5,000 DPI resolution. The laser energy pulses in sub-nanosecond bursts with a concentrated 6.35-micron focal spot size, vaporizing the black mask instantly with zero thermal bleed.',
       'This razor-sharp mask boundary allows UV light to polymerize microscopic dots as small as 10 microns (representing a 0.8% dot at 175 LPI) with perfectly perpendicular sidewalls and pristine flat tops.'
     ],
     seoKeywords: ['laser ablation cdi flexo', 'fiber laser plate imaging', 'lams mask ablation', 'digital photopolymer imaging']

@@ -31,7 +31,7 @@ export const INDUSTRIES: IndustryItem[] = [
       'Compatible with UV, LED, and water-based label ink systems'
     ],
     specs: {
-      resolution: '4,000 DPI Laser CDI',
+      resolution: '5,000 DPI Laser CDI',
       durometer: '73 - 75 Shore A',
       screenRulings: '150 - 200 LPI',
       turnaround: 'Same-day / 24 Hours'
@@ -52,7 +52,7 @@ export const INDUSTRIES: IndustryItem[] = [
       'Maintains dimensional stability over 500,000+ meter runs'
     ],
     specs: {
-      resolution: '4,000 DPI Laser CDI',
+      resolution: '5,000 DPI Laser CDI',
       durometer: '67 - 70 Shore A',
       screenRulings: '133 - 175 LPI',
       turnaround: '24 Hours'
@@ -73,7 +73,7 @@ export const INDUSTRIES: IndustryItem[] = [
       'Formulated for high-speed post-print corrugated presses'
     ],
     specs: {
-      resolution: '2,540 / 4,000 DPI CDI',
+      resolution: '2,540 / 5,000 DPI CDI',
       durometer: '30 - 42 Shore A',
       screenRulings: '65 - 110 LPI',
       turnaround: '24 - 48 Hours'
@@ -94,7 +94,7 @@ export const INDUSTRIES: IndustryItem[] = [
       'Optimized for heavy solvent and alcohol ink formulations'
     ],
     specs: {
-      resolution: '2,540 / 4,000 DPI Laser',
+      resolution: '2,540 / 5,000 DPI Laser',
       durometer: '38 - 42 Shore A',
       screenRulings: '65 - 100 LPI',
       turnaround: '24 Hours'
@@ -115,7 +115,7 @@ export const INDUSTRIES: IndustryItem[] = [
       'Resistant to industrial ink solvents and friction heat'
     ],
     specs: {
-      resolution: '2,540 / 4,000 DPI Laser',
+      resolution: '2,540 / 5,000 DPI Laser',
       durometer: '32 - 42 Shore A',
       screenRulings: '65 - 85 LPI',
       turnaround: '24 Hours'
@@ -136,7 +136,7 @@ export const INDUSTRIES: IndustryItem[] = [
       'Rapid run-in time with minimal press make-ready waste'
     ],
     specs: {
-      resolution: '4,000 DPI CDI Laser',
+      resolution: '5,000 DPI CDI Laser',
       durometer: '38 - 70 Shore A',
       screenRulings: '85 - 150 LPI',
       turnaround: '24 Hours'

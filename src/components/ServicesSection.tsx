@@ -63,7 +63,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
                   <h3 className="font-display font-bold text-xl text-slate-900 group-hover:text-amber-600 transition-colors mb-1.5">
                     {srv.title}
                   </h3>
-                  <p className="text-xs font-mono text-amber-600 mb-3">
+                  <p className="text-[13px] sm:text-sm font-bold text-amber-600 mb-3 leading-snug">
                     {srv.subtitle}
                   </p>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
