@@ -12,8 +12,8 @@ export const WorkflowSection: React.FC = () => {
     },
     {
       step: '02',
-      title: '4,000 DPI Laser CDI Ablation',
-      desc: 'High-power German multi-beam fiber lasers vaporize the black LAMS mask with 6.35-micron spot precision.',
+      title: '5,000 DPI Laser CDI Ablation',
+      desc: 'High-power German multi-beam fiber lasers vaporize the black LAMS mask with sub-micron spot precision.',
       icon: <Zap className="w-5 h-5 text-amber-500" />,
       tagline: 'Sub-micron laser accuracy'
     },

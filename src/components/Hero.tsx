@@ -60,7 +60,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuote, onNavigateSection }) =>
               </span>
               <span className="flex items-center gap-1.5 font-medium">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span className="text-slate-950 font-bold">4,000 DPI</span> Laser Precision
+                <span className="text-slate-950 font-bold">5,000 DPI</span> Laser Precision
               </span>
               <span className="flex items-center gap-1.5 font-medium">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
